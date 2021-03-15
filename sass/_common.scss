@@ -1,0 +1,170 @@
+/* ------------------------
+Common/UI elements (images, video, buttons, etc)
+------------------------ */
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+// .back-to-top {
+//     text-align: right;
+//     display: block;
+// }
+
+img.alignright,
+img.alignleft,
+img.aligncenter,
+img.alignnone,
+.caption {
+    display: block;
+    height: auto;
+    margin: 0 auto 1em;
+    max-width: 100%;
+}
+
+// .content {
+img.alignright,
+img.alignleft {
+    float: none;
+    @include media($tablet) {
+        margin-bottom: 1em;
+        max-width: 50%;
+    }
+}
+img.alignleft {
+    @include media($tablet) {
+        float: left;
+        margin-right: 1em;
+    }
+}
+img.alignright {
+    @include media($tablet) {
+        float: right;
+        margin-left: 1em;
+    }
+}
+// }
+
+.wp-caption {
+    max-width: 95%;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+img.alignleft,
+img.alignright,
+img.aligncenter,
+.yes-frame {
+    visibility: visible;
+}
+
+.submit-btn,
+.wp-block-button__link,
+.button,
+.buttons a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $priFont;
+    color: $priCol;
+    font-size: 14px;
+    line-height: 1em;
+    border-radius: 0px;
+    padding: 14px 40px 14px 40px !important;
+    border: none;
+
+
+    background: #d8c095; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d8c095 0%, #ffe8be 32%, #ffe8be 32%, #ffe8be 49%, #ffe8be 59%, #d1b175 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8c095', endColorstr='#d1b175',GradientType=0 ); /* IE6-9 */
+
+    transition: all ease-out 0.45s;
+    @include media($tablet) {
+        text-transform: uppercase;
+    }
+    &:hover {
+        @include media($desktop) {
+            background: -moz-linear-gradient(top,  #d8c095 0%, #ffe8be 32%, #ffe8be 32%, #ffe8be 49%, #ffe8be 59%, #d1b175 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8c095', endColorstr='#d1b175',GradientType=0 ); /* IE6-9 */
+
+            // background: #d8c095; 
+
+        }
+    }
+}
+
+/* Guttenberg Buttons */
+
+.wp-block-buttons .wp-block-button a.wp-block-button__link {
+    &:hover {
+        color: white;
+    }
+}
+
+.disclaimer {
+    font-size: 11px;
+    font-style: italic;
+}
+
+.two-column {
+    @include media($tablet) {
+        column-count: 2;
+        column-gap: 40px;
+    }
+}
+
+
+/* LAZY LOADING */
+
+.b-lazy {
+    transition: opacity 300ms ease-in-out;
+    max-width: 100%;
+    opacity: 0;
+}
+
+.b-lazy.b-loaded {
+    opacity: 1;
+}
+
+::selection {
+    background: $priCol;
+}
+
+// For jump links on a site with fixed header
+
+// :target:before {
+// 	@include media($desktop) {
+// 		content:"";
+// 		display:block;
+// 		height:70px; /* fixed header height*/
+// 		margin:-70px 0 0; /* negative fixed header height */
+// 	}
+// }
+
+
+/* Wow Effects */
+
+
+@include media($desktop) {
+    .wow {
+        &.fadeInUp,
+        &.fadeInRight,
+        &.fadeInLeft,
+        &.fadeIn,
+        &.fadeInDown {
+            visibility: hidden;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    }
+}

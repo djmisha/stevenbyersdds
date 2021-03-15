@@ -1,0 +1,433 @@
+footer {
+    background-color: $priCol;
+    position: relative;
+}
+
+.footer-logo {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    @include media($tablet) {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    svg {
+        max-width: 250px;
+        @include media($tablet) {
+            max-width: none;
+        }
+    }
+}
+
+
+.top-polygon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: url('images/svg/bg-footer-polygon.svg');
+    background-size: 110% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-position-y: -1px;
+    @include media($desktop) {
+        height: 150px;
+    }
+}
+
+
+.upper-footer {
+    background-size: cover;
+    position: relative;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    @include media($tablet) {
+        min-height: 900px;
+        padding-top: 110px;
+    }
+    @include media($desktop) {
+        padding-top: 8vw;
+    }
+    span.headline {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 8px;
+        @include media($tablet) {
+            font-size: 57px;
+        }
+    }
+    div.subheadline {
+        padding-top: 10px;
+        text-align: center;
+        display: block;
+        font-size: 21px;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .s-line {
+        width: 60px;
+        height: 1px;
+        background: $secCol;
+    }
+}
+
+
+.footer-locations {
+    list-style: none;
+    @include media($desktop) {
+        margin-bottom: 0;
+        text-align: center;
+    }
+    li {
+        margin-top: 60px;
+        position: relative;
+        @include media($desktop) {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .phone {
+        margin-top: 50px;
+        @include font(18px);
+        margin-bottom: 25px;
+        letter-spacing: 3px;
+    }
+    .directions a {
+        letter-spacing: 3px;
+        @include media($tablet) {
+            display: flex;
+            justify-content: center;
+            .city {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    @include media($tablet) {
+        margin-top: 50px;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+    @include media($desktop) {
+        margin-top: 20px;
+        justify-content: flex-end;
+    }
+    a {
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $priTrans;
+        color: $secCol !important;
+        width: 45px;
+        height: 45px;
+        text-decoration: none !important;
+        &:hover {
+            color: lighten($secCol, 10%) !important;
+        }
+    }
+    span {
+        display: none;
+    }
+    i {
+        font-size: 32px;
+        position: relative;
+    }
+}
+
+
+.footer-flex {
+    @include media($tablet) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @include media($desktop) {
+        display: flex;
+        justify-content: space-between;
+        > div {
+            width: 48%;
+        }
+    }
+}
+
+.footer-sign-up {
+    max-width: 600px;
+    text-align: left;
+    span {
+        @include font(15px, 16px);
+    }
+    form {
+        margin-top: 20px;
+        @include media($tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        .type-singlelinetext {
+            margin-bottom: 10px;
+            @include media($tablet) {
+                margin-bottom: 0;
+                margin-right: 10px !important;
+            }
+            input {
+                border: 1px solid rgba($secCol, .4) !important;
+                margin-bottom: 0 !important;
+                background: transparent !important;
+                color: #fff !important;
+            }
+        }
+        .type-submitbutton {
+            margin-top: 0 !important;
+            // margin: 0 auto;
+            text-align: center;
+            input {
+                color: $priCol !important;
+            }
+        }
+    }
+}
+
+
+.lower-footer {
+    color: white;
+    @include font(15px, 1.2em);
+    font-weight: 100;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    @include media($desktop) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .copyright {
+        text-align: center;
+        @include media($tablet) {
+            text-align: right;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .disclaimer {
+        // margin-bottom: 10px;
+    }
+    .sig {
+        padding-top: 40px;
+        @include media($tablet) {
+            padding-top: 60px;
+        }
+        svg {
+            width: 25px;
+            height: 25px;
+            position: relative;
+            top: 5px;
+            margin-left: 8px;
+            path {
+                fill: white;
+            }
+        }
+    }
+}
+
+
+/*===========================================
+=            Footer Contact Form            =
+===========================================*/
+
+.footer-contact-form {
+    .contact-form {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0px 20px;
+        @include media($tablet) {
+            padding: 0px 40px;
+        }
+    }
+  
+    form {
+        margin-top: 40px;
+        margin-bottom: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include media($tablet) {
+            margin-top: 80px;
+        }
+        .field-wrap {
+            // @include media($tablet) {
+                width: 49%;
+            // }
+        }
+        .type-selectbox.field-18.field-wrap {
+            width: 100%;
+        }
+        .type-textarea {
+            width: 100%;
+        }
+        .type-submitbutton {
+            width: 100%;
+            text-align: center;
+        }
+        .type-singlelinetext input,
+        .type-selectbox select,
+        .type-textarea textarea {
+            background: rgba($priCol, .3) !important;
+            border: none !important;
+            color: white;
+            border: 1px solid rgba($secCol, .4) !important;
+        }
+        textarea {
+            height: 130px !important;
+        }
+        .type-selectbox,
+        .type-singlelinetext,
+        .type-textarea {
+            select,
+            input,
+            textarea {
+                // font-size: 14px;
+                // padding: 8px 20px;
+                @include media($tablet) {
+                    margin-bottom: 15px;
+                }
+            }
+            ::-webkit-input-placeholder {
+                /* WebKit, Blink, Edge */
+                color: rgba(white, 1) !important;
+                font-family: $priFont;
+                font-size: 14px;
+                font-weight: normal;
+            }
+            :-moz-placeholder {
+                /* Mozilla Firefox 4 to 18 */
+                color: rgba(white, 1) !important;
+                font-family: $priFont;
+                font-size: 14px;
+                font-weight: normal;
+                opacity: 1;
+            }
+            ::-moz-placeholder {
+                /* Mozilla Firefox 19+ */
+                color: rgba(white, 1) !important;
+                font-family: $priFont;
+                font-size: 14px;
+                font-weight: normal;
+                opacity: 1;
+            }
+            :-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: rgba(white, 1) !important;
+                font-family: $priFont;
+                font-size: 14px;
+                font-weight: normal;
+            }
+        }
+        .type-text {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .submit-btn {
+            margin-top: 10px;
+            color: $priCol;
+            padding-left: 50px !important;
+            padding-right: 50px !important;
+        }
+        input.error,
+        textarea.error {
+            border: 1px solid red !important;
+            box-shadow: 0 0 10px rgba(black, 0.2) !important;
+        }
+    }
+    /* Confirmation Message */
+    .aforms_confirmation_message {
+        border: 1px solid white;
+        margin-top: 40px;
+        padding: 10px;
+        h2,
+        p,
+        span {
+            display: block;
+            margin-bottom: 40px;
+            color: $priCol;
+        }
+        margin-bottom: 40px;
+    }
+}
+
+
+
+// Sticky Contact  
+
+// .sticky-contact-cta {
+//     @include font(16px, 1em, 300);
+//     font-family: $secFont;
+//     text-align: center;
+//     z-index: 399;
+//     display: block;
+//     bottom: -60px;
+//     right: 0;
+//     position: fixed;
+//     text-transform: uppercase;
+//     display: block;
+//     width: 100%;
+//     height: 60px;
+//     padding-top: 5px;
+//     transition: bottom 0.45s ease, box-shadow .45s ease;
+//     color: white;
+//     border: 1px solid $priCol;
+//     box-shadow: inset 0 0 0 0 $priCol;
+//     background: rgba(#102134, .90);
+//     @include media($desktop) {
+//         background: rgba(#102134, .60);
+//         width: 300px;
+//         height: 60px;
+//         right: 40px;
+//         bottom: -120px;
+//         @include font(20px);
+//     }
+//     &.make-sticky {
+//         bottom: 0;
+//         @include media($desktop) {
+//             bottom: 20px;
+//         }
+//     }
+//     &:hover {
+//         @include media($desktop) {
+//             box-shadow: inset 400px 0 0 0 $priCol;
+//         }
+//     }
+//     svg {
+//         position: relative;
+//         top: 8px;
+//         left: -6px;
+//         width: 31px;
+//         height: 31px;
+//     }
+// }

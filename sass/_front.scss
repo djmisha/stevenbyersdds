@@ -1,0 +1,887 @@
+.home-hero {
+    background-color: $priCol;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-height: 812px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $priCol;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px;
+    @include media($tablet) {
+        max-height: none;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    @include media($desktop) {
+        margin-top: 0px;
+        background-size: auto;
+        height: calc(100vh);
+        background-size: cover;
+    }
+    .hero-bucket {
+        position: absolute;
+        top: 150px;
+        text-align: center;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include media($tablet) {
+            padding-left: 0px;
+            padding-right: 0px;
+            top: 150px;
+            max-width: 580px;
+        }
+        @include media($desktop) {
+            width: 40vw;
+            top: 25vh;
+            left: 5vw;
+        }
+    }
+    .hero-logo {
+        svg {
+            width: 280px;
+            @include media($tablet) {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+    .hero-split-line {
+        width: 126px;
+        height: 1px;
+        background: $secCol;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .hero-drname {
+        color: white;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        @include media($tablet) {
+            font-size: 22px;
+        }
+    }
+    .hero-split-line-small {
+        width: 32px;
+        height: 1px;
+        background: $secCol;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .taglines-title {
+        color: white;
+        font-family: $secFont;
+        text-align: center;
+        @include font(28px, 1em, 300);
+        @include media($tablet) {
+            @include font(37px, 1.3em, 300);
+            margin-top: 0;
+        }
+        @include media($desktop) {
+            max-width: 430px;
+            margin: 0 auto;
+            height: 96px;
+        }
+    }
+    .button {
+        border: none;
+        margin-top: 30px;
+        background: rgb(191,167,121);
+        background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
+        @include media($tablet) {
+            margin-bottom: 0;
+        }
+    }
+    .mobile-button {
+        display: block;
+        background-color: $priCol;
+        max-width: 240px;
+        margin: 0 auto;
+        margin-top: 40px;
+        @include media($desktop) {
+            display: none;
+        }
+    }
+}
+
+
+.home-hero-buttons {
+    background: rgb(191,167,121);
+    background: linear-gradient(0deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
+    height: 100vh;
+    width: 60px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    @include media($tablet) {
+        display: flex;
+    }
+    a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+.parallax-home-wrapper {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.home-welcome {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    @include font(20px, 1.5em);
+    @include media($tablet) {
+        @include font(26px, 1.5em);
+        padding-top: 180px;
+        padding-bottom: 200px;
+        p {
+            margin: 0 auto;
+            max-width: 825px;
+        }
+    }
+    .icon-welcome-flower {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 196px;
+        height: 297px;
+        background: url('images/icon-welcome-flower.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+    .icon-doctor-flower {
+        position: absolute;
+        bottom: -400px;
+        right: 0;
+        width: 333px;
+        height: 503px;
+        background: url('images/icon-doctor-flower.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+        display: none;
+        @include media($tablet) {
+            display: block;
+            bottom: -400px;
+            width: 333px;
+            height: 503px;
+        }
+    }
+}
+
+.home-about-wrap {
+    max-width: $full;
+    margin: 0 auto;
+}
+.home-about {
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    margin-bottom: 20px;
+    background-position: bottom left;
+
+    @include media($tablet) {
+        background-size: auto;
+        min-height: 700px;
+        background-position: top left;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+   
+    .about-content {
+        padding-top: 40px;
+        padding-bottom: 110vw;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include media($tablet) {
+            padding-bottom: 0;
+            padding-top: 700px;
+        }
+        @include media($desktop) {
+            padding-left: 50%;
+            padding-top: 0;
+        }
+        @include media($desktop + 100) {
+            padding-left: 55%;
+            padding-right: 40px;
+            padding-top: 0;
+        }
+    }
+    p {
+        max-width: 500px;
+    }
+    h2 {
+        text-align: center;
+        max-width: 550px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: $priCol;
+        font-family: $secFont;
+        @include font(47px);
+
+        @include media($tablet) {
+            @include font(73px);
+        }
+    }
+    div.subheadline {
+        @include font(26px);
+        color: $priCol;
+        font-family: $secFont;
+        text-transform: uppercase;
+        padding-top: 10px;
+        text-align: center;
+        display: block;
+        font-size: 21px;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .s-line {
+        width: 80px;
+        height: 1px;
+        background: $priCol;
+        @include media($tablet) {
+            width: 180px;
+        }
+    }
+    a {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 40px;
+        color: $priAlt;
+    }
+    .split-line {
+        width: 40px;
+        height: 2px;
+        background-color: $priAlt;
+        margin: 0 auto;
+        margin-top: 5px;
+        // margin-left: 25px;
+        border-radius: 2px;
+    }
+}
+
+.home-testis {
+    min-height: 400px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    @include media($tablet) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .splide__arrows {
+        display: none;
+    }
+    .splide__pagination {
+        button {
+            background: transparent;
+            border: 1px solid $priCol;
+            width: 14px;
+            height: 14px;
+        }
+        .is-active {
+            background: $priCol;
+            transform: none;
+        }
+    }
+    strong {
+        font-family: $secFont;
+        font-style: normal;
+        font-size: 28px;
+        font-weight: 400;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        display: block;
+    }
+    em {
+        font-family: $secFont;
+        font-style: normal;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        display: block;
+        font-size: 13px;
+    }
+    li p {
+        font-size: 18px !important;
+        font-family: $highFont;
+        font-style: italic;
+        max-width: $desktop;
+        margin: 0 auto;
+        color: #5A5A5A;
+    }
+    a.custom-butn {
+        display: block;
+        padding-top: 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $priAlt;
+    }
+    .testi-split-line {
+        width: 40px;
+        height: 2px;
+        border-radius: 2px;
+        background: $priAlt;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    img {
+        width: 278px;
+        height: 37px;
+    }
+}
+
+
+ 
+
+
+.the-home-tabs-shadow {
+    position: relative;
+    box-shadow: 10px 20px 30px rgba( $priCol, .1);
+    .icon-welcome-flower-2 {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 196px;
+        height: 297px;
+        background: url('images/icon-welcome-flower.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}
+
+.the-home-tabs-desktop {
+    background-color: white;
+    display: none;
+    @include media($tablet) {
+        display: block;
+        max-width: 1358px;
+        margin: 0 auto;
+    }
+    ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        max-width: 1400px;
+        margin: 0 auto;
+        span {
+            color: white;
+        }
+    }
+    .tab-top {
+        width: 25%;
+        padding: 30px 45px;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 20px;
+        position: relative;
+        text-align: center;
+        border-bottom: 10px solid transparent;
+        transition: background .2s ease;
+        &:first-of-type {
+        }
+        &:hover {
+            background-color: rgba($secCol, .2);
+            border-bottom: 10px solid $secCol;
+        }
+        &.active{
+            border-bottom: 10px solid $secCol;
+        }
+        a {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        span {
+            color: $priCol;
+            text-transform: uppercase;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+    }
+    .tab-pane {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .tab-content {
+        position: relative;
+        min-height: 460px;
+        background-color: $priCol;
+        background: url('images/icon-tabs-flower.svg');
+        background-position: bottom left;
+        background-position-x: 100px;
+        background-repeat: no-repeat;
+        text-align: left;
+        > div {
+            padding-top: 100px;
+            padding-bottom: 40px;
+            margin: 0 auto;
+        }
+    }
+    .tab-content img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+    .tab-content span {
+        display: block;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: $priAlt;
+        font-size: 28px;
+    }
+    .tab-content a,
+    .tab-content span,
+    .tab-content p {
+        position: relative; 
+        z-index: 2;
+        padding-right: 60%;
+        padding-left: 40px;
+        // font-weight: 100;
+    }
+    .tab-content a {
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-top: 40px;
+        color: $priAlt;
+    }
+    .split-line {
+        width: 40px;
+        height: 2px;
+        background-color: $priAlt;
+        margin-top: 5px;
+        margin-left: 65px;
+        border-radius: 2px;
+    }
+}
+
+
+
+.the-home-tabs-mobile {
+    margin-top: 40px;
+    @include media($tablet) {
+        display: none;
+    }
+    .tab-icon {
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border-radius: 50%;
+        top: 140px;
+        left: calc(50% - 55.5px);
+        width: 111px;
+
+    }
+    .tab-top {
+        display: block;
+        height: 14px;
+        background: rgb(191,167,121);
+        background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
+    }
+    .single-tab {
+        width: 276px;
+        box-shadow: 0 13px 26px rgba(black, .16);
+        padding-bottom: 40px;
+        position: relative;
+        margin-bottom: 40px;
+        p {
+            padding: 0 20px;
+        }
+        strong {
+            display: block;
+            margin-top: 70px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 18px;
+            color: $priAlt;
+            font-family: $secFont;
+        }
+        a {
+            display: block;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 40px;
+            color: $priAlt;
+        }
+        .split-line {
+            width: 40px;
+            height: 2px;
+            background-color: $priAlt;
+            margin-top: 5px;
+            margin-left: 115px;
+            border-radius: 2px;
+        }
+    }
+    .single-tab:nth-of-type(2),
+    .single-tab:nth-of-type(3),
+    .single-tab:nth-of-type(4) {
+        // display: none;
+    }
+    .splide__slide {
+        // width: 276px !important;
+        // padding-left: 40px;
+        // padding-right: 40px;
+
+    }
+}
+
+
+
+
+
+.home-location {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 790px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    @include media($tablet) {
+        background-size: auto auto;
+        background-position: center;
+        padding-top: 100px;
+        min-height: 1000px;
+    }
+    @include media($desktop) {
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // background-size: cover;
+        background-attachment: fixed;
+    }
+    @include media($full) {
+        background-size: cover;
+    }
+    > div {
+        @include media($desktop) {
+            width: 50%;
+        }
+    }
+    .location-logo {
+        display: flex;
+        justify-content: center;
+        svg {
+            width: 100px;
+            height: 200px;
+            @include media($tablet) {
+                width: auto;
+                height: auto;
+            }
+            path {
+                fill: $priCol;
+            }
+        }
+    }
+    .location-content {
+        max-width: 500px;
+        color: white;
+        margin: 0 auto;
+        margin-top: 50px;
+        @include media($tablet) {
+            margin-top: 100px;
+        }
+        @include media($desktop) {
+            text-align: left;
+        }
+        h2 {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 0;
+            margin-bottom: 80px;
+            color: $priCol;
+            @include media($tablet) {
+                margin-bottom: 40px;
+                margin-top: 0;
+                max-width: none;
+            }
+        }
+        p {
+            text-align: left;
+            color: $defaultcolor;
+            @include media($tablet) {
+                text-align: center;
+                color: white;
+                @include font(18px, 1.5em);
+            }
+            @include media($desktop) {
+                text-align: left;
+            }
+        }
+    }
+    .button {
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+    }
+    position: relative;
+    .split-line {
+        @include media($desktop) {
+            width: 1px; 
+            height: 100px;
+            background : $priCol;
+            position: absolute;
+            left: calc(50% - 1px);
+            top: 0px;
+        }
+    }
+    .split-line-2 {
+        @include media($desktop) {
+            width: 1px; 
+            height: 100px;
+            background : $priCol;
+            position: absolute;
+            left: calc(50% - 1px);
+            bottom: 0px;
+        }
+    } 
+}
+
+
+
+.home-ig-feed {
+    padding-bottom: 40px;
+    // color: black;
+    background-color: #F7F7F7;
+    @include media($tablet) {
+        margin-left: 0px;
+        // padding: 100px 0 120px;
+    }
+    i {
+        color: $secCol;
+        // font-size: 20px;
+        margin-right: 10px;
+    }
+    span {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        color: $priCol;
+        @include font(20px, 1.2em, 300);
+        @include media($tablet) {
+            @include font(26px, 1.2em, 300);
+        }
+        a {
+            color: $priCol;
+            text-decoration: none;
+        }
+    }
+    ul {
+        margin-top: 20px;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        @include media($desktop) {
+            flex-wrap: nowrap;
+        }
+        li {
+            width: 30%;
+            @include media($tablet) {
+                width: 30%;
+            }
+            @include media($desktop) {
+                width: auto;
+            }
+        }
+        li a img {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+/* KEN BURNS HERO */
+
+
+.splide-hero {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    .splide__slide,
+    .splide__list,
+    .splide__track {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+
+.ken-burns-img {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ken-burns-img-1 {
+  background-image: url("images/hero-1.jpg");
+}
+.ken-burns-img-2 {
+  background-image: url("images/hero-2.jpg");
+}
+.ken-burns-img-3 {
+  background-image: url("images/hero-3.jpg");
+}
+.ken-burns-img-4 {
+  background-image: url("images/hero-4.jpg");
+}
+.ken-burns-img-5 {
+  background-image: url("images/bg-contact.jpg");
+}
+
+.ken-burns-effect-1.start-effect {
+  animation: kenburns-top 6.5s linear;
+}
+
+.ken-burns-effect-2.start-effect {
+  animation: kenburns-bottom 6.5s linear;
+}
+
+.ken-burns-effect-3.start-effect {
+  animation: kenburns-right 6.5s linear;
+}
+
+.ken-burns-effect-4.start-effect {
+  animation: kenburns-left 6.5s linear;
+}
+
+.ken-burns-effect-5.start-effect {
+  animation: kenburns-top 6.5s linear;
+}
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2017-12-10 16:42:7
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation kenburns-top
+ * ----------------------------------------
+ */
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation kenburns-bottom
+ * ----------------------------------------
+ */
+@keyframes kenburns-bottom {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 84%;
+  }
+  100% {
+    transform: scale(1.25) translateY(15px);
+    transform-origin: bottom;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation kenburns-right
+ * ----------------------------------------
+ */
+@keyframes kenburns-right {
+  0% {
+    transform: scale(1) translate(0, 0);
+    transform-origin: 84% 50%;
+  }
+  100% {
+    transform: scale(1.25) translateX(20px);
+    transform-origin: right;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation kenburns-left
+ * ----------------------------------------
+ */
+@keyframes kenburns-left {
+  0% {
+    transform: scale(1) translate(0, 0);
+    transform-origin: 16% 50%;
+  }
+  100% {
+    transform: scale(1.25) translate(-20px, 15px);
+    transform-origin: left;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation focus-in-contract
+ * ----------------------------------------
+ */
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,253 @@
+$menuHeight: 100vh;
+
+// .not--device {
+//     @include media($desktop) {
+
+//     .menu-is-open {
+//         .menu-wrap {
+//             height: 100vh;
+//             width: 950px;
+//             position: fixed;
+//             z-index: 9999;
+//             top: 0;
+//             left: 0px;
+//             transition: left .4s ease-out;
+//         }
+//         .close-menu {
+//             transition: top .4s ease;
+//         }
+//     }
+    
+//     .menu-is-closed {
+//         .menu-wrap {
+//             display: block;
+//             height: 100vh;
+//             width: 950px;
+//             position: fixed;
+//             left: 100px;
+//             z-index: 9999;
+//             top: 0;
+//             left: -950px;
+//             transition: left .4s ease-out;
+//         }
+//         .close-menu {
+//             top: -50px;
+//             transition: top .4s ease;
+//         }
+//     }
+
+//     .menu-wrap {
+//         .main-menu {
+//             padding-top: 60px;
+//             padding-left: 60px;
+//             padding-right: 30px;
+//             border-right: 1px solid #eee;
+//             height: 100vh;
+//             background-color: white;
+
+//             > li {
+//                 display: flex;
+//                 align-items: center;
+//                 position: relative;
+//                 max-width: 380px;
+//                 text-align: left;
+//                 // border: 1px solid pink;
+//                 // height: 100%;
+//                 // text-align: left;
+//                 //show sub-menus on hover
+//                 &:hover {
+//                     // background: $darkColor;
+//                     // background-color: #343434;
+//                     color: $priCol;
+//                     > .sub-menu {
+//                         opacity: 1;
+//                         visibility: visible;
+//                         z-index: 50;
+//                         top: 70px; //same as height of .main-menu
+//                     }
+//                     // &:after {
+//                     //  content: '';
+//                     //  position: absolute;
+//                     //  bottom: 0;
+//                     //  left: 0;
+//                     //  width: 100%;
+//                     //  border-bottom: 5px solid $secCol;
+//                     // }
+//                     > a {
+//                         color: $priCol;
+//                         text-decoration: none;
+//                         margin-left: 10px;
+//                     }
+//                 }
+//                 &.mega-menu {
+//                     position: static;
+//                 }
+//                 a {
+//                     font-family: $highFont;
+//                     @include font(22px, 1em);
+//                     font-weight: 700;
+//                     display: block;
+//                     text-decoration: none;
+//                     padding: 20px 20px;
+//                     transition: color 0.25s ease, margin-left 0.25s ease;
+//                     color: $secCol; //set this color
+//                     position: relative;
+//                     text-transform: uppercase;
+//                 }
+//             }
+//         }
+
+//         a {
+//             @include font(
+//                 15px,
+//                 1em
+//             ); //reset font-size for inline-block hack
+//         }
+//         /* Top Level Dropdown Item */
+//         // .nav-dropdown-button {
+//         // }
+//         /*CUSTOM SUB NAV*/
+//         // #menu-item-17 .sub-menu {
+//         //     left: -25px;
+//         // }
+//         /* Sub Menu */
+//         .sub-menu {
+//             // background: rgba(#343434, .96); //set to your own background color
+//             border-left: 1px solid rgba($priCol, 1); //for visual purposes.  can remove.
+//             position: fixed;
+//             top: 40px;
+//             left: 620px;
+//             // right: 50%;
+//             transform: translate(-50%, 0);
+//             opacity: 0;
+//             visibility: hidden;
+//             width: 490px;
+//             z-index: -5;
+//             transition:  0.25s ease-in-out opacity;
+//             // padding-top: 10px;
+//             min-height: 440px;
+
+
+//             > li {
+//                 // padding-left: 20px;
+//                 // padding-right: 20px;
+//                 // background-color: $darkColor;
+
+//                 &:first-of-type {
+//                     // padding-top: 20px;
+//                 }
+//                 &:last-of-type {
+//                     // padding-bottom: 20px;
+//                 }
+
+//                 &.menu-item-has-children {
+//                     // padding-right: 25px; //set this to the size of the arrows container
+//                     position: relative;
+//                     &:hover {
+//                         //show third level sub-menu
+//                         // &:after{
+//                         //  transform: translateY(-50%) rotate(90deg);
+//                         // }
+//                         > .sub-menu {
+//                             opacity: 1;
+//                             visibility: visible;
+//                             right: inherit;
+//                             left: inherit;
+//                             transform: none;
+//                             left: 299px;
+//                             top: -1px;
+//                             // padding-bottom: 10px;
+//                         }
+//                     }
+//                 }
+//                 a {
+//                     color: $secCol;
+//                     font-weight: 100;
+//                     font-size: 16px;
+//                     text-transform: none;
+//                     // transition: 0.25s ease-in all;
+//                     // border: 1px solid pink;
+//                     border-bottom: none !important;
+
+//                 }
+//                 &:hover {
+//                     > a {
+//                         text-decoration: none;
+//                         color: $priCol;
+//                     }
+//                 }
+//             }
+//             .nav-dropdown-button {
+//                 position: absolute;
+//                 width: 8px;
+//                 height: 8px;
+//                 top: calc(50% - 4px);
+//                 right: 15px;
+//                 border-top: 2px solid $secAlt;
+//                 border-right: 2px solid $secAlt;
+//                 transform: rotate(45deg);
+//             }
+//             a {
+//                 border-bottom: 1px solid rgba($secCol, 0.2);
+//                 text-align: left;
+//                 padding: 6px 100px 6px 100px !important;
+//                 color: $lightColor;
+//             }
+//         }
+//         /* Hides the Mobile Nav Expander */
+//         .nav-dropdown-button {
+//             position: relative;
+//             width: 10px;
+//             height: 10px;
+//             border-top: 2px solid $secCol;
+//             border-right: 2px solid $secCol;
+//             transform: rotate(45deg);
+//             right: 15px;
+//             .nav-expander {
+//                 position: relative;
+//                 span {
+//                     display: none;
+//                 }
+//             }
+//         }
+//         .duplicate-item {
+//             // display: none;
+//         }
+       
+//         .close-menu {
+//             // display: none !important;
+//         }
+
+//     }
+
+//     }
+// }
+
+/* Custom Icons on Nav*/
+// .not--device .sub-menu .nav-item-icon  {
+//     margin-top: 20px;
+//     background: url('images/svg/icon-nav-reshape.svg');
+//     background-repeat: no-repeat;
+//     background-position-x: 40px; 
+//     &:first-of-type{
+//         margin-top: 0;
+//     }
+//     &.icon-refine {
+//         background: url('images/svg/icon-nav-refine.svg');
+//         background-repeat: no-repeat;
+//         background-position-x: 40px; 
+//     }
+//     &.icon-restore {
+//         background: url('images/svg/icon-nav-restore.svg');
+//         background-repeat: no-repeat;
+//         background-position-x: 40px; 
+//     }
+//     a {
+//         font-size: 24px !important;
+//         font-weight: bold !important;
+//         cursor: default;
+//         &:hover {
+//             color: $secCol !important;
+//         }
+//     }
+// }

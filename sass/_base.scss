@@ -1,0 +1,272 @@
+/* ------------------------
+   Typography (and primary body style)
+------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    color: $defaultcolor;
+    font: 15px/23px $defaultfont;
+    font-weight: normal;
+    min-width: 320px;
+    text-align: center;
+    @include media($tablet) {
+        font: 16px/28px $defaultfont;
+    }
+}
+
+p {
+    margin: 0 0 1em;
+    font-weight: 300;
+}
+
+ul,
+ol,
+dl {
+    font-weight: 300;
+}
+
+li {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.headline {
+    font-family: $priFont;
+    color: $priCol;
+    font-weight: normal;
+    text-transform: uppercase;
+    // letter-spacing: 3px;
+    // font-weight: $semiBold;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    // margin-top: 1em;
+    // margin-bottom: 0.5em;
+    // line-height: 100%;
+}
+
+h1 {
+    @include font(25px);
+    @include media($tablet) {
+        @include font(37px);
+    }
+}
+
+h2,
+.headline {
+    @include font(25px, 1.1em);
+    @include media($tablet) {
+        @include font(37px, 1.1em);
+    }
+}
+
+h3 {
+    @include font(18px, 1.1em);
+    @include media($tablet) {
+        @include font(21px, 1.1em);
+    }
+}
+
+h4,
+h5,
+h6 {
+    @include font(16px);
+    @include media($tablet) {
+        @include font(18px);
+    }
+}
+
+a {
+    color: $priCol;
+    text-decoration: underline;
+    &:focus {
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+blockquote {
+    font-family: $highFont;
+    font-style: italic;
+    @include media($desktop) {
+        @include font(25px, 110%);
+    }
+    footer {
+        font-style: normal;
+    }
+}
+
+// header,
+section,
+// main,
+.contain {
+    padding: 20px;
+    @include media($desktop) {
+        padding: 20px 40px;
+    }
+    @include media($full) {
+        @include contain($full, 20px);
+    }
+}
+
+/* Smaller Width Sizing Containers */
+
+// .page-title,
+// .breadcrumb-wrap,
+main,
+.single-case-content,
+.gallery-cat-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include media($tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include media($desktop) {
+        // padding-left: calc(40px + (50% - (#{$desktop} / 2)));
+        // padding-right: calc(40px + (50% - (#{$desktop} / 2)));
+    }
+    @include media($full) {
+        // max-width: $full;
+        max-width: $full;
+        margin: 0 auto;
+        // padding-left: calc(40px + (50% - (1200px / 2)));
+        // padding-right: calc(40px + (50% - (1200px / 2)));
+    }
+}
+
+// section,
+// main,
+// .contain {
+//     padding: 0 20px;
+//     @include media($tablet) {
+//         padding: 0 40px;
+//     }
+//     @include media($desktop) {
+//         padding: 0  calc(40px + (50% - (#{$desktop} / 2)));
+//     }
+//     @include media(1280px) {
+//         // padding: 0 calc(40px + (50% - (1280px / 2)));
+//     }
+//     @include media($full) {
+//         // padding: 0  calc(40px + (50% - (#{$full} / 2)));
+//     }
+// }
+
+/* For Devices - still needed ?  */
+// .is--device {
+// 	section,
+// 	main,
+// 	.contain {
+// 		@include media($desktop) {
+// 			padding: 0 20px;
+// 		}
+// 	}
+// }
+
+/* ***************************************** */
+/* --------------- Layouts ----------------- */
+/* ***************************************** */
+
+/* -----------------------
+	Basic layout
+----------------------- */
+
+.container,
+.container-full {
+    position: relative;
+}
+
+.container {
+    max-width: $desktop;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* ------------------------
+	Header
+------------------------ */
+
+@import "header";
+
+/* ------------------------
+	Nav
+------------------------ */
+
+@import "moby";
+@import "menu_touch";
+@import "menu_hover";
+
+
+/* ------------------------
+	Content
+------------------------ */
+
+@import "content";
+
+/* ------------------------
+	Guttenberg
+------------------------ */
+
+@import "blocks";
+
+/* ------------------------
+	Aside
+------------------------ */
+
+@import "sidebar";
+
+/* ------------------------
+	Footer Layout
+------------------------ */
+
+@import "footer";
+
+/* ------------------------
+	Forms & Form Elements
+------------------------ */
+
+@import "contact";
+
+/* ***************************************** */
+/* ---------- Specific Templates ----------- */
+/* ***************************************** */
+
+/* ------------------------
+	Home Page
+------------------------ */
+
+@import "front";
+
+/* ------------------------
+	Blog/Category/Archives
+------------------------ */
+
+@import "blog";
+
+/* ------------------------
+	Gallery
+------------------------ */
+
+@import "gallery";
+
+/* ------------------------
+	Custom Page
+------------------------ */
+
+@import "custompages";
+
+/* Hide / Show */
+
+@import "hide";

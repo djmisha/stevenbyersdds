@@ -1,0 +1,247 @@
+/* Masthead  */
+
+
+.masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 80px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    @include media($tablet) {
+    }
+    @include media($desktop) {
+        width: calc( 100vw - 80px);
+        top: 20px;
+        left: 40px;
+        right: 40px;
+        display: flex;
+    }
+    .mast-phone {
+        padding-right: 20px;
+        @include media($tablet) {
+            padding-right: 60px;
+            .inside & {
+                padding-right: 20px;
+            }
+        }
+        a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            .inside & {
+                color: $priCol;
+            }
+            .tmpl_type_page_no_header & {
+                color: white;
+            }
+        }
+    }
+}
+
+
+.sticky-trigger {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // height: 75px;
+    // box-shadow: 0 3px 6px rgba(black, 0.16);
+    background: rgba($color: $priCol, $alpha: 1);
+    position: fixed;
+    top: -140px;
+    // right: 0;
+    left: -18px;
+    z-index: 100;
+    transform: skew(-30deg);
+    transition: top .45s ease;
+    &.sticky-navigation {
+        top: 0px;
+    }
+    .menu-trigger {
+        height: 60px;
+        width: 100px;
+        span {
+            background-color: white !important;
+        }
+    }
+}
+
+/* Menu Trigger  */
+
+.menu-trigger {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .25s ease;
+    &:hover {
+        @include media($desktop) {
+            background-color: rgba(white, .2);
+        }
+    }
+    span {
+        .inside & {
+            background: $priCol;
+        }
+        .tmpl_type_page_no_header & {
+            background: white;
+        }
+    }
+}
+
+
+
+.int-header {
+    position: relative;
+    .inside-logo {
+        display: none;
+        @include media($tablet) {
+            position: absolute;
+            display: block;
+            z-index: 1;
+            top: 170px;
+            left: 40px;
+        }
+        @include media($desktop) {
+            left: calc(50% - 520px);
+        }
+    }
+}
+
+
+
+/*--------------  Header Hero Images  -------------*/
+
+.internal-header-images {
+    background-color: #F8F8F7;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+}
+
+
+.internal-logo {
+    margin-top: 60px;
+    svg {
+        width: 280px;
+        @include media($tablet) {
+            width: auto;   
+        }
+    }
+}
+
+
+
+.inside-hero-buttons {
+    background: url('images/bg-inside-buttons.svg');
+    // background: rgb(191,167,121);
+    // transform: skew(-30deg);
+    // background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
+    height: 70px;
+    width: 287px;
+    position: absolute;
+    right: 0;
+    top: calc(100vh - 68px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    display: none;
+    @include media($tablet) {
+        display: flex;
+        z-index: 111;
+    }
+    a {
+        display: block;
+        margin: 0 3px;
+        padding: 2px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        &:hover, &.active {
+            border: 2px solid #A8936B;
+        }
+        &:last-of-type {
+            margin-right: 20px;
+        }
+    }
+}
+
+
+
+/* Page Title */
+
+.page-title {
+    border-bottom: 1px solid #EFEFE9;
+    width: 100%;
+    text-align: left;
+    // margin-top: 120px;
+    @include media($tablet) {
+        // margin-top: 260px;
+    }
+    h1,
+    .headline {
+        color: $priCol;
+        margin: 10px 0;
+        font-family: $secFont;
+        text-transform: uppercase;
+        text-align: center;
+        // font-weight: 400;
+        margin: 30px 0;
+        @include font(25px, 1.1em);
+        @include media($tablet) {
+            @include font(37px, 1em);
+            
+        }
+    }
+}
+
+/* BreadCrums  */
+
+.site-crumbs {
+    text-align: left;
+    padding-top: 10px;
+    @include media($tablet) {
+          
+    }
+    @include media($desktop) {
+        margin-top: 40px;
+    }
+    .salacious-crumb {
+        @include font(12px);
+        font-family: $secFont;
+        font-style: normal;
+        a {
+            text-decoration: none;
+            color: $priCol;
+        }
+        .crumb-sep {
+            border-right: 1px solid $priCol;
+            color: $priCol;
+            margin: 0 6px;
+        }
+        span {
+            color: $priCol !important;
+        }
+        .current-crumb-item {
+            color: $priCol !important;
+            a {
+                color: $priCol !important;
+            }
+        }
+    }
+    p {
+        margin: 0;
+    }
+}

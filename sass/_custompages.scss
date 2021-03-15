@@ -1,0 +1,79 @@
+/* FAQ ACF Block */
+
+.faq-block-wrap {
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: 0 13px 26px rgba(black, .16);
+    max-width: 1080px;
+    @include media($tablet) {
+        margin-top: 80px;
+    }
+    .top-faq-section {
+        height: 17px;
+        background: rgb(191,167,121);
+        background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
+    }
+    .faq-headline {
+        max-width: 780px;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 20px;
+        display: block;     
+        padding-left: 20px;
+        padding-right: 20px;
+        @include media($tablet) {
+            padding-bottom: 60px;
+        }
+    }
+    ul {
+        max-width: 980px;
+        margin: 0 auto !important;
+        padding: 0px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        @include media($tablet) {
+            padding-left: 40px !important;
+            padding-right: 40px !important;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        li {
+            padding: 20px 0px !important;
+            // border: 1px solid pink;
+            @include media($tablet) {
+                width: 47%;
+            }
+            ul li {
+                background: transparent;
+                padding: 0 !important;
+                position: relative;
+                padding-left: 20px !important;
+                border-radius: 0;
+                margin-bottom: 0;
+                &:before {
+                    display: block;
+                    content: "";
+                    background: black !important;
+                    position: absolute;
+                    left: 0;
+                    top: 0.75em;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        li:before {
+            display: none;
+        }
+        span {
+            display: block;
+        }
+        h3 {
+            font-family: $secFont;
+            margin-top: 0 !important;
+        }
+    }
+}

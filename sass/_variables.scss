@@ -1,0 +1,93 @@
+/* ------------------------
+   Variables
+------------------------ */
+
+$purple: #1D1549;
+$lightPurple: #5C5780;
+$lighterBlack: #1D1549;
+
+$yellow: #E5CB9A;
+$darkYellow: #816C44;
+$darkerYellow: #E5CB9A;
+
+$red : #f03e3e;
+
+$backgroundGrey: #F7F7F7;
+$lightGray: #efefef;
+$alsoDarkGrey: #5A5A5A;
+
+$textGray: #555454;
+$textGrayAlt: #0A0A0A;
+$textAlmostBlack: #0A0A0A;
+// ---------------
+
+$priCol: $purple; // Primary Color: link color, buttons, nav, footer, etc
+$priAlt: $lightPurple; // Alt - link hover
+$priHigh: $darkerYellow; //  Highlight
+$priHighAlt: $lighterBlack; //  Highlight Alt
+$priAcc: $alsoDarkGrey; //  Accent
+
+$secCol: $yellow;
+$secAlt: $darkYellow;
+
+$thiCol: $red;
+$thiAlt: $purple;
+
+$lightColor: #ffffff;
+$darkColor: #000000;
+$lightAlt: $lightGray;
+$darkAlt: $backgroundGrey;
+
+// Font Family
+
+$priFont: 'Lato', sans-serif;
+$secFont: proxima-nova, sans-serif;
+$highFont: 'Times New Roman' , serif;
+// $fourthFont: droid-serif, serif;
+
+// Font Weight
+
+$thin: 100;
+$light: 300;
+$normal: 400;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
+
+// Sizing
+
+// @function updateSize($size) {
+//     $newSize: $size + 80px;
+//     @return $newSize;
+// }
+
+$tablet: 768px;
+$ogDesktop: 980px;
+$ogFull: 1380px;
+
+$desktop: 1060px;
+$full: 1460px;
+
+
+// $desktop: updateSize($ogDesktop);
+// $full: updateSize($ogFull);
+
+$sidebar: 300px;
+
+// Increasing color
+
+$step: 1;
+
+// Defaults
+
+$defaultfont: $priFont;
+$defaultcolor: $textGrayAlt;
+
+/* Transitions and Shadows */
+
+$shadow: 0px 3px 6px rgba(black, .16);
+
+$priTrans: all .25s ease; // Primary Transition 

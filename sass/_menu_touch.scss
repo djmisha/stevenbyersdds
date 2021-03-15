@@ -1,0 +1,328 @@
+// Touch Menu
+
+
+/* Hamburger Menu */
+
+.nav-hamburger {
+    width: 30px;
+    height: 15px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 4px;
+        background: white;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        &:nth-child(1) {
+            top: 0px;
+            // width: 60%;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 6px;
+            width: 0;
+        }
+        &:nth-child(4) {
+            top: 10px;
+        }
+    }
+
+    &.open {
+        span {
+            &:nth-child(1) {
+                top: 7px;
+                transform: rotate(45deg);
+                width: 100%;
+            }
+
+            &:nth-child(2) {
+                // width: 
+            }
+
+            &:nth-child(3) {
+            }
+
+            &:nth-child(4) {
+                transform: rotate(-45deg);
+                top: 7px;
+            }
+        }
+    }
+}
+
+
+/* hides the menu on initial load*/
+#main-nav {
+    display: none;
+}
+
+
+
+
+// $navBar: 60px;
+// .touch-menu {
+//     display: block;
+
+//     &.menu-wrap {
+//         width: 100%;
+//         position: fixed;
+//         top: 75px; // Height of the nav bar
+//         bottom: 0;
+//         left: 0;
+//         // height: calc(100vh - #{$navBar});
+//         height: 100%;
+//         z-index: -1;
+//         padding: 0;
+//     }
+
+//     .main-menu {
+//         background: rgba(white, .95);
+//         height: 100%;
+//         width: 100%;
+//         overflow-y: scroll;
+//         // transform: translate3d(100%, 0, 0);
+//         // transition: all 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+//         // transform .2s;
+//         text-align: left;
+//         opacity: 0;
+//         padding-top: 20px;
+//         @include media($desktop) {
+//             padding-top: 0;
+//         }
+//         // visibility: hidden;
+
+//         li {
+//             //Set baseline "li" styling -- reset
+//             margin: 0;
+//             padding: 0 20px;
+//             position: relative;
+//             list-style-type: none;
+
+//             &:before {
+//                 display: none;
+//             }
+
+//             ul li {
+//                 padding: 0 0px;
+//             }
+
+//             // &:hover {
+//             //  > a {
+//             //      background: $priAcc;
+//             //  }
+//             // }
+//         }
+
+//         //End "li" reset
+
+//         a {
+//             //Set baseline "a" styling -- reset
+//             font-family: $highFont;
+//             @include font(18px, 1em); //Set font size for menu items
+//             text-decoration: none;
+//             display: block;
+//             color:rgba($secCol, 1); //Set color for menu items
+//             text-transform: uppercase;
+
+//             &:hover,
+//             &:active,
+//             &:focus {
+//                 // background: $priAcc;
+//                 outline: none;
+//             }
+//         }
+
+//         //End "a" reset
+
+//         //Touch Menu Items
+//         .menu-item {
+//             // li
+//             > a {
+//                 padding: 18px 0px;
+//                 // border-bottom: 1px solid rgba($priCol, .2);
+//                 @include media($desktop) {
+//                     border-bottom: none;
+//                 }
+//             }
+
+//             // &.first {
+//             // border-top: 1px solid rgba($lightColor, .15);
+//             // }
+//         }
+
+//         //General Sub-Menu Styling
+//         .sub-menu {
+//             display: none;
+//             a {
+//                 @include font(16px, 1em); //Set font size for menu items
+//                 font-family: $highFont;
+//                 text-transform: none;
+//                 // text-transform: uppercase;
+//                 padding-right: 0;
+//                 padding: 12px 0px;
+//                 padding-left: 45px;
+//             }
+//             /*  Second Level Dropdown  */
+//             .nav-dropdown-button {
+//                 right: 20px;
+//                 top: -4px;
+//             }
+//             .sub-menu {
+//                 a {
+//                     padding-left: 30px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .nav-dropdown-button {
+//         position: absolute;
+//         z-index: 25;
+//         width: 50px;
+//         height: 54px;
+//         right: 40px;
+//         top: 0px;
+//         cursor: pointer;
+//         display: flex;
+//         justify-content: flex-end;
+//         padding-right: 20px;
+//         align-items: center;
+//     }
+// }
+
+// Open and Closing .touch-menu
+
+// .menu-is-open {
+//     .touch-menu {
+//         z-index: 500;
+//         overflow: scroll;
+//         opacity: 1;
+//         height: 100% !important;
+//         z-index: 9999;
+//         .main-menu {
+//             // transform: translate3d(-100%, 0, 0);
+//             opacity: 1;
+//             transition: opacity 0.25s ease-in-out;
+//             height: 100vh;
+//             // visibility: visible;
+//         }
+//     }
+// }
+
+// .menu-is-closed {
+//     .touch-menu {
+//         height: 0 !important;
+//         .main-menu {
+//             // transition: opacity .25s ease-in-out;
+//             opacity: 0;
+//             // visibility: hidden;
+//             // transition-duration: .25s;
+//         }
+//     }
+// }
+
+
+// .close-menu {
+//     width: 50px;
+//     height: 50px;
+//     display: block;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 50%;
+//     background: white;
+//     position: fixed;
+//     top: 10px;
+//     left: calc(930px);
+//     border: 1px solid #eee;
+//     i {
+//         font-size: 25px;
+//         color: $priCol;
+//     }
+// }
+
+
+/* Nav Expander (Plus button) */
+
+// .nav-expander {
+//     width: 20px;
+//     height: 20px;
+//     padding: 20px;
+//     position: relative;
+//     right: -40px;
+//     transform: rotate(0deg);
+//     transition: .5s ease-in-out;
+//     cursor: pointer;
+//     span {
+//         display: block;
+//         position: absolute;
+//         height: 2px;
+//         width: 15px;
+//         background: $priCol;
+//         opacity: 1;
+//         left: 0;
+//         transform: rotate(0deg);
+//         transition: .5s ease-in-out;
+//         &:nth-child(1) {
+//             top: 18px;
+//             left: 10px;
+//         }
+//         &:nth-child(2) {
+//             top: 18px;
+//             left: 10px;
+//             transform: rotate(90deg);
+//         }
+//     }
+// }
+
+// .sub-menu-open {
+//     > .nav-dropdown-button {
+//         .nav-expander {
+//             span {
+//                 &:nth-child(2) {
+//                     transform: rotate(180deg);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
+
+/* Hamburger Menu */
+
+// .menu-trigger {
+//     cursor: pointer;
+//     display: flex;
+//     align-items: center;
+//     height: 60px;
+//     @include media($desktop) {
+//         width: 120px;
+//     }
+// }
+
+
+
+// .menu-button-text {
+//     font-family: $highFont;
+//     color: $secCol;
+//     text-transform: uppercase;
+//     margin-right: 10px;
+//     position: relative;
+//     font-size: 18px;
+//     display: none;
+//     @include media($desktop) {
+//         display: block;
+//     }
+// }
+
+
