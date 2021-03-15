@@ -2,141 +2,66 @@
     background-color: $priCol;
     background-repeat: no-repeat;
     height: 100vh;
-    max-height: 812px;
+    max-height: 736px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     color: $priCol;
     position: relative;
-    background-size: cover;
-    background-position: center;
-    padding-top: 80px;
     @include media($tablet) {
         max-height: none;
         height: 100vh;
-        background-size: cover;
-        background-position: center;
     }
     @include media($desktop) {
-        margin-top: 0px;
         background-size: auto;
         height: calc(100vh);
         background-size: cover;
     }
     .hero-bucket {
-        position: absolute;
-        top: 150px;
-        text-align: center;
-        padding-right: 20px;
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 350px;
+        position: relative;
+        z-index: 1;
         @include media($tablet) {
-            padding-left: 0px;
-            padding-right: 0px;
-            top: 150px;
-            max-width: 580px;
+            padding-top: 35vh;  
         }
-        @include media($desktop) {
-            width: 40vw;
-            top: 25vh;
-            left: 5vw;
-        }
-    }
-    .hero-logo {
-        svg {
-            width: 280px;
-            @include media($tablet) {
-                width: auto;
-                height: auto;
-            }
-        }
-    }
-    .hero-split-line {
-        width: 126px;
-        height: 1px;
-        background: $secCol;
-        margin: 0 auto;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-    .hero-drname {
-        color: white;
-        letter-spacing: 6px;
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 600;
-        @include media($tablet) {
-            font-size: 22px;
-        }
-    }
-    .hero-split-line-small {
-        width: 32px;
-        height: 1px;
-        background: $secCol;
-        margin: 0 auto;
-        margin-top: 15px;
-        margin-bottom: 20px;
     }
     .taglines-title {
         color: white;
         font-family: $secFont;
         text-align: center;
-        @include font(28px, 1em, 300);
+        @include font(19px, 1.1em, 300);
         @include media($tablet) {
-            @include font(37px, 1.3em, 300);
-            margin-top: 0;
+            margin: 0 auto;
+            @include font(56px, 1.1em, 300);
+            max-width: 900px;
         }
         @include media($desktop) {
-            max-width: 430px;
-            margin: 0 auto;
-            height: 96px;
+        }
+    }
+    .taglines-subtitle {
+        color: white;
+        text-align: center;
+        font-style: italic;
+        font-family: $priFont;
+        @include font(16px, 1.1em, 100);
+            padding-top: 20px;
+            padding-bottom: 30px;
+        @include media($tablet) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            @include font(24px, 1.1em, 100);
         }
     }
     .button {
         border: none;
-        margin-top: 30px;
-        background: rgb(191,167,121);
-        background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
         @include media($tablet) {
             margin-bottom: 0;
         }
     }
-    .mobile-button {
-        display: block;
-        background-color: $priCol;
-        max-width: 240px;
-        margin: 0 auto;
-        margin-top: 40px;
-        @include media($desktop) {
-            display: none;
-        }
-    }
 }
 
 
-.home-hero-buttons {
-    background: rgb(191,167,121);
-    background: linear-gradient(0deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
-    height: 100vh;
-    width: 60px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: none;
-    @include media($tablet) {
-        display: flex;
-    }
-    a {
-        display: block;
-        margin: 10px 0;
-    }
-}
+
 
 
 .parallax-home-wrapper {
@@ -152,212 +77,257 @@
     padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
-    @include font(20px, 1.5em);
     @include media($tablet) {
-        @include font(26px, 1.5em);
+        text-align: left;
         padding-top: 180px;
-        padding-bottom: 200px;
-        p {
-            margin: 0 auto;
-            max-width: 825px;
+        padding-bottom: 240px;
+    }
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        @include font(19px, 1.5em);
+        @include media($tablet) {
+            margin-bottom: 30px;
+            @include font(46px, 1.2em);
+            max-width: 800px;
         }
     }
-    .icon-welcome-flower {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 196px;
-        height: 297px;
-        background: url('images/icon-welcome-flower.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: -1;
-    }
-    .icon-doctor-flower {
-        position: absolute;
-        bottom: -400px;
-        right: 0;
-        width: 333px;
-        height: 503px;
-        background: url('images/icon-doctor-flower.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: -1;
-        display: none;
+    span {
+        @include font(18px, 1.5em, 100);
+        font-style: italic;
+        padding-bottom: 20px;
+        display: block;
         @include media($tablet) {
-            display: block;
-            bottom: -400px;
-            width: 333px;
-            height: 503px;
+            padding-bottom: 30px;
+            @include font(26px, 1.5em, 100);
+            max-width: 750px;
+        }
+    }
+    p {
+        max-width: 910px;
+        // @include font(20px, 1.5em);
+    }
+}
+
+
+.home-our-doctors-headline {
+    position: relative;
+    h2 {
+        background-color: white;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include media($desktop) {
+            padding-left: 40px;
+            padding-right: 40px;
+            left: -200px;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 1px;
+        background: $priCol;
+        margin: 0 auto;
+        @include media($tablet) {
+            top: 50px;
         }
     }
 }
 
 .home-about-wrap {
-    max-width: $full;
     margin: 0 auto;
-}
-.home-about {
-    display: flex;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: 100vw auto;
-    margin-bottom: 20px;
-    background-position: bottom left;
-
+    margin-top: 40px;
     @include media($tablet) {
-        background-size: auto;
-        min-height: 700px;
-        background-position: top left;
-        align-items: center;
-        margin-bottom: 150px;
+        margin-top: 60px;
     }
-   
-    .about-content {
-        padding-top: 40px;
-        padding-bottom: 110vw;
-        text-align: left;
-        padding-left: 20px;
-        padding-right: 20px;
+    @include media($desktop) {
+        display: flex;
+    }
+}
+
+.home-about {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 390px;
+    box-shadow: $shadow;
+    @include media($tablet) {
+        height: 890px;
+   }
+   @include media($desktop) {
+       width: 50%;
+   }
+}
+
+
+
+.home-about-slideshow {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    height: auto;
+    @include media($desktop) {
+        margin-top: 100px;
+       width: 50%;
+    }
+}
+
+
+
+.doc-slides {
+    padding: 40px 20px;
+    text-align: left;
+    color: white;
+    @include media($tablet) {
+        padding: 60px;
+    }
+    img {
+        box-shadow: $shadow;
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
         @include media($tablet) {
-            padding-bottom: 0;
-            padding-top: 700px;
+            margin-right: 40px;
+            margin-bottom: 60px;
         }
-        @include media($desktop) {
-            padding-left: 50%;
-            padding-top: 0;
-        }
-        @include media($desktop + 100) {
-            padding-left: 55%;
-            padding-right: 40px;
-            padding-top: 0;
-        }
-    }
-    p {
-        max-width: 500px;
     }
     h2 {
-        text-align: center;
-        max-width: 550px;
-        margin-top: 20px;
+        color: white;
+        display: block;
+        top: 40px;
+        margin-top: 0;
+        position: relative;
+        max-width: 650px;
+    }
+    .intro {
+        font-size: 22px;
+        line-height: 39px;
+        font-style: italic;
         margin-bottom: 20px;
-        text-transform: uppercase;
-        color: $priCol;
-        font-family: $secFont;
-        @include font(47px);
-
-        @include media($tablet) {
-            @include font(73px);
-        }
+        font-weight: 300;
     }
-    div.subheadline {
-        @include font(26px);
-        color: $priCol;
-        font-family: $secFont;
-        text-transform: uppercase;
-        padding-top: 10px;
-        text-align: center;
-        display: block;
-        font-size: 21px;
-        letter-spacing: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .bio {
+        font-weight: 300;
     }
-    .s-line {
-        width: 80px;
-        height: 1px;
-        background: $priCol;
-        @include media($tablet) {
-            width: 180px;
-        }
-    }
-    a {
-        display: block;
-        text-transform: uppercase;
-        text-decoration: none;
-        margin: 0 auto;
-        text-align: center;
+    .button {
         margin-top: 40px;
-        color: $priAlt;
     }
-    .split-line {
-        width: 40px;
-        height: 2px;
-        background-color: $priAlt;
-        margin: 0 auto;
-        margin-top: 5px;
-        // margin-left: 25px;
-        border-radius: 2px;
+    
+}
+
+.doctors-splide {
+    .splide__arrows {
+        position: absolute !important;
+        display: flex;
+        width: 170px;
+        bottom: -40px;
+        @include media($desktop) {
+            bottom: -100px;
+        }
+    }
+    .splide__arrow {
+        position: absolute;
+        width: 4em;
+        height: 4em;
+        border-radius: 0;
+        background-color: rgba($secCol, 1);
+        svg {
+            path {
+                fill: white;
+            }
+        }
     }
 }
+
 
 .home-testis {
     min-height: 400px;
     padding-bottom: 60px;
     padding-top: 60px;
+    position: relative;
     @include media($tablet) {
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+    .home-testi_head_stars {
+        font-family: $secFont;
+        color: $secCol;
+        @include media($tablet) {
+            font-size: 21px;
+        }
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 180px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 1px;
+        background: $priCol;
+        margin: 0 auto;
+    }
+    h2.home-testi_head_trusted {
+        background-color: white;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 60px;
+        @include media($tablet) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    li p {
+        font-size: 18px !important;
+        line-height: 30px;
+        max-width: $desktop;
+        margin: 0 auto;
+        color: #5A5A5A;
+    }
+    li h2 {
+        margin-top: 40px;
+        @include media($tablet) {
+            font-size: 26px;
+        }
+    }
+    li h3 {
+        margin-bottom: 20px;
+        @include media($tablet) {
+            font-size: 20px;
+        }
+    }
+    .button {
+        margin-top: 100px;
     }
     .splide__arrows {
         display: none;
     }
     .splide__pagination {
+        bottom: -50px;
         button {
             background: transparent;
-            border: 1px solid $priCol;
-            width: 14px;
-            height: 14px;
+            border: 1px solid $secCol;
+            width: 50px;
+            height: 1px;
+            border-radius: 0;
         }
         .is-active {
-            background: $priCol;
+            border: 2px solid $secCol;
             transform: none;
         }
-    }
-    strong {
-        font-family: $secFont;
-        font-style: normal;
-        font-size: 28px;
-        font-weight: 400;
-        padding-top: 30px;
-        padding-bottom: 20px;
-        display: block;
-    }
-    em {
-        font-family: $secFont;
-        font-style: normal;
-        padding-top: 20px;
-        padding-bottom: 30px;
-        display: block;
-        font-size: 13px;
-    }
-    li p {
-        font-size: 18px !important;
-        font-family: $highFont;
-        font-style: italic;
-        max-width: $desktop;
-        margin: 0 auto;
-        color: #5A5A5A;
-    }
-    a.custom-butn {
-        display: block;
-        padding-top: 30px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $priAlt;
-    }
-    .testi-split-line {
-        width: 40px;
-        height: 2px;
-        border-radius: 2px;
-        background: $priAlt;
-        margin: 0 auto;
-        margin-top: 5px;
-    }
-    img {
-        width: 278px;
-        height: 37px;
     }
 }
 
@@ -562,7 +532,6 @@
         // width: 276px !important;
         // padding-left: 40px;
         // padding-right: 40px;
-
     }
 }
 
@@ -730,6 +699,27 @@
     }
 }
 
+
+
+.logos-memeberships {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include media($tablet) {
+        justify-content: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    img {
+        margin: 10px 20px;
+        @include media($tablet) {
+            margin: 20px 20px
+        }
+    }
+}
 
 
 

@@ -10,9 +10,10 @@ var bLazy = new Blazy({
 var mobyMenu = new Moby({
   menu       : $('#main-nav'), // The menu that will be cloned
   mobyTrigger: $('.menu-trigger'), // Button that will trigger the Moby menu to open
-  subMenuOpenIcon  : '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
-  subMenuCloseIcon : '<i class="fa fa-chevron-down" aria-hidden="true"></i>',
-  menuClass    : 'grow-out',
+  subMenuOpenIcon  : '<i class="fa fa-plus"></i>',
+  subMenuCloseIcon : '<i class="fa fa-minus"></i>',
+  menuClass    : 'left-side',
+  template         : '<div class="moby-wrap"><div class="moby-close"><span class="moby-close-icon"></span></div><div class="moby-menu"></div></div>'
 });
 
 
@@ -59,23 +60,37 @@ if (homepageSlideShows) {
 }
 
 
-/* Mobile Slideshow */
+/* Doctors Slideshow */
 
-var homepageSlideShowsMobile = document.querySelector('.mobile-splide');
+var doctorSlideShows = document.querySelector('.doctors-splide');
 
-if (homepageSlideShowsMobile) {
-    new Splide( '.mobile-splide', {
+if (doctorSlideShows) {
+    new Splide( '.doctors-splide', {
         type   : 'loop',
         perPage: 1,
-        arrows: false,
-        pagination: false,
-        focus  : 'center',
-        padding: {
-            right: '40px',
-            left : '40px',
-          },
     } ).mount();
 }
+
+
+
+
+/* Mobile Slideshow */
+
+// var homepageSlideShowsMobile = document.querySelector('.mobile-splide');
+
+// if (homepageSlideShowsMobile) {
+//     new Splide( '.mobile-splide', {
+//         type   : 'loop',
+//         perPage: 1,
+//         arrows: false,
+//         pagination: false,
+//         focus  : 'center',
+//         padding: {
+//             right: '40px',
+//             left : '40px',
+//           },
+//     } ).mount();
+// }
 
 
 
@@ -85,62 +100,68 @@ $(function () {
 
     /* Homepage Tabs */
 
-    $('.tab-top:first-of-type').addClass('active');
-    $('.tab-pane:first-of-type').addClass('active');
+    // $('.tab-top:first-of-type').addClass('active');
+    // $('.tab-pane:first-of-type').addClass('active');
 
-    function switchBetweenTabs() {
-      var tabElement = document.querySelectorAll('.tab-top');
+    // function switchBetweenTabs() {
+    //   var tabElement = document.querySelectorAll('.tab-top');
 
-      tabElement.forEach( function (tab) {
-          tab.addEventListener('click', onTabClick, false);
-      });
+    //   tabElement.forEach( function (tab) {
+    //       tab.addEventListener('click', onTabClick, false);
+    //   });
 
-      function onTabClick(event) {
-        event.preventDefault();
-        // find all active tabs
-        var activeTabs = document.querySelectorAll('.active');
-        // remove active from currently active tabs
-        for (var i = 0; i < activeTabs.length; i++) {
-            activeTabs[i].className = activeTabs[i].className.replace(' active', '');
-        }
-        // console.log(event);
-        // adds active class to new tab
-        event.target.className += ' active';
-        event.target.parentElement.className += ' active';
+    //   function onTabClick(event) {
+    //     event.preventDefault();
+    //     // find all active tabs
+    //     var activeTabs = document.querySelectorAll('.active');
+    //     // remove active from currently active tabs
+    //     for (var i = 0; i < activeTabs.length; i++) {
+    //         activeTabs[i].className = activeTabs[i].className.replace(' active', '');
+    //     }
+    //     // console.log(event);
+    //     // adds active class to new tab
+    //     event.target.className += ' active';
+    //     event.target.parentElement.className += ' active';
 
-        // adds active class to new tab content
-        document.getElementById(event.target.href.split('#')[1]).className += ' active';
-      }
-    }
+    //     // adds active class to new tab content
+    //     document.getElementById(event.target.href.split('#')[1]).className += ' active';
+    //   }
+    // }
 
-    switchBetweenTabs();
+    // switchBetweenTabs();
 
-    /* Sticky stickyMenuTrigger  */
 
-    var stickyMenuTrigger = document.querySelector(
-        ".sticky-trigger"
-    );
+    /* Duplicate Masthead and Sticky Navigation */
+    let header = document.querySelector('.site-header');
+    let masthead = document.querySelector('.masthead');
+    let cloneMast = masthead;
+    // let cloneMast = {...masthead};
+    
 
-    if (stickyMenuTrigger) {
+    cloneMast.classList.add('sticky-navigtaion');
+    header.appendChild(cloneMast)
+    console.log(cloneMast);
+
+    if (cloneMast) {
         (function () {
             function makeSticky(item) {
-                item.classList.add("sticky-navigation");
+                item.classList.add("stuck");
             }
 
             function removeSticky(item) {
-                item.classList.remove("sticky-navigation");
+                item.classList.remove("stuck");
             }
 
-            function stickyFooter() {
+            function stickyNav() {
                 if (window.pageYOffset > 200) {
-                    makeSticky(stickyMenuTrigger);
+                    makeSticky(cloneMast);
                 } else {
-                    removeSticky(stickyMenuTrigger);
+                    removeSticky(cloneMast);
                 }
             }
 
-            stickyFooter();
-            window.addEventListener("scroll", stickyFooter);
+            stickyNav();
+            window.addEventListener("scroll", stickyNav);
         })();
     }
 
@@ -212,24 +233,11 @@ if (contactPageMap) {
 }
 
 
-var herosection = document.querySelector(".block-hero");
-if(herosection) {
-  var inside =  document.querySelector(".inside");
-  var iconButtons = document.querySelectorAll(".inside-hero-buttons a");
+/* Video Hack  */
 
-  if (inside.classList.contains('botox')) {
-    iconButtons[0].classList.add('active')
-  } 
-
-  if (inside.classList.contains('breast')) {
-    iconButtons[1].classList.add('active')
-  } 
-
-  if (inside.classList.contains('body')) {
-    iconButtons[2].classList.add('active')
-  } 
-
-  if (inside.classList.contains('face')) {
-    iconButtons[3].classList.add('active')
-  } 
+var videoBlock = document.querySelector(".block-video-with-bg");
+if(videoBlock) {
+  var videoDivBg =  document.createElement('div');
+  videoDivBg.classList.add('videoDivBg');
+  videoBlock.appendChild(videoDivBg);
 }

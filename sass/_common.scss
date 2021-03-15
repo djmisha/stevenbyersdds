@@ -72,34 +72,32 @@ img.aligncenter,
     text-decoration: none;
     text-transform: uppercase;
     font-family: $priFont;
-    color: $priCol;
-    font-size: 14px;
+    color: white;
+    font-size: 16px;
     line-height: 1em;
     border-radius: 0px;
-    padding: 14px 40px 14px 40px !important;
+    padding: 18px 40px 18px 40px !important;
     border: none;
-
-
-    background: #d8c095; /* Old browsers */
-    background: -moz-linear-gradient(top,  #d8c095 0%, #ffe8be 32%, #ffe8be 32%, #ffe8be 49%, #ffe8be 59%, #d1b175 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8c095', endColorstr='#d1b175',GradientType=0 ); /* IE6-9 */
-
+    background-color: $secCol;
     transition: all ease-out 0.45s;
     @include media($tablet) {
         text-transform: uppercase;
     }
     &:hover {
         @include media($desktop) {
-            background: -moz-linear-gradient(top,  #d8c095 0%, #ffe8be 32%, #ffe8be 32%, #ffe8be 49%, #ffe8be 59%, #d1b175 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom,  #d8c095 0%,#ffe8be 32%,#ffe8be 32%,#ffe8be 49%,#ffe8be 59%,#d1b175 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8c095', endColorstr='#d1b175',GradientType=0 ); /* IE6-9 */
-
             // background: #d8c095; 
-
         }
+    }
+    &.button-light {
+        background-color: transparent;
+        border: 1px solid $secCol;
+        color: $secCol;
+        &:hover {
+            @include media($desktop) {
+            color: white;
+            background-color: $secCol;
+        }
+    }
     }
 }
 

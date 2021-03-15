@@ -11,67 +11,105 @@
     left: 0px;
     right: 0px;
     z-index: 1000;
+    background: #13243B;
+    background-image: linear-gradient(to bottom, #13243b, #192c45, #1f3550, #243d5a, #2a4665);
     @include media($tablet) {
-    }
-    @include media($desktop) {
+        background: transparent;
+        background-image: none;
         width: calc( 100vw - 80px);
         top: 20px;
         left: 40px;
         right: 40px;
         display: flex;
     }
-    .mast-phone {
-        padding-right: 20px;
+    .mast-logo {
+        padding-left: 20px;
         @include media($tablet) {
-            padding-right: 60px;
-            .inside & {
-                padding-right: 20px;
+            padding-left: 0;
+        }
+        svg {
+            width: 210px;
+            @include media($tablet) {
+                width: 270px;
             }
         }
+    }
+    .mast-phone {
+        display: none;
+        @include media($tablet) {
+            display: block;
+            position: absolute;
+            right: 120px;
+        }
         a {
+            font-weight: 100;
             font-size: 16px;
             color: white;
             text-decoration: none;
-            letter-spacing: 3px;
-            font-weight: bold;
-            .inside & {
-                color: $priCol;
-            }
-            .tmpl_type_page_no_header & {
-                color: white;
-            }
+        }
+        &:nth-of-type(2) {
+            display: none;
         }
     }
 }
 
-
-.sticky-trigger {
-    padding-top: 0;
-    padding-bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // height: 75px;
-    // box-shadow: 0 3px 6px rgba(black, 0.16);
-    background: rgba($color: $priCol, $alpha: 1);
+.masthead.sticky-navigtaion {
+    width: 100%;
+    background-color: white;
     position: fixed;
-    top: -140px;
-    // right: 0;
-    left: -18px;
-    z-index: 100;
-    transform: skew(-30deg);
-    transition: top .45s ease;
-    &.sticky-navigation {
-        top: 0px;
+    top: -100px;
+    left: 0;
+    right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: $shadow;
+    transition: top .25s ease-in-out;
+    &.stuck {
+        top: 0;
     }
-    .menu-trigger {
-        height: 60px;
-        width: 100px;
-        span {
-            background-color: white !important;
+    .mast-logo svg {
+        path, rect {
+            fill: $priAlt;
         }
     }
+    .mast-phone a {
+        color:  $priAlt;
+    } 
+    .menu-trigger .nav-hamburger span {
+        background:  $priAlt;
+    }
 }
+
+
+
+
+// .sticky-trigger {
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     // height: 75px;
+//     // box-shadow: 0 3px 6px rgba(black, 0.16);
+//     background: rgba($color: $priCol, $alpha: 1);
+//     position: fixed;
+//     top: -140px;
+//     // right: 0;
+//     left: -18px;
+//     z-index: 100;
+//     transform: skew(-30deg);
+//     transition: top .45s ease;
+//     &.sticky-navigation {
+//         top: 0px;
+//     }
+//     .menu-trigger {
+//         height: 60px;
+//         width: 100px;
+//         span {
+//             background-color: white !important;
+//         }
+//     }
+// }
 
 /* Menu Trigger  */
 
@@ -144,39 +182,39 @@
 
 
 
-.inside-hero-buttons {
-    background: url('images/bg-inside-buttons.svg');
-    // background: rgb(191,167,121);
-    // transform: skew(-30deg);
-    // background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
-    height: 70px;
-    width: 287px;
-    position: absolute;
-    right: 0;
-    top: calc(100vh - 68px);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    display: none;
-    @include media($tablet) {
-        display: flex;
-        z-index: 111;
-    }
-    a {
-        display: block;
-        margin: 0 3px;
-        padding: 2px;
-        border-radius: 50%;
-        border: 2px solid transparent;
-        &:hover, &.active {
-            border: 2px solid #A8936B;
-        }
-        &:last-of-type {
-            margin-right: 20px;
-        }
-    }
-}
+// .inside-hero-buttons {
+//     background: url('images/bg-inside-buttons.svg');
+//     // background: rgb(191,167,121);
+//     // transform: skew(-30deg);
+//     // background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%); 
+//     height: 70px;
+//     width: 287px;
+//     position: absolute;
+//     right: 0;
+//     top: calc(100vh - 68px);
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: flex-end;
+//     display: none;
+//     @include media($tablet) {
+//         display: flex;
+//         z-index: 111;
+//     }
+//     a {
+//         display: block;
+//         margin: 0 3px;
+//         padding: 2px;
+//         border-radius: 50%;
+//         border: 2px solid transparent;
+//         &:hover, &.active {
+//             border: 2px solid #A8936B;
+//         }
+//         &:last-of-type {
+//             margin-right: 20px;
+//         }
+//     }
+// }
 
 
 

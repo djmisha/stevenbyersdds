@@ -10,24 +10,11 @@
 
     <title><?php wp_title(""); ?></title>
 
-    <?php if (!is_404()): ?>
-
-		<?php miniCSS::url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap'); ?>
-        <!-- <link rel="stylesheet" href="https://use.typekit.net/aoz1zlk.css"> -->
-        <script src="https://use.typekit.net/aoz1zlk.js"></script>
-        <script>try{Typekit.load({ async: false });}catch(e){}</script>
-        
-    <?php endif; ?>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Sen:wght@400;700&display=swap" rel="stylesheet">
 
 
     <?php wp_head(); ?>
-
-    <?php // Analytics and Tags : WP Admin Site settings > Admin
-        $google_analytics = get_field("google_analytics", 'option');
-        if (!empty($google_analytics)): echo $google_analytics;
-        else: // Do nothing
-        endif;
-    ?>
 
 </head>
 
@@ -37,30 +24,18 @@
     
     <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>">
         <div class="masthead">
-            <div class="menu-trigger" id="moby-button">
-                <div class="nav-hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <div class="mast-logo"> 
+                <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo'); ?></a>
             </div>
 
-          <?php if( have_rows('locations', 'option')): ?>
+            <?php if( have_rows('locations', 'option')): ?>
               <?php while( have_rows('locations', 'option')): the_row();
                 $phone = get_sub_field('phone');
                 $tel = str_replace(array('.', ',', '-', '(', ')', ' '), '' , $phone);
-            ?>
-              <?php
-                if($phone) echo '<div class="mast-phone">
-                <a href="tel:+1' . $tel . '">' . $phone . '</a></div>';
-                ?>
+                if($phone) echo '<div class="mast-phone"> <a href="tel:+1' . $tel . '">' . $phone . '</a></div>'; ?>
               <?php endwhile; ?>
-          <?php endif; ?>
+            <?php endif; ?>
 
-        </div>
-       
-        <div class="sticky-trigger">
             <div class="menu-trigger" id="moby-button">
                 <div class="nav-hamburger">
                     <span></span>
@@ -70,6 +45,17 @@
                 </div>
             </div>
         </div>
+       
+        <!-- <div class="sticky-trigger">
+            <div class="menu-trigger" id="moby-button">
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div> -->
 
         <nav id="main-nav">
             <?php wp_nav_menu(array(
@@ -82,16 +68,10 @@
 
 
     <?php if (is_page_template('page-no-header.php')) { // Logo inside pages with No header ?>
-        <!-- <div class="inside-logo"> <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('inside-logo'); ?> </a></div> -->
-    <!-- <div class="inside-hero-buttons">
-        <?php if(have_rows('home_procedures', 87)): ?>
-            <?php while(have_rows('home_procedures', 87)): the_row(); ?>
-                <a href="<?php the_sub_field('link'); ?>">
-                   <img src="<?php the_sub_field('small_icon'); ?>" alt=" <?php the_sub_field('name'); ?> icon">
-                </a>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </div> -->
+       
+          <!-- <div class="breadcrumb-wrap">
+                <div class="site-crumbs"><?php echo __salaciouscrumb(); ?></div>
+            </div> -->
     <?php } ?>
 
 
@@ -100,7 +80,9 @@
 
 <?php if (!is_front_page() && !is_page_template('page-no-header.php')) { // Headers for inside pages: Contact, Blog, Single, Gallery  ?>
         <section class="internal-header-images" <?php //header_images(); ?>>
-            <div class="internal-logo"> <?php echo inline_svg('logo-inside'); ?> </div>
+            <div class="internal-logo"> 
+                <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo-inside'); ?></a>
+            </div>
             <!-- <div class="breadcrumb-wrap">
                 <div class="site-crumbs"><?php echo __salaciouscrumb(); ?></div>
             </div> -->

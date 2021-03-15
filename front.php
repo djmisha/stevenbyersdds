@@ -21,22 +21,11 @@
     </div>
 
     <div class="hero-bucket">
-        <!-- <div class="hero-logo"> <?php echo inline_svg('logo-hero'); ?> </div> -->
-        <div class="hero-split-line"></div>
-        <div class="hero-drname">Dr. Larry Lickstein, MD</div>
-        <div class="hero-split-line-small"></div>
         <div class="taglines-title"><?php the_field('headline'); ?></div>
-        <a href="" class="button" rel="noreferrer noopener">Virtual Consults Available</a>
+        <div class="taglines-subtitle"><?php the_field('subheadline'); ?></div>
+        <a href="<?php bloginfo('url'); ?>/gallery" class="button">View Patient Gallery</a>
     </div>
-    <div class="home-hero-buttons">
-        <?php if(have_rows('home_procedures')): ?>
-            <?php while(have_rows('home_procedures')): the_row(); ?>
-                <a href="<?php the_sub_field('link'); ?>">
-                   <img src="<?php the_sub_field('small_icon'); ?>" alt=" <?php the_sub_field('name'); ?> icon">
-                </a>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
+   
 </div>
 
 
@@ -45,33 +34,46 @@
     
 
     <section class="home-welcome">
-        <?php the_field('doctor_content'); ?>
-        <!-- <div class="icon-welcome-flower"></div> -->
-        <!-- <div class="icon-doctor-flower"></div> -->
+        <h2><?php the_field('welcome_headline'); ?></h2>
+        <span><?php the_field('welcome_subheadline'); ?></span>
+        <?php the_field('welcome_content'); ?>
     </section>
 
 
+
+
+    <div class="home-our-doctors-headline">
+        <h2>Our Doctors</h2>
+    </div>
+
     <div class="home-about-wrap">
-        <div class="home-about b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-doctor.jpg">
-            <div class="about-content">
-                <div class="subheadline">
-                    <div class="s-line"></div>
-                    <div class="">&nbsp;&nbsp; MEET &nbsp;&nbsp;</div>
-                    <div class="s-line"></div>
-                </div>
-                <h2>Dr. Lickstein</h2>
-                <?php the_field('practice_content'); ?>
-                <div class="butn-wrap">
-                    <a href="<?php the_sub_field('doctor_link'); ?>">read more</a>
-                    <div class="split-line"></div>
+        <div class="home-about b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/home-docs-bg.jpg"> </div>
+        <div class="home-about-slideshow b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-docs-slide.jpg">
+           <div class="doctors-splide splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <?php if(have_rows('doctors')): ?>
+                            <?php while(have_rows('doctors')): the_row(); ?>
+                                <li class="splide__slide">
+                                    <div class="doc-slides">
+                                        <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
+                                        <h2><?php the_sub_field('name'); ?></h2>
+                                        <div class="clear"></div>
+                                        <div class="intro"><?php the_sub_field('intro'); ?></div>
+                                        <div class="bio"><?php the_sub_field('bio'); ?></div>
+                                        <a href="<?php the_sub_field('link'); ?>" class="button button-light">View My Bio</a>
+                                    </div>
+                                </li>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
-
+<!-- 
      <div class="the-home-tabs-shadow">
-        <!-- <div class="icon-welcome-flower-2"></div> -->
 
          <div class="the-home-tabs-desktop">
              <?php if(have_rows('home_procedures')): ?>
@@ -104,10 +106,10 @@
                  </div>
              <?php endif; ?>
          </div>  
-    </div>
+    </div> -->
 
 
-
+<!-- 
 
      <div class="the-home-tabs-mobile">
          <?php if(have_rows('home_procedures')): ?>
@@ -136,11 +138,14 @@
                  
              </div>
          <?php endif; ?>
-     </div>  
+     </div>   -->
 
 
     <section class="home-testis">
-        <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php bloginfo('template_directory'); ?>/images/icon-quote.png" alt="specials package image">
+        <div class="home-testi_head">
+            <span class="home-testi_head_stars">4.9 Star Average  out of 684 Reviews</span>
+            <h2 class="home-testi_head_trusted">Trusted & Highly Recommended</h2>
+        </div>
         <div class="testi-splide splide">
             <div class="splide__track">
                 <ul class="splide__list">
@@ -152,20 +157,26 @@
                 </ul>
             </div>
         </div>
-        <a href="<?php the_field('read_more_reviews_button'); ?>" class="custom-butn">Read More Reviews</a>
-        <div class="testi-split-line"></div>
+        <a href="<?php the_field('read_more_reviews_button'); ?>" class="button button-light">Read More Reviews</a>
     </section>
 
 
-
-    <div class="home-ig-feed">
-        <span><i class="fab fa-instagram"></i> Follow Us <a href="https://www.instagram.com/elleaestheticarts/" target="_blank" rel="nofollow noopener">@elleaestheticarts</a> </span> 
-        <div class="the-ig-feedme">
-            <?php echo do_shortcode('[wp_my_instagram username="elleaestheticarts" limit="5" layout="3" size="large" target="_blank" link=""]'); ?>
-        </div>
-    </div>
+   
 
 </div>
+
+
+<div class="logos-memeberships">
+    <?php if (have_rows('logos')): ?>
+        <?php while (have_rows('logos')): the_row(); ?>
+            <div class="single-logo">
+                <img data-src="<?php the_sub_field('logo'); ?>" alt="Memeberships logo" class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
+
+
 
 
 

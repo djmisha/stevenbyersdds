@@ -1,5 +1,5 @@
 footer {
-    background-color: $priCol;
+    // background-color: $priCol;
     position: relative;
 }
 
@@ -19,239 +19,156 @@ footer {
 }
 
 
-.top-polygon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: url('images/svg/bg-footer-polygon.svg');
-    background-size: 110% auto;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-position-y: -1px;
-    @include media($desktop) {
-        height: 150px;
-    }
-}
-
 
 .upper-footer {
     background-size: cover;
     position: relative;
     color: white;
-    padding-top: 60px;
-    padding-bottom: 80px;
     @include media($tablet) {
         min-height: 900px;
         padding-top: 110px;
+        padding-bottom: 110px;
     }
-    @include media($desktop) {
-        padding-top: 8vw;
-    }
-    span.headline {
-        text-align: center;
-        text-transform: uppercase;
-        color: white;
-        letter-spacing: 8px;
-        @include media($tablet) {
-            font-size: 57px;
-        }
-    }
-    div.subheadline {
-        padding-top: 10px;
-        text-align: center;
-        display: block;
-        font-size: 21px;
-        letter-spacing: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .s-line {
-        width: 60px;
-        height: 1px;
-        background: $secCol;
-    }
-}
-
-
-.footer-locations {
-    list-style: none;
-    @include media($desktop) {
-        margin-bottom: 0;
-        text-align: center;
-    }
-    li {
-        margin-top: 60px;
-        position: relative;
-        @include media($desktop) {
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-    .phone {
-        margin-top: 50px;
-        @include font(18px);
-        margin-bottom: 25px;
-        letter-spacing: 3px;
-    }
-    .directions a {
-        letter-spacing: 3px;
-        @include media($tablet) {
-            display: flex;
-            justify-content: center;
-            .city {
-                padding-left: 10px;
-            }
-        }
-    }
-}
-
-
-.footer-social {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    @include media($tablet) {
-        margin-top: 50px;
-        margin-bottom: 10px;
-        justify-content: center;
-    }
-    @include media($desktop) {
-        margin-top: 20px;
-        justify-content: flex-end;
-    }
-    a {
-        display: block;
-        text-align: left;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: $priTrans;
-        color: $secCol !important;
-        width: 45px;
-        height: 45px;
-        text-decoration: none !important;
-        &:hover {
-            color: lighten($secCol, 10%) !important;
-        }
-    }
-    span {
+    .footer-logo{
         display: none;
-    }
-    i {
-        font-size: 32px;
-        position: relative;
-    }
-}
-
-
-.footer-flex {
-    @include media($tablet) {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    @include media($desktop) {
-        display: flex;
-        justify-content: space-between;
-        > div {
-            width: 48%;
-        }
-    }
-}
-
-.footer-sign-up {
-    max-width: 600px;
-    text-align: left;
-    span {
-        @include font(15px, 16px);
-    }
-    form {
-        margin-top: 20px;
         @include media($tablet) {
-            display: flex;
-            align-items: center;
-            justify-content: start;
-        }
-        .type-singlelinetext {
-            margin-bottom: 10px;
-            @include media($tablet) {
-                margin-bottom: 0;
-                margin-right: 10px !important;
-            }
-            input {
-                border: 1px solid rgba($secCol, .4) !important;
-                margin-bottom: 0 !important;
-                background: transparent !important;
-                color: #fff !important;
-            }
-        }
-        .type-submitbutton {
-            margin-top: 0 !important;
-            // margin: 0 auto;
-            text-align: center;
-            input {
-                color: $priCol !important;
-            }
+            display: block;
         }
     }
 }
 
+// .middle-footer {
+//     width: 100%;
+//     background: #13243B;
+//     background-image: linear-gradient(to bottom, #13243b, #192c45, #1f3550, #243d5a, #2a4665);
+//     @include media($tablet) {
+//         padding-top: 40px;
+//         padding-bottom: 80px;
+//     }
+//     @include media($desktop) {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         height: 280px;
+//     }
+//     a {
+//         color: white;
+//         text-decoration: none;
+//     }
+//     .logo-phone {
+//         flex-direction: column;
+//         margin-bottom: 40px;
+//         @include media($desktop) {
+//             margin-bottom: 0px;
+//         }
+//         svg {
+//             margin: 0 auto;
+//             max-width: 300px;
+//             display: block;
+//         }
+//     }
+//     .mf-phone {
+//         display: block;
+//         margin-top: 5px;
+//         font-size: 25px;
+//         font-weight: 300;
+//     }
+// }
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    > div {
+        text-align: left;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+}
+
+// .footer-social {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//     @include media($tablet) {
+//         justify-content: center;
+//     }
+//     @include media($desktop) {
+//         justify-content: flex-end;
+//     }
+//     a {
+//         display: block;
+//         text-align: left;
+//         text-decoration: none;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         transition: $priTrans;
+//         color: white;
+//         width: 45px;
+//         height: 45px;
+//         text-decoration: none !important;
+//         &:hover {
+//             color: $secCol;
+//         }
+//     }
+//     span {
+//         display: none;
+//     }
+//     i {
+//         font-size: 32px;
+//         position: relative;
+//     }
+// }
 
 .lower-footer {
-    color: white;
-    @include font(15px, 1.2em);
+    color: $priCol;
+    background-color: #FCFCFC;
+    @include font(12px, 1.3em);
     font-weight: 100;
     padding-top: 50px;
-    padding-bottom: 100px;
-    @include media($desktop) {
+    padding-bottom: 50px;
+    @include media($tablet) {
+    @include font(15px, 1.7em);
         padding-top: 80px;
         padding-bottom: 80px;
     }
     .copyright {
         text-align: center;
         @include media($tablet) {
-            text-align: right;
-        }
-    }
-    a {
-        text-decoration: none;
-        color: white;
-        &:hover {
-            text-decoration: underline;
+            // display: flex;
+            // justify-content: space-between;
         }
     }
     .disclaimer {
-        // margin-bottom: 10px;
+        @include font(12px, 1.5em);
+        font-style: italic;
+    }   
+    a {
+        text-decoration: none;
+        color: $priCol;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     .sig {
         padding-top: 40px;
         @include media($tablet) {
             padding-top: 60px;
         }
-        svg {
-            width: 25px;
-            height: 25px;
-            position: relative;
-            top: 5px;
-            margin-left: 8px;
-            path {
-                fill: white;
-            }
-        }
+        // svg {
+        //     width: 25px;
+        //     height: 25px;
+        //     position: relative;
+        //     top: 5px;
+        //     margin-left: 8px;
+        //     path {
+        //         fill: $priCol;
+        //     }
+        // }
     }
 }
 
@@ -261,13 +178,21 @@ footer {
 ===========================================*/
 
 .footer-contact-form {
-    .contact-form {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 0px 20px;
+    max-width: 945px;
+    background: rgba($color: #13243B, $alpha: 1);
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 10px;
+    @include media($tablet) {
+        background: rgba($color: #13243B, $alpha: .8);
+        padding: 60px;
+    }
+    .headline {
+        font-family: $secFont;
+        font-size: 21px !important;
+        color: white;
         @include media($tablet) {
-            padding: 0px 40px;
+            font-size: 26px !important;
         }
     }
   
@@ -278,14 +203,12 @@ footer {
         flex-wrap: wrap;
         justify-content: space-between;
         @include media($tablet) {
-            margin-top: 80px;
+            // margin-top: 80px;
         }
         .field-wrap {
-            // @include media($tablet) {
-                width: 49%;
-            // }
+            width: 48%;
         }
-        .type-selectbox.field-18.field-wrap {
+        .type-checkbox.field-26.field-wrap {
             width: 100%;
         }
         .type-textarea {
@@ -298,13 +221,14 @@ footer {
         .type-singlelinetext input,
         .type-selectbox select,
         .type-textarea textarea {
-            background: rgba($priCol, .3) !important;
+            // background: rgba($priCol, .3) !important;
+            background: transparent !important;
             border: none !important;
             color: white;
-            border: 1px solid rgba($secCol, .4) !important;
+            border-bottom: 1px solid rgba(white, 1) !important;
         }
         textarea {
-            height: 130px !important;
+            height: 80px !important;
         }
         .type-selectbox,
         .type-singlelinetext,
@@ -355,7 +279,6 @@ footer {
         }
         .submit-btn {
             margin-top: 10px;
-            color: $priCol;
             padding-left: 50px !important;
             padding-right: 50px !important;
         }
@@ -375,7 +298,7 @@ footer {
         span {
             display: block;
             margin-bottom: 40px;
-            color: $priCol;
+            color: white;
         }
         margin-bottom: 40px;
     }
