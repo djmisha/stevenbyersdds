@@ -41,7 +41,7 @@
 				<div class="icon">
 					<?php echo inline_svg('icon-map'); ?>
 				</div>
-				<div class="text">
+				<div class="i-text">
 					<strong>Steven J. Byers, DDS</strong><br />
 					4403 Marlborough Avenue<br />
 					San Diego, CA 92116<br />
@@ -53,21 +53,35 @@
 				<div class="icon">
 					<?php echo inline_svg('icon-direction'); ?>
 				</div>
-				<div class="text">Directions</div>
+				<div class="i-text">Directions</div>
 			</a>
 		</div>
-		<div class="phone"><a href="tel:+16192827060"><?php echo inline_svg('icon-phone'); ?> (619) 282-7060</a></div>
-		<div class="request"><a href=""><?php echo inline_svg('icon-chat'); ?> Request an Appointment</a></div>
+		<div class="phone">
+			<a href="tel:+16192827060">
+				<div class="icon">
+					<?php echo inline_svg('icon-phone'); ?> 
+				</div>
+				<div class="i-text">
+					(619) 282-7060
+				</div>
+			</a>
+		</div>
+		<div class="request">
+			<a href="">
+				<div class="icon"> <?php echo inline_svg('icon-chat'); ?></div>
+				<div class="i-text">Request an Appointment</div>
+			</a>
+		</div>
 	</section>
 
 
-	<!-- <div class="ratings-social">
+	<div class="ratings-social">
 		<div class="footer-social">
 			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" aria-label="Google" rel="nofollow noopener" target="_blank"><span>Google</span></a>
 			<a href="https://www.yelp.com/biz/steven-j-byers-dds-san-diego" aria-label="Yelp" rel="nofollow noopener" target="_blank"><span>Yelp</span></a>
 			<a href="https://www.facebook.com/stevenjbyersdds/" aria-label="Facebook" rel="nofollow noopener" target="_blank"><span>Facebook</span></a>
 		</div>
-	</div> -->
+	</div>
 
 	<section class="lower-footer">
 		<div class="copyright">
