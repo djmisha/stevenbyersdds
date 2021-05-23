@@ -7,7 +7,7 @@
 
 <footer class="site-footer">
 
-	<div class="upper-footer b-lazy will-parallax parallax-home-footer" data-src="<?php bloginfo('template_directory'); ?>/images/bg-contact.jpg">
+	<div class="upper-footer">
 <!-- 		
 		<div class="footer-logo">
 			<a href="<?php bloginfo('url'); ?>" title="Go to Homepage">
@@ -21,7 +21,10 @@
 		<div class="footer-contact-form" id="contact-form">
 			<span class="headline">Request an Appointment</span>
 			<div class="contact-form">
-				<?php echo do_shortcode('[aform name="contact-us"]'); ?>
+				<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true" ]
+'); ?>
+
+        
 			</div>		
 		</div>
 		

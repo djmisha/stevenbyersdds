@@ -7,6 +7,9 @@ var bLazy = new Blazy({
 
 /* Main Mobile Navigation */
 
+// TODO: Select Elements using Vanilla JS
+// var navigation = document.getElementById('#main-nav')
+
 var mobyMenu = new Moby({
   menu: $('#main-nav'), // The menu that will be cloned
   mobyTrigger: $('.menu-trigger'), // Button that will trigger the Moby menu to open

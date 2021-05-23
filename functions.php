@@ -50,7 +50,7 @@ function __themejs()
 {
     global $wp_scripts;
     //Required
-    wp_deregister_script('jquery');
+    // wp_deregister_script('jquery');
     wp_deregister_script('wp-embed'); // Disable wp-embed.js
 
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", false, "3.5.1", true);

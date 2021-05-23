@@ -56,7 +56,7 @@ h2,
 .headline {
     @include font(25px, 1.1em);
     @include media($tablet) {
-        @include font(36px, 1.2em);
+        @include font(40px, 1.2em);
     }
 }
 
