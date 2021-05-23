@@ -8,18 +8,18 @@
 <footer class="site-footer">
 
 	<div class="upper-footer b-lazy will-parallax parallax-home-footer" data-src="<?php bloginfo('template_directory'); ?>/images/bg-contact.jpg">
-		
+<!-- 		
 		<div class="footer-logo">
 			<a href="<?php bloginfo('url'); ?>" title="Go to Homepage">
 				<?php echo inline_svg('logo-footer'); ?>
 			</a>
-		</div>
+		</div> -->
 
 		<!-- <div class="top-polygon"></div> -->
 
 		
-		<div class="footer-contact-form">
-			<span class="headline">Request  A Consultation</span>
+		<div class="footer-contact-form" id="contact-form">
+			<span class="headline">Request an Appointment</span>
 			<div class="contact-form">
 				<?php echo do_shortcode('[aform name="contact-us"]'); ?>
 			</div>		
@@ -33,8 +33,6 @@
 
 	</div>	
 	
-
-
 	<section class="action-buttons">
 		<div class="address">
 			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" target="_blank">
@@ -67,31 +65,34 @@
 			</a>
 		</div>
 		<div class="request">
-			<a href="">
+			<a href="#contact-form">
 				<div class="icon"> <?php echo inline_svg('icon-chat'); ?></div>
 				<div class="i-text">Request an Appointment</div>
 			</a>
 		</div>
 	</section>
-
-
-	<div class="ratings-social">
+  
+	<section class="ratings-social">
+    <div class="footer-ratings">
+      <a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" target="_blank" rel="nofollow noopener">
+        <div class="icon"><?php echo inline_svg('icon-stars'); ?></div>
+        <p>5 Star Rating, Based on Patient Reviews</p>
+      </a>
+    </div>
 		<div class="footer-social">
-			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" aria-label="Google" rel="nofollow noopener" target="_blank"><span>Google</span></a>
-			<a href="https://www.yelp.com/biz/steven-j-byers-dds-san-diego" aria-label="Yelp" rel="nofollow noopener" target="_blank"><span>Yelp</span></a>
-			<a href="https://www.facebook.com/stevenjbyersdds/" aria-label="Facebook" rel="nofollow noopener" target="_blank"><span>Facebook</span></a>
+			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" aria-label="Google" rel="nofollow noopener" target="_blank"><span>Google</span><div class="icon"> <?php echo inline_svg('google-brands'); ?></div></a>
+			<a href="https://www.yelp.com/biz/steven-j-byers-dds-san-diego" aria-label="Yelp" rel="nofollow noopener" target="_blank"><span>Yelp</span><div class="icon"> <?php echo inline_svg('yelp-brands'); ?></div></a>
+			<a href="https://www.facebook.com/stevenjbyersdds/" aria-label="Facebook" rel="nofollow noopener" target="_blank"><span>Facebook</span><div class="icon"> <?php echo inline_svg('facebook-brands'); ?></div></a>
 		</div>
-	</div>
+	</section>
 
 	<section class="lower-footer">
 		<div class="copyright">
 			Copyright &copy; <?php echo date("Y"); ?> <?bloginfo('title');?>. All rights reserved. <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a>
 			<br>
-			<a href="https://asburymediagroup.com/website-design-and-development/" target="_blank" rel="noopener" aria-label="WordPress Development" title="WordPress Development">WordPress Development by <a href="https://asburymediagroup.com/" target="_blank" rel="noopener" aria-label="Silvr Agency" title="Silvr Agency">Asbury Media Group </a>
+			<a href="https://asburymediagroup.com/website-design-and-development/" target="_blank" rel="noopener" aria-label="Web Development" title="Web Development">Web Development</a>  by <a href="https://asburymediagroup.com/" target="_blank" rel="noopener" aria-label="Asbury Media Group" title="Asbury Media Group">Asbury Media Group </a>
 		</div>
 	</section>
-
-	
 
 </footer>
 

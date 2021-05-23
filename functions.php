@@ -33,13 +33,10 @@ add_action('after_setup_theme', '__themesetup', 2);
 
 function __themecss()
 {
-    // wp_register_style('moby', TMPL_DIR_URI . '/js/libs/moby/moby.min.css');
     wp_register_style('splide', TMPL_DIR_URI . '/js/libs/splide/css/splide.min.css');
     // wp_register_style('fancybox', TMPL_DIR_URI . '/js/libs/fancybox3/jquery.fancybox.css');
-    // wp_register_style('beerslider', TMPL_DIR_URI . '/js/libs/beerslider/BeerSlider.css');
-    wp_register_style('fontawesome', TMPL_DIR_URI . '/fonts/fontawesome/css/all.css');
-    wp_register_style('silvr-theme', get_stylesheet_uri(), array('splide' , 'fontawesome'), '1');
-    // wp_register_style('silvr-theme', get_stylesheet_uri(), array('splide' , 'fancybox' , 'fontawesome'), '1');
+    // wp_register_style('fontawesome', TMPL_DIR_URI . '/fonts/fontawesome/css/all.css');
+    wp_register_style('silvr-theme', get_stylesheet_uri(), array('splide'), '1');
 
     wp_enqueue_style('silvr-theme');
 }
