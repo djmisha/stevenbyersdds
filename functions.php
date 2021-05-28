@@ -54,7 +54,7 @@ function __themejs()
     wp_deregister_script('wp-embed'); // Disable wp-embed.js
 
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js", false, "3.5.1", true);
-    // wp_register_script('modernizr', TMPL_DIR_URI . '/js/libs/modernizr.min.js', false, '2.8.3', false);
+    wp_register_script('modernizr', TMPL_DIR_URI . '/js/libs/modernizr.min.js', false, '2.8.3', false);
     
     // Mobile Navigation 
     wp_register_script('silvr-moby', TMPL_DIR_URI . '/js/libs/moby.min.js', array('jquery'), '1.0', true);

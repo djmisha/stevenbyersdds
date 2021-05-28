@@ -10,38 +10,52 @@ var bLazy = new Blazy({
 // TODO: Select Elements using Vanilla JS
 // var navigation = document.getElementById('#main-nav')
 
-var mobyMenu = new Moby({
-  menu: $('#main-nav'), // The menu that will be cloned
-  mobyTrigger: $('.menu-trigger'), // Button that will trigger the Moby menu to open
-  subMenuOpenIcon: '<i class="fa fa-plus"></i>',
-  subMenuCloseIcon: '<i class="fa fa-minus"></i>',
-  menuClass: 'left-side',
-  template: '<div class="moby-wrap"><div class="moby-close"><span class="moby-close-icon"></span></div><div class="moby-menu"></div></div>'
-});
+// var mobyMenu = new Moby({
+//   menu: $('#main-nav'), // The menu that will be cloned
+//   mobyTrigger: $('.menu-trigger'), // Button that will trigger the Moby menu to open
+//   subMenuOpenIcon: '<i class="fa fa-plus"></i>',
+//   subMenuCloseIcon: '<i class="fa fa-minus"></i>',
+//   menuClass: 'left-side',
+//   template: '<div class="moby-wrap"><div class="moby-close"><span class="moby-close-icon"></span></div><div class="moby-menu"></div></div>'
+// });
 
 
 /* Slideshows */
 
-var homepageSlideShows = document.querySelector('.testi-splide');
+/* Footer Slideshow */
 
-if (homepageSlideShows) {
-  new Splide('.testi-splide', {
+var footerSlideShow = document.querySelector('.footer-splide');
+
+if (footerSlideShow) {
+  new Splide('.footer-splide', {
     type: 'loop',
     perPage: 1,
+    lazyLoad: 'nearby',
+    autoplay: true,
   }).mount();
 }
+
+
+// var homepageSlideShows = document.querySelector('.testi-splide');
+
+// if (homepageSlideShows) {
+//   new Splide('.testi-splide', {
+//     type: 'loop',
+//     perPage: 1,
+//   }).mount();
+// }
 
 
 /* Doctors Slideshow */
 
-var doctorSlideShows = document.querySelector('.doctors-splide');
+// var doctorSlideShows = document.querySelector('.doctors-splide');
 
-if (doctorSlideShows) {
-  new Splide('.doctors-splide', {
-    type: 'loop',
-    perPage: 1,
-  }).mount();
-}
+// if (doctorSlideShows) {
+//   new Splide('.doctors-splide', {
+//     type: 'loop',
+//     perPage: 1,
+//   }).mount();
+// }
 
 
 
@@ -68,22 +82,24 @@ if (doctorSlideShows) {
 
 /*jQuery*/
 
-$(function () {
+// $(function () {
 
-  $(window).on("load resize", function (e) {
-    $(".will-parallax").addClass("parallax");
-    $(".will-parallax").addClass("is-parallaxing");
+//   $(window).on("load resize", function (e) {
+//     $(".will-parallax").addClass("parallax");
+//     $(".will-parallax").addClass("is-parallaxing");
 
-    if ($(".parallax").hasClass("parallax")) {
-      $(".will-parallax").waypoint(function () {
-        $(".parallax-home-about").parallax("center", 0.3, true);
-        $(".parallax-home-wrapper").parallax("center", 0.3, true);
-        $(".parallax-home-footer").parallax("center", -0.3, true);
-      });
-    }
-  });
+//     if ($(".parallax").hasClass("parallax")) {
+//       $(".will-parallax").waypoint(function () {
+//         $(".parallax-home-about").parallax("center", 0.3, true);
+//         $(".parallax-home-wrapper").parallax("center", 0.3, true);
+//         $(".parallax-home-footer").parallax("center", -0.3, true);
+//       });
+//     }
+//   });
 
-}); // end of jQuery doc ready 
+// }); 
+
+// end of jQuery doc ready 
 
 
 /* Parallax Effects -> https://github.com/dixonandmoe/rellax */

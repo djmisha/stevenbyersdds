@@ -1,38 +1,40 @@
-	<!-- <div class="footer-ig-feed">
-        <span><i class="fab fa-instagram"></i> Follow Us <a href="https://www.instagram.com/elleaestheticarts/" target="_blank" rel="nofollow noopener">@elleaestheticarts</a> </span> 
-        <div class="the-ig-feedme">
-            <?php echo do_shortcode('[wp_my_instagram username="elleaestheticarts" limit="5" layout="3" size="large" target="_blank" link=""]'); ?>
-        </div>
-    </div> -->
 
 <footer class="site-footer">
 
 	<div class="upper-footer">
-<!-- 		
-		<div class="footer-logo">
-			<a href="<?php bloginfo('url'); ?>" title="Go to Homepage">
-				<?php echo inline_svg('logo-footer'); ?>
-			</a>
-		</div> -->
 
-		<!-- <div class="top-polygon"></div> -->
+    <div class="footer-slideshow">
+      <div class="footer-splide splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img data-splide-lazy="<?php bloginfo('template_directory'); ?>/images/office-1.jpg" alt="<?bloginfo('title');?> office photo"></li>
+              <li class="splide__slide"><img data-splide-lazy="<?php bloginfo('template_directory'); ?>/images/office-2.jpg" alt="<?bloginfo('title');?> office photo"></li>
+              <li class="splide__slide"><img data-splide-lazy="<?php bloginfo('template_directory'); ?>/images/office-3.jpg" alt="<?bloginfo('title');?> office photo"></li>
+            </ul>
+        </div>
+      </div>
+      <div class="footer-logo">
+        <a href="<?php bloginfo('url'); ?>" title="Go to Homepage">
+          <?php echo inline_svg('logo'); ?>
+        </a>
+      </div>
+    </div>
 
-		
-		<div class="footer-contact-form" id="contact-form">
-			<span class="headline">Request an Appointment</span>
-			<div class="contact-form">
-				<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true" ]
-'); ?>
+    <section class="footer-slogan">
+      <span>We take pride in taking care of our patients just like family. </span>
+      <span>Your <strong>dental home</strong> for Over 33 years</span>
+    </section>
 
-        
-			</div>		
-		</div>
-		
-		<?php // Footer Contact Form - not shown on Homepage, Contact, Blog or Single Blogs
-			 if(!is_page(array('contact-us', 'contact' )) ):
-			  ?>
-
-		<?php endif; ?>  
+    <div class="footer-contact-form" id="contact-form">
+      <span class="headline">Request an Appointment</span>
+      <div class="contact-form">
+        <?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true" ]'); ?>
+      </div>		
+    </div>
+      
+    <?php // Footer Contact Form - not shown on Homepage, Contact, Blog or Single Blogs
+        if(!is_page(array('contact-us', 'contact' )) ):?>
+    <?php endif; ?>  
 
 	</div>	
 	
@@ -100,7 +102,6 @@
 </footer>
 
 <?php wp_footer();?>
-
 
 <?php if ($_SERVER['SERVER_NAME'] == 'stevenbyersdds.local'): ?>
 	<script id="__bs_script__">
