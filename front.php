@@ -7,28 +7,17 @@
 <div id="skiptomaincontent"></div>
 
 <div class="home-hero">
-
-    <div class="splide-hero">
-        <div class="splide__track">
-            <ul class="splide__list">
-                <div class="ken-burns-img splide__slide ken-burns-img-1 ken-burns-effect-1"></div>
-                <div class="ken-burns-img splide__slide ken-burns-img-2 ken-burns-effect-2"></div>
-                <div class="ken-burns-img splide__slide ken-burns-img-3 ken-burns-effect-3"></div>
-                <div class="ken-burns-img splide__slide ken-burns-img-4 ken-burns-effect-4"></div>
-                <div class="ken-burns-img splide__slide ken-burns-img-5 ken-burns-effect-5"></div>
-            </ul>
-        </div>
-    </div>
-
-    <div class="hero-bucket">
-        <div class="taglines-title"><?php the_field('headline'); ?></div>
-        <div class="taglines-subtitle"><?php the_field('subheadline'); ?></div>
-        <a href="<?php bloginfo('url'); ?>/gallery" class="button">View Patient Gallery</a>
-    </div>
-   
+  <div class="hero-logo">
+    <a href="<?php bloginfo('url'); ?>" title="Go to Homepage">
+      <?php echo inline_svg('logo'); ?>
+    </a>
+  </div>
+  <div class="hero-bucket">
+      <div class="taglines-pretitle">Steven J. Byers D.D.S</div>
+      <div class="taglines-title">Beautiful, Healthy <strong>Smiles</strong></div>
+      <div class="taglines-subtitle">Providing the San Diego Community with Truly Exceptional Dental Care for Over 25 Years. 
+  </div>
 </div>
-
-
 
 <div class="will-parallax parallax-home-wrapper b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/middle-wrap.jpg">
     

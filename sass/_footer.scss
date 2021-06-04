@@ -1,4 +1,3 @@
-
 .upper-footer {
   background: $secCol;
   position: relative;
@@ -7,7 +6,7 @@
 .footer-logo {
   position: absolute;
   left: calc(50% - 100px);
-  top:200px;
+  top: 200px;
 }
 
 .footer-slideshow {
@@ -18,7 +17,7 @@
 }
 
 .footer-splide {
-  box-shadow: 0px 13px 16px rgba( #000000, .38);
+  box-shadow: 0px 13px 16px rgba(#000000, 0.38);
   img {
     width: 100%;
   }
@@ -32,10 +31,10 @@
   }
   .splide__arrow--prev {
     left: -2em;
-  } 
+  }
   .splide__arrow--next {
     right: -2em;
-  } 
+  }
   .splide__pagination {
     bottom: -2em;
   }
@@ -68,60 +67,58 @@
   }
 }
 
-
 .action-buttons {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 40px;
-    padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include media($desktop) {
+    flex-wrap: nowrap;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  > div {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 40px;
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+    @include media($tablet) {
+      margin-bottom: 40px;
+      text-align: left;
+      width: 45%;
+    }
     @include media($desktop) {
-      flex-wrap: nowrap;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      margin-bottom: 0;
+      width: auto;
     }
-    > div {
-        text-align: left;
-        width: 100%;
-        margin-bottom: 40px;
-        &:last-of-type {
-          margin-bottom: 20px;
-        }
-        @include media($tablet) {
-          margin-bottom: 40px;
-          text-align: left;
-          width: 45%;
-        }
-        @include media($desktop) {
-          margin-bottom: 0;
-          width: auto;
-        }
+  }
+  a {
+    text-decoration: none;
+    color: $secCol;
+    font-size: 20px;
+    text-align: center;
+    @include media($tablet) {
+      text-align: left;
+      display: flex;
+      align-items: center;
     }
-    a {
-        text-decoration: none;
-        color: $secCol;
-        font-size: 20px;
-        text-align: center;
-        @include media($tablet) {
-          text-align: left;
-          display: flex;
-          align-items: center;
-        }
 
-        &:hover {
-          text-decoration: underline;
-        }
+    &:hover {
+      text-decoration: underline;
     }
-    .icon {
-      @include media($tablet) {
-        margin-right: 25px;
-      }
-
+  }
+  .icon {
+    @include media($tablet) {
+      margin-right: 25px;
     }
-    .address .i-text {
-      font-size: 15px;
-      line-height: 1.3rem;
-    }
+  }
+  .address .i-text {
+    font-size: 15px;
+    line-height: 1.3rem;
+  }
 }
 
 .ratings-social {
@@ -171,71 +168,71 @@
   span {
     display: none;
   }
-   svg {
-     width: 30px;
-     height: 30px;;
-     path {
-        fill: $priCol;
-     }
-   }
+  svg {
+    width: 30px;
+    height: 30px;
+    path {
+      fill: $priCol;
+    }
+  }
 }
 
 .lower-footer {
-    color: $secCol;
-    background-color: #FCFCFC;
-    @include font(12px, 1.6em);
-    font-weight: 100;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  color: $secCol;
+  background-color: #fcfcfc;
+  @include font(12px, 1.6em);
+  font-weight: 100;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include media($tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .copyright {
+    text-align: center;
     @include media($tablet) {
-        padding-top: 60px;
-        padding-bottom: 60px;
+      // display: flex;
+      // justify-content: space-between;
     }
-    .copyright {
-        text-align: center;
-        @include media($tablet) {
-            // display: flex;
-            // justify-content: space-between;
-        }
+  }
+  .disclaimer {
+    @include font(12px, 1.5em);
+    font-style: italic;
+  }
+  a {
+    text-decoration: none;
+    color: $secCol;
+    &:hover {
+      text-decoration: underline;
     }
-    .disclaimer {
-        @include font(12px, 1.5em);
-        font-style: italic;
-    }   
-    a {
-        text-decoration: none;
-        color: $secCol;
-        &:hover {
-            text-decoration: underline;
-        }
+  }
+  .sig {
+    padding-top: 40px;
+    @include media($tablet) {
+      padding-top: 60px;
     }
-    .sig {
-        padding-top: 40px;
-        @include media($tablet) {
-            padding-top: 60px;
-        }
-    }
+  }
 }
 
 .footer-contact-form {
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 60px 20px;
-    @include media($tablet) {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-    .headline {
-        font-family: $priFont;
-        color: white;
-    }
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 20px;
+  @include media($tablet) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .headline {
+    font-family: $priFont;
+    color: white;
+  }
   form {
     .gform_fields {
       display: flex !important;
       justify-content: space-between;
       flex-wrap: wrap;
-      
+
       #field_1_1,
       #field_1_6,
       #field_1_2,
@@ -245,17 +242,19 @@
       #field_1_4 {
         width: 100%;
       }
-      .field_sublabel_hidden_label .ginput_complex.ginput_container input[type="text"], .field_sublabel_hidden_label .ginput_complex.ginput_container select {
+      .field_sublabel_hidden_label .ginput_complex.ginput_container input[type="text"],
+      .field_sublabel_hidden_label .ginput_complex.ginput_container select {
         margin-bottom: 0 !important;
       }
     }
     label {
       display: none !important;
     }
-    input, textarea {
+    input,
+    textarea {
       background: transparent;
       border: none;
-      border-bottom: 1px solid #CECECE;
+      border-bottom: 1px solid #cecece;
       padding: 15px 20px !important;
       width: 100% !important;
       color: white;
