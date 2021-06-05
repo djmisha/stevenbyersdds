@@ -6791,9 +6791,16 @@ span.error {
 @media only screen and (min-width: 1060px) {
   .home-hero {
     background: url("images/hero.jpg") center center no-repeat;
-    background-size: auto;
-    height: calc(100vh);
     background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1460px) {
+  .home-hero {
+    background: url("images/hero.jpg") center center no-repeat;
+    background-size: cover;
+    max-height: none;
+    height: calc(100vh);
   }
 }
 
@@ -6816,6 +6823,12 @@ span.error {
   .home-hero .hero-bucket {
     padding-left: 120px;
     padding-top: 420px;
+  }
+}
+
+@media only screen and (min-width: 1460px) {
+  .home-hero .hero-bucket {
+    padding-top: 55vh;
   }
 }
 
@@ -6882,6 +6895,79 @@ span.error {
     font-size: 1.8125rem;
     line-height: 1.3em;
     font-weight: 400;
+  }
+}
+
+.home-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-services .service {
+  position: relative;
+  width: 50%;
+  height: 30vw;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1060px) {
+  .home-services .service {
+    width: 33.3%;
+    height: 19vw;
+  }
+}
+
+.home-services a {
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.home-services a:hover h3 {
+  font-size: 33px;
+  top: 12vw;
+  right: 60px;
+}
+
+.home-services img {
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.home-services img:hover {
+  opacity: 0.8;
+}
+
+.home-services h3 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  color: white;
+  top: 22vw;
+  right: 0px;
+  left: 0;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 1060px) {
+  .home-services h3 {
+    font-size: 23px;
+    right: 40px;
+    left: auto;
+    top: 14vw;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -7791,7 +7877,8 @@ footer,
 .footer-contact-form,
 .action-buttons,
 .ratings-social,
-.lower-footer {
+.lower-footer,
+.home-hero {
   display: none !important;
 }
 

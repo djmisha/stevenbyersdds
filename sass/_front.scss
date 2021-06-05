@@ -33,9 +33,13 @@
   }
   @include media($desktop) {
     background: url("images/hero.jpg") center center no-repeat;
-    background-size: auto;
-    height: calc(100vh);
     background-size: cover;
+  }
+  @include media($full) {
+    background: url("images/hero.jpg") center center no-repeat;
+    background-size: cover;
+    max-height: none;
+    height: calc(100vh);
   }
   .hero-bucket {
     padding-left: 20px;
@@ -50,6 +54,9 @@
     @include media($desktop) {
       padding-left: 120px;
       padding-top: 420px;
+    }
+    @include media($full) {
+      padding-top: 55vh;
     }
   }
   .taglines-pretitle {
@@ -97,783 +104,138 @@
   }
 }
 
-// .parallax-home-wrapper {
-//     background-repeat: no-repeat;
-//     background-position: top center;
-//     background-repeat: no-repeat;
-//     background-attachment: fixed;
-//     background-size: cover;
-// }
+.home-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-// .home-welcome {
-//     padding-top: 80px;
-//     padding-bottom: 80px;
-//     position: relative;
-//     @include media($tablet) {
-//         text-align: left;
-//         padding-top: 180px;
-//         padding-bottom: 240px;
-//     }
-//     h2 {
-//         margin-top: 0;
-//         margin-bottom: 20px;
-//         @include font(19px, 1.5em);
-//         @include media($tablet) {
-//             margin-bottom: 30px;
-//             @include font(46px, 1.2em);
-//             max-width: 800px;
-//         }
-//     }
-//     span {
-//         @include font(18px, 1.5em, 100);
-//         font-style: italic;
-//         padding-bottom: 20px;
-//         display: block;
-//         @include media($tablet) {
-//             padding-bottom: 30px;
-//             @include font(26px, 1.5em, 100);
-//             max-width: 750px;
-//         }
-//     }
-//     p {
-//         max-width: 910px;
-//         // @include font(20px, 1.5em);
-//     }
-// }
-
-// .home-our-doctors-headline {
-//     position: relative;
-//     h2 {
-//         background-color: white;
-//         position: relative;
-//         z-index: 2;
-//         display: inline-block;
-//         padding-left: 20px;
-//         padding-right: 20px;
-//         @include media($desktop) {
-//             padding-left: 40px;
-//             padding-right: 40px;
-//             left: -200px;
-//         }
-//     }
-//     &:before {
-//         content: "";
-//         position: absolute;
-//         top: 35px;
-//         left: 0;
-//         right: 0;
-//         width: 100vw;
-//         height: 1px;
-//         background: $priCol;
-//         margin: 0 auto;
-//         @include media($tablet) {
-//             top: 50px;
-//         }
-//     }
-// }
-
-// .home-about-wrap {
-//     margin: 0 auto;
-//     margin-top: 40px;
-//     @include media($tablet) {
-//         margin-top: 60px;
-//     }
-//     @include media($desktop) {
-//         display: flex;
-//     }
-// }
-
-// .home-about {
-//     background-position: top center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     width: 100%;
-//     height: 390px;
-//     box-shadow: $shadow;
-//     @include media($tablet) {
-//         height: 890px;
-//    }
-//    @include media($desktop) {
-//        width: 50%;
-//    }
-// }
-
-// .home-about-slideshow {
-//     background-position: center center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     min-height: 700px;
-//     height: auto;
-//     @include media($desktop) {
-//         margin-top: 100px;
-//        width: 50%;
-//     }
-// }
-
-// .doc-slides {
-//     padding: 40px 20px;
-//     text-align: left;
-//     color: white;
-//     @include media($tablet) {
-//         padding: 60px;
-//     }
-//     img {
-//         box-shadow: $shadow;
-//         float: left;
-//         margin-right: 20px;
-//         margin-bottom: 20px;
-//         @include media($tablet) {
-//             margin-right: 40px;
-//             margin-bottom: 60px;
-//         }
-//     }
-//     h2 {
-//         color: white;
-//         display: block;
-//         top: 40px;
-//         margin-top: 0;
-//         position: relative;
-//         max-width: 650px;
-//     }
-//     .intro {
-//         font-size: 22px;
-//         line-height: 39px;
-//         font-style: italic;
-//         margin-bottom: 20px;
-//         font-weight: 300;
-//     }
-//     .bio {
-//         font-weight: 300;
-//     }
-//     .button {
-//         margin-top: 40px;
-//     }
-
-// }
-
-// .doctors-splide {
-//     .splide__arrows {
-//         position: absolute !important;
-//         display: flex;
-//         width: 170px;
-//         bottom: -40px;
-//         @include media($desktop) {
-//             bottom: -100px;
-//         }
-//     }
-//     .splide__arrow {
-//         position: absolute;
-//         width: 4em;
-//         height: 4em;
-//         border-radius: 0;
-//         background-color: rgba($secCol, 1);
-//         svg {
-//             path {
-//                 fill: white;
-//             }
-//         }
-//     }
-// }
+  .service {
+    position: relative;
+    width: 50%;
+    height: 30vw;
+    overflow: hidden;
+    @include media($desktop) {
+      width: 33.3%;
+      height: 19vw;
+    }
+  }
+  a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      h3 {
+        font-size: 33px;
+        top: 12vw;
+        right: 60px;
+      }
+    }
+  }
+  img {
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  h3 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    color: white;
+    top: 22vw;
+    right: 0px;
+    left: 0;
+    font-size: 18px;
+    @include media($desktop) {
+      font-size: 23px;
+      right: 40px;
+      left: auto;
+      top: 14vw;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
 
 // .home-testis {
-//     min-height: 400px;
-//     padding-bottom: 60px;
-//     padding-top: 60px;
-//     position: relative;
+//   min-height: 400px;
+//   padding-bottom: 60px;
+//   padding-top: 60px;
+//   position: relative;
+//   @include media($tablet) {
+//     padding-top: 100px;
+//     padding-bottom: 100px;
+//   }
+//   .home-testi_head_stars {
+//     font-family: $secFont;
+//     color: $secCol;
 //     @include media($tablet) {
-//         padding-top: 100px;
-//         padding-bottom: 100px;
+//       font-size: 21px;
 //     }
-//     .home-testi_head_stars {
-//         font-family: $secFont;
-//         color: $secCol;
-//         @include media($tablet) {
-//             font-size: 21px;
-//         }
-//     }
-//     &:before {
-//         content: "";
-//         position: absolute;
-//         top: 180px;
-//         left: 0;
-//         right: 0;
-//         width: 100vw;
-//         height: 1px;
-//         background: $priCol;
-//         margin: 0 auto;
-//     }
-//     h2.home-testi_head_trusted {
-//         background-color: white;
-//         position: relative;
-//         z-index: 2;
-//         display: inline-block;
-//         padding-left: 20px;
-//         padding-right: 20px;
-//         margin-bottom: 60px;
-//         @include media($tablet) {
-//             padding-left: 40px;
-//             padding-right: 40px;
-//         }
-//     }
-
-//     li p {
-//         font-size: 18px !important;
-//         line-height: 30px;
-//         max-width: $desktop;
-//         margin: 0 auto;
-//         color: #5A5A5A;
-//     }
-//     li h2 {
-//         margin-top: 40px;
-//         @include media($tablet) {
-//             font-size: 26px;
-//         }
-//     }
-//     li h3 {
-//         margin-bottom: 20px;
-//         @include media($tablet) {
-//             font-size: 20px;
-//         }
-//     }
-//     .button {
-//         margin-top: 100px;
-//     }
-//     .splide__arrows {
-//         display: none;
-//     }
-//     .splide__pagination {
-//         bottom: -50px;
-//         button {
-//             background: transparent;
-//             border: 1px solid $secCol;
-//             width: 50px;
-//             height: 1px;
-//             border-radius: 0;
-//         }
-//         .is-active {
-//             border: 2px solid $secCol;
-//             transform: none;
-//         }
-//     }
-// }
-
-// .the-home-tabs-shadow {
-//     position: relative;
-//     box-shadow: 10px 20px 30px rgba( $priCol, .1);
-//     .icon-welcome-flower-2 {
-//         position: absolute;
-//         top: 100px;
-//         left: 0;
-//         width: 196px;
-//         height: 297px;
-//         background: url('images/icon-welcome-flower.svg');
-//         background-size: cover;
-//         background-repeat: no-repeat;
-//         z-index: -1;
-//     }
-// }
-
-// .the-home-tabs-desktop {
+//   }
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     top: 180px;
+//     left: 0;
+//     right: 0;
+//     width: 100vw;
+//     height: 1px;
+//     background: $priCol;
+//     margin: 0 auto;
+//   }
+//   h2.home-testi_head_trusted {
 //     background-color: white;
-//     display: none;
+//     position: relative;
+//     z-index: 2;
+//     display: inline-block;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     margin-bottom: 60px;
 //     @include media($tablet) {
-//         display: block;
-//         max-width: 1358px;
-//         margin: 0 auto;
+//       padding-left: 40px;
+//       padding-right: 40px;
 //     }
-//     ul {
-//         margin: 0;
-//         list-style-type: none;
-//         display: flex;
-//         justify-content: center;
-//         max-width: 1400px;
-//         margin: 0 auto;
-//         span {
-//             color: white;
-//         }
-//     }
-//     .tab-top {
-//         width: 25%;
-//         padding: 30px 45px;
-//         cursor: pointer;
-//         font-size: 18px;
-//         line-height: 20px;
-//         position: relative;
-//         text-align: center;
-//         border-bottom: 10px solid transparent;
-//         transition: background .2s ease;
-//         &:first-of-type {
-//         }
-//         &:hover {
-//             background-color: rgba($secCol, .2);
-//             border-bottom: 10px solid $secCol;
-//         }
-//         &.active{
-//             border-bottom: 10px solid $secCol;
-//         }
-//         a {
-//             position: absolute;
-//             top: 0;
-//             bottom: 0;
-//             left: 0;
-//             right: 0;
-//         }
-//         span {
-//             color: $priCol;
-//             text-transform: uppercase;
-//         }
-//         img {
-//             display: block;
-//             margin: 0 auto;
-//             margin-bottom: 10px;
-//         }
-//     }
-//     .tab-pane {
-//         display: none;
-//         &.active {
-//             display: block;
-//         }
-//     }
-//     .tab-content {
-//         position: relative;
-//         min-height: 460px;
-//         background-color: $priCol;
-//         background: url('images/icon-tabs-flower.svg');
-//         background-position: bottom left;
-//         background-position-x: 100px;
-//         background-repeat: no-repeat;
-//         text-align: left;
-//         > div {
-//             padding-top: 100px;
-//             padding-bottom: 40px;
-//             margin: 0 auto;
-//         }
-//     }
-//     .tab-content img {
-//         position: absolute;
-//         right: 0;
-//         top: 0;
-//         z-index: 1;
-//     }
-//     .tab-content span {
-//         display: block;
-//         margin-bottom: 20px;
-//         text-transform: uppercase;
-//         color: $priAlt;
-//         font-size: 28px;
-//     }
-//     .tab-content a,
-//     .tab-content span,
-//     .tab-content p {
-//         position: relative;
-//         z-index: 2;
-//         padding-right: 60%;
-//         padding-left: 40px;
-//         // font-weight: 100;
-//     }
-//     .tab-content a {
-//         display: block;
-//         text-transform: uppercase;
-//         text-decoration: none;
-//         margin-top: 40px;
-//         color: $priAlt;
-//     }
-//     .split-line {
-//         width: 40px;
-//         height: 2px;
-//         background-color: $priAlt;
-//         margin-top: 5px;
-//         margin-left: 65px;
-//         border-radius: 2px;
-//     }
-// }
+//   }
 
-// .the-home-tabs-mobile {
+//   li p {
+//     font-size: 18px !important;
+//     line-height: 30px;
+//     max-width: $desktop;
+//     margin: 0 auto;
+//     color: #5a5a5a;
+//   }
+//   li h2 {
 //     margin-top: 40px;
 //     @include media($tablet) {
-//         display: none;
+//       font-size: 26px;
 //     }
-//     .tab-icon {
-//         position: absolute;
-//         background-color: white;
-//         padding: 10px;
-//         border-radius: 50%;
-//         top: 140px;
-//         left: calc(50% - 55.5px);
-//         width: 111px;
-
-//     }
-//     .tab-top {
-//         display: block;
-//         height: 14px;
-//         background: rgb(191,167,121);
-//         background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%);
-//     }
-//     .single-tab {
-//         width: 276px;
-//         box-shadow: 0 13px 26px rgba(black, .16);
-//         padding-bottom: 40px;
-//         position: relative;
-//         margin-bottom: 40px;
-//         p {
-//             padding: 0 20px;
-//         }
-//         strong {
-//             display: block;
-//             margin-top: 70px;
-//             margin-bottom: 20px;
-//             text-transform: uppercase;
-//             font-size: 18px;
-//             color: $priAlt;
-//             font-family: $secFont;
-//         }
-//         a {
-//             display: block;
-//             text-transform: uppercase;
-//             text-decoration: none;
-//             margin-top: 40px;
-//             color: $priAlt;
-//         }
-//         .split-line {
-//             width: 40px;
-//             height: 2px;
-//             background-color: $priAlt;
-//             margin-top: 5px;
-//             margin-left: 115px;
-//             border-radius: 2px;
-//         }
-//     }
-//     .single-tab:nth-of-type(2),
-//     .single-tab:nth-of-type(3),
-//     .single-tab:nth-of-type(4) {
-//         // display: none;
-//     }
-//     .splide__slide {
-//         // width: 276px !important;
-//         // padding-left: 40px;
-//         // padding-right: 40px;
-//     }
-// }
-
-// .home-location {
-//     background-position: top center;
-//     background-repeat: no-repeat;
-//     background-size: 790px;
-//     padding-top: 40px;
-//     padding-bottom: 60px;
+//   }
+//   li h3 {
+//     margin-bottom: 20px;
 //     @include media($tablet) {
-//         background-size: auto auto;
-//         background-position: center;
-//         padding-top: 100px;
-//         min-height: 1000px;
+//       font-size: 20px;
 //     }
-//     @include media($desktop) {
-//         padding-top: 0;
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//         // background-size: cover;
-//         background-attachment: fixed;
-//     }
-//     @include media($full) {
-//         background-size: cover;
-//     }
-//     > div {
-//         @include media($desktop) {
-//             width: 50%;
-//         }
-//     }
-//     .location-logo {
-//         display: flex;
-//         justify-content: center;
-//         svg {
-//             width: 100px;
-//             height: 200px;
-//             @include media($tablet) {
-//                 width: auto;
-//                 height: auto;
-//             }
-//             path {
-//                 fill: $priCol;
-//             }
-//         }
-//     }
-//     .location-content {
-//         max-width: 500px;
-//         color: white;
-//         margin: 0 auto;
-//         margin-top: 50px;
-//         @include media($tablet) {
-//             margin-top: 100px;
-//         }
-//         @include media($desktop) {
-//             text-align: left;
-//         }
-//         h2 {
-//             max-width: 300px;
-//             margin: 0 auto;
-//             margin-top: 0;
-//             margin-bottom: 80px;
-//             color: $priCol;
-//             @include media($tablet) {
-//                 margin-bottom: 40px;
-//                 margin-top: 0;
-//                 max-width: none;
-//             }
-//         }
-//         p {
-//             text-align: left;
-//             color: $defaultcolor;
-//             @include media($tablet) {
-//                 text-align: center;
-//                 color: white;
-//                 @include font(18px, 1.5em);
-//             }
-//             @include media($desktop) {
-//                 text-align: left;
-//             }
-//         }
-//     }
-//     .button {
-//         border-top: 1px solid transparent;
-//         border-left: 1px solid transparent;
-//         border-right: 1px solid transparent;
-//     }
-//     position: relative;
-//     .split-line {
-//         @include media($desktop) {
-//             width: 1px;
-//             height: 100px;
-//             background : $priCol;
-//             position: absolute;
-//             left: calc(50% - 1px);
-//             top: 0px;
-//         }
-//     }
-//     .split-line-2 {
-//         @include media($desktop) {
-//             width: 1px;
-//             height: 100px;
-//             background : $priCol;
-//             position: absolute;
-//             left: calc(50% - 1px);
-//             bottom: 0px;
-//         }
-//     }
-// }
-
-// .home-ig-feed {
-//     padding-bottom: 40px;
-//     // color: black;
-//     background-color: #F7F7F7;
-//     @include media($tablet) {
-//         margin-left: 0px;
-//         // padding: 100px 0 120px;
-//     }
-//     i {
-//         color: $secCol;
-//         // font-size: 20px;
-//         margin-right: 10px;
-//     }
-//     span {
-//         padding-top: 30px;
-//         padding-left: 20px;
-//         padding-right: 20px;
-//         display: block;
-//         color: $priCol;
-//         @include font(20px, 1.2em, 300);
-//         @include media($tablet) {
-//             @include font(26px, 1.2em, 300);
-//         }
-//         a {
-//             color: $priCol;
-//             text-decoration: none;
-//         }
-//     }
-//     ul {
-//         margin-top: 20px;
-//         display: flex;
-//         overflow: hidden;
-//         align-items: center;
-//         @include media($desktop) {
-//             flex-wrap: nowrap;
-//         }
-//         li {
-//             width: 30%;
-//             @include media($tablet) {
-//                 width: 30%;
-//             }
-//             @include media($desktop) {
-//                 width: auto;
-//             }
-//         }
-//         li a img {
-//             width: 100%;
-//         }
-//     }
-// }
-
-// .logos-memeberships {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-around;
-//     flex-wrap: wrap;
-//     padding-top: 40px;
-//     padding-bottom: 40px;
-//     @include media($tablet) {
-//         justify-content: center;
-//         padding-top: 60px;
-//         padding-bottom: 60px;
-//     }
-//     img {
-//         margin: 10px 20px;
-//         @include media($tablet) {
-//             margin: 20px 20px
-//         }
-//     }
-// }
-
-// /* KEN BURNS HERO */
-
-// .splide-hero {
-//     width: 100vw;
-//     height: 100vh;
-//     top: 0;
-//     position: absolute;
-//     .splide__slide,
-//     .splide__list,
-//     .splide__track {
-//         width: 100vw;
-//         height: 100vh;
-//     }
-// }
-
-// .ken-burns-img {
-//   position: absolute;
-//   overflow: hidden;
-//   left: 0;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   background-color: transparent;
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
-// .ken-burns-img-1 {
-//   background-image: url("images/hero-1.jpg");
-// }
-// .ken-burns-img-2 {
-//   background-image: url("images/hero-2.jpg");
-// }
-// .ken-burns-img-3 {
-//   background-image: url("images/hero-3.jpg");
-// }
-// .ken-burns-img-4 {
-//   background-image: url("images/hero-4.jpg");
-// }
-// .ken-burns-img-5 {
-//   background-image: url("images/bg-contact.jpg");
-// }
-
-// .ken-burns-effect-1.start-effect {
-//   animation: kenburns-top 6.5s linear;
-// }
-
-// .ken-burns-effect-2.start-effect {
-//   animation: kenburns-bottom 6.5s linear;
-// }
-
-// .ken-burns-effect-3.start-effect {
-//   animation: kenburns-right 6.5s linear;
-// }
-
-// .ken-burns-effect-4.start-effect {
-//   animation: kenburns-left 6.5s linear;
-// }
-
-// .ken-burns-effect-5.start-effect {
-//   animation: kenburns-top 6.5s linear;
-// }
-
-// /* ----------------------------------------------
-//  * Generated by Animista on 2017-12-10 16:42:7
-//  * w: http://animista.net, t: @cssanimista
-//  * ---------------------------------------------- */
-// /**
-//  * ----------------------------------------
-//  * animation kenburns-top
-//  * ----------------------------------------
-//  */
-// @keyframes kenburns-top {
-//   0% {
-//     transform: scale(1) translateY(0);
-//     transform-origin: 50% 16%;
 //   }
-//   100% {
-//     transform: scale(1.25) translateY(-15px);
-//     transform-origin: top;
+//   .button {
+//     margin-top: 100px;
 //   }
-// }
-// /**
-//  * ----------------------------------------
-//  * animation kenburns-bottom
-//  * ----------------------------------------
-//  */
-// @keyframes kenburns-bottom {
-//   0% {
-//     transform: scale(1) translateY(0);
-//     transform-origin: 50% 84%;
+//   .splide__arrows {
+//     display: none;
 //   }
-//   100% {
-//     transform: scale(1.25) translateY(15px);
-//     transform-origin: bottom;
-//   }
-// }
-// /**
-//  * ----------------------------------------
-//  * animation kenburns-right
-//  * ----------------------------------------
-//  */
-// @keyframes kenburns-right {
-//   0% {
-//     transform: scale(1) translate(0, 0);
-//     transform-origin: 84% 50%;
-//   }
-//   100% {
-//     transform: scale(1.25) translateX(20px);
-//     transform-origin: right;
-//   }
-// }
-// /**
-//  * ----------------------------------------
-//  * animation kenburns-left
-//  * ----------------------------------------
-//  */
-// @keyframes kenburns-left {
-//   0% {
-//     transform: scale(1) translate(0, 0);
-//     transform-origin: 16% 50%;
-//   }
-//   100% {
-//     transform: scale(1.25) translate(-20px, 15px);
-//     transform-origin: left;
-//   }
-// }
-// /**
-//  * ----------------------------------------
-//  * animation focus-in-contract
-//  * ----------------------------------------
-//  */
-// @keyframes focus-in-contract {
-//   0% {
-//     letter-spacing: 1em;
-//     filter: blur(12px);
-//     opacity: 0;
-//   }
-//   100% {
-//     filter: blur(0px);
-//     opacity: 1;
+//   .splide__pagination {
+//     bottom: -50px;
+//     button {
+//       background: transparent;
+//       border: 1px solid $secCol;
+//       width: 50px;
+//       height: 1px;
+//       border-radius: 0;
+//     }
+//     .is-active {
+//       border: 2px solid $secCol;
+//       transform: none;
+//     }
 //   }
 // }

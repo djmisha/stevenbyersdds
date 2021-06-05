@@ -15,122 +15,29 @@
   <div class="hero-bucket">
       <div class="taglines-pretitle">Steven J. Byers D.D.S</div>
       <div class="taglines-title">Beautiful, Healthy <strong>Smiles</strong></div>
-      <div class="taglines-subtitle">Providing the San Diego Community with Truly Exceptional Dental Care for Over 25 Years. 
+      <div class="taglines-subtitle">Providing the San Diego Community with Truly Exceptional Dental Care for Over 25 Years. </div>
   </div>
 </div>
 
-<div class="will-parallax parallax-home-wrapper b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/middle-wrap.jpg">
-    
 
-    <section class="home-welcome">
-        <h2><?php the_field('welcome_headline'); ?></h2>
-        <span><?php the_field('welcome_subheadline'); ?></span>
-        <?php the_field('welcome_content'); ?>
-    </section>
+<section class="home-about">
+  <h2>Let your dreams of a beautiful smile take flight!</h2>
+  <p>Dr. Steven J. Byers has been serving the San Diego community for over 25 years. At our Kensington, San Diego cosmetic and family dentistry practice, we are proud to provide patients with truly exceptional care. Those from Kensington, Normal Heights, North Park, and across San Diego, benefit from our many family and emergency dentistry procedures. </p>
+  <p>We are committed to providing patients with beautiful, healthy smiles!</p>
+  <span>Did you know Dr. Byers is also an avid pilot? When not serving patients at our busy dental practice, Dr. Byers is frequently enjoying the views of San Diego from thousands of feet up.</span>
+</section>
 
+<h2>Our Services</h2>
+<div class="home-services">
+  <div class="service"><a href="<?php bloginfo('url'); ?>/NEEDTOADDLINKHERE/"><img src="<?php bloginfo('template_directory'); ?>/images/service-1.jpg" alt="Zoom Whitening"><h3>Zoom Whitening</h3></a></div>
+  <div class="service"><a href="<?php bloginfo('url'); ?>/NEEDTOADDLINKHERE/"><img src="<?php bloginfo('template_directory'); ?>/images/service-2.jpg" alt="Invisalign"><h3>Invisalign</h3></a></div>
+  <div class="service"><a href="<?php bloginfo('url'); ?>/NEEDTOADDLINKHERE/"><img src="<?php bloginfo('template_directory'); ?>/images/service-3.jpg" alt="In House Lab"><h3>In House Lab</h3></a></div>
+  <div class="service"><a href="<?php bloginfo('url'); ?>/NEEDTOADDLINKHERE/"><img src="<?php bloginfo('template_directory'); ?>/images/service-4.jpg" alt="Veneers"><h3>Veneers</h3></a></div>
+  <div class="service"><a href="<?php bloginfo('url'); ?>/NEEDTOADDLINKHERE/"><img src="<?php bloginfo('template_directory'); ?>/images/service-5.jpg" alt="Implants"><h3>Implants</h3></a></div>
+  <div class="service"><a href="<?php bloginfo('url'); ?>/NEEDTOADDLINKHERE/"><img src="<?php bloginfo('template_directory'); ?>/images/service-6.jpg" alt="Metal-Free Fillings"><h3>Metal-Free Fillings</h3></a></div>
+</div>
 
-
-
-    <div class="home-our-doctors-headline">
-        <h2>Our Doctors</h2>
-    </div>
-
-    <div class="home-about-wrap">
-        <div class="home-about b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/home-docs-bg.jpg"> </div>
-        <div class="home-about-slideshow b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-docs-slide.jpg">
-           <div class="doctors-splide splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <?php if(have_rows('doctors')): ?>
-                            <?php while(have_rows('doctors')): the_row(); ?>
-                                <li class="splide__slide">
-                                    <div class="doc-slides">
-                                        <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
-                                        <h2><?php the_sub_field('name'); ?></h2>
-                                        <div class="clear"></div>
-                                        <div class="intro"><?php the_sub_field('intro'); ?></div>
-                                        <div class="bio"><?php the_sub_field('bio'); ?></div>
-                                        <a href="<?php the_sub_field('link'); ?>" class="button button-light">View My Bio</a>
-                                    </div>
-                                </li>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- 
-     <div class="the-home-tabs-shadow">
-
-         <div class="the-home-tabs-desktop">
-             <?php if(have_rows('home_procedures')): ?>
-                 <?php $counter = 1; ?>
-                 <ul class="tab-choises" id="nav-tab">
-                     <?php while(have_rows('home_procedures')): the_row(); ?>
-                         <li class="tab-top"><a href="#tab-content-<?php echo $counter; ?>"></a><span>
-                            <img src="<?php the_sub_field('icon'); ?>" alt="tab icon">
-                            <?php the_sub_field('name'); ?></span>
-                        </li>
-                     <?php $counter ++ ; ?>
-                     <?php endwhile; ?>
-                 </ul>
-             <?php endif; ?>
-
-
-             <?php if(have_rows('home_procedures')): ?>
-                 <?php $counter = 1; ?>
-                 <div class="tab-content">
-                     <?php while(have_rows('home_procedures')): the_row(); ?>
-                         <div class="tab-pane" id="tab-content-<?php echo $counter; ?>">
-                             <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('name'); ?>">
-                             <span><?php the_sub_field('name'); ?></span>
-                             <?php the_sub_field('content'); ?>
-                             <a href="<?php the_sub_field('link'); ?>">read more</a>
-                             <div class="split-line"></div>
-                         </div>
-                     <?php $counter ++ ; ?>
-                     <?php endwhile; ?>
-                 </div>
-             <?php endif; ?>
-         </div>  
-    </div> -->
-
-
-<!-- 
-
-     <div class="the-home-tabs-mobile">
-         <?php if(have_rows('home_procedures')): ?>
-             <?php $counter = 1; ?>
-             <div class="tab-content">
-                <div class="mobile-splide splide">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                             <?php while(have_rows('home_procedures')): the_row(); ?>
-                                <li class="splide__slide">
-                                     <div class="single-tab">
-                                         <div class="tab-top"></div>
-                                         <img src="<?php the_sub_field('mobile_image'); ?>" alt="<?php the_sub_field('name'); ?>">
-                                         <div class="tab-icon"> <img src="<?php the_sub_field('icon'); ?>" alt="tab icon"> </div>
-                                         <strong><?php the_sub_field('name'); ?></strong>
-                                         <?php the_sub_field('content'); ?>
-                                         <a href="<?php the_sub_field('link'); ?>">read more</a>
-                                         <div class="split-line"></div>
-                                    </div>
-                                </li>
-                             <?php $counter ++ ; ?>
-                             <?php endwhile; ?>
-                        </ul>
-                    </div>
-                </div>
-                 
-             </div>
-         <?php endif; ?>
-     </div>   -->
-
-
-    <section class="home-testis">
+    <!-- <section class="home-testis">
         <div class="home-testi_head">
             <span class="home-testi_head_stars">4.9 Star Average  out of 684 Reviews</span>
             <h2 class="home-testi_head_trusted">Trusted & Highly Recommended</h2>
@@ -147,7 +54,7 @@
             </div>
         </div>
         <a href="<?php the_field('read_more_reviews_button'); ?>" class="button button-light">Read More Reviews</a>
-    </section>
+    </section> -->
 
 
    
@@ -155,15 +62,6 @@
 </div>
 
 
-<div class="logos-memeberships">
-    <?php if (have_rows('logos')): ?>
-        <?php while (have_rows('logos')): the_row(); ?>
-            <div class="single-logo">
-                <img data-src="<?php the_sub_field('logo'); ?>" alt="Memeberships logo" class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-            </div>
-        <?php endwhile; ?>
-    <?php endif; ?>
-</div>
 
 
 
