@@ -7,10 +7,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: fixed;
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   top: 0;
   left: 0;
   width: 100%;
@@ -25,15 +25,14 @@
   transition: all 0.2s;
 }
 .moby-overlay.dark {
-  background: rgba(#FCFCFC,1);
-  
+  background: rgba(#000000, 1);
 }
 .moby-overlay.light {
   background: rgba(255, 255, 255, 0.65);
 }
 .moby-overlay.moby-overlay-active {
   visibility: visible !important;
-  opacity: 1 !important;
+  opacity: 0.5 !important;
 }
 .moby-body-fixed {
   overflow: hidden !important;
@@ -43,8 +42,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   // background: $secCol;
-  background: $priAlt;
-  background-image: linear-gradient(to bottom, #13243b, #192c45, #1f3550, #243d5a, #2a4665);
+  background: $secCol;
+  // background-image: linear-gradient(to bottom, #13243b, #192c45, #1f3550, #243d5a, #2a4665);
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -66,13 +65,16 @@
   z-index: 3000;
   top: 0;
   height: 100%;
-  width: 30%;
+  width: 100%;
   right: 0;
   min-width: 280px;
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
+  @include media($tablet) {
+    width: 30%;
+  }
 }
 .moby.right-side.moby-active {
   -webkit-transform: translateX(0);
@@ -104,7 +106,7 @@
   height: 100%;
   left: 0px;
   min-width: 280px;
-  width: 100%;;
+  width: 100%;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -167,10 +169,10 @@
   height: 100%;
   left: 0px;
   width: 100%;
-  -webkit-transform: scale(.7);
-  -moz-transform: scale(.7);
-  -ms-transform: scale(.7);
-  transform: scale(.7);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
   visibility: hidden;
   opacity: 0;
 }
@@ -212,49 +214,45 @@
 }
 .moby ul {
   list-style: none;
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .moby ul ul {
   display: none;
 }
 
 .moby ul li a {
+  font-family: $secFont;
   position: relative;
   color: #9a989a;
   text-decoration: none;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-size: 18px;
   display: block;
-  padding: 10px 90px 10px 30px;
+  padding: 15px 90px 15px 30px;
   text-align: left;
   // background: $priAlt;
   color: white;
-  font-weight: 100;
-  // background: rgb(191,167,121);
-  // background: linear-gradient(90deg, rgba(191,167,121,1) 0%, rgba(252,225,174,1) 50%, rgba(191,167,121,1) 100%);
-  border-bottom: 1px solid rgba(white, .03);
+  border-bottom: 1px solid rgba(white, 0.03);
   @include media($tablet) {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 
-.moby ul li ul  a {
+.moby ul li ul a {
   font-weight: 100;
   font-size: 14px;
   padding-left: 60px;
 }
 
 .moby ul li ul li ul a {
-  
   font-weight: 100;
   font-size: 12px;
   padding-left: 80px;
   text-transform: none;
 }
-
 
 .moby ul li a .moby-expand {
   position: absolute;
@@ -290,14 +288,13 @@
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 400;
-  padding: 10px 30px;
-  background: $priAlt;
+  padding: 10px 10px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: -moz-box;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   -ms-flex-direction: row;
   -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
@@ -307,16 +304,16 @@
   margin-right: 15px;
   margin-top: 4px;
   position: relative;
-  height: 20px;
-  width: 20px;
-  
+  height: 30px;
+  width: 30px;
+
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .moby .moby-close .moby-close-icon::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -326,7 +323,7 @@
   margin-top: -1px;
 }
 .moby .moby-close .moby-close-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   height: 100%;
@@ -336,14 +333,13 @@
   margin-left: -1px;
 }
 
-
 @include media($desktop) {
   .moby-active .sub-menu {
     position: absolute;
     left: 600px;
     z-index: 9999;
     top: 80px;
-    background: #FCFCFC;
+    background: #fcfcfc;
     width: 300px;
     a {
       padding-left: 20px;
@@ -355,7 +351,7 @@
       }
       &:hover {
         text-decoration: underline;
-      } 
+      }
     }
     .sub-menu {
       top: 0;

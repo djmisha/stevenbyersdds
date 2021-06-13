@@ -1,71 +1,68 @@
 // Touch Menu
 
-
 /* Hamburger Menu */
 
 .nav-hamburger {
-    width: 30px;
-    height: 15px;
-    position: relative;
+  width: 30px;
+  height: 25px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 4px;
+    background: white;
+    opacity: 1;
+    left: 0;
     transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+      width: 60%;
+    }
+    &:nth-child(2) {
+      top: 10px;
+    }
+    &:nth-child(3) {
+      top: 6px;
+      width: 0;
+    }
+    &:nth-child(4) {
+      top: 20px;
+    }
+  }
+
+  &.open {
     span {
-        display: block;
-        position: absolute;
-        height: 3px;
+      &:nth-child(1) {
+        top: 7px;
+        transform: rotate(45deg);
         width: 100%;
-        border-radius: 4px;
-        background: white;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
-        &:nth-child(1) {
-            top: 0px;
-            // width: 60%;
-        }
-        &:nth-child(2),
-        &:nth-child(3) {
-            top: 6px;
-            width: 0;
-        }
-        &:nth-child(4) {
-            top: 10px;
-        }
+      }
+
+      &:nth-child(2) {
+        // width:
+      }
+
+      &:nth-child(3) {
+      }
+
+      &:nth-child(4) {
+        transform: rotate(-45deg);
+        top: 7px;
+      }
     }
-
-    &.open {
-        span {
-            &:nth-child(1) {
-                top: 7px;
-                transform: rotate(45deg);
-                width: 100%;
-            }
-
-            &:nth-child(2) {
-                // width: 
-            }
-
-            &:nth-child(3) {
-            }
-
-            &:nth-child(4) {
-                transform: rotate(-45deg);
-                top: 7px;
-            }
-        }
-    }
+  }
 }
-
 
 /* hides the menu on initial load*/
 #main-nav {
-    display: none;
+  display: none;
 }
-
-
-
 
 // $navBar: 60px;
 // .touch-menu {
@@ -229,7 +226,6 @@
 //     }
 // }
 
-
 // .close-menu {
 //     width: 50px;
 //     height: 50px;
@@ -248,7 +244,6 @@
 //         color: $priCol;
 //     }
 // }
-
 
 /* Nav Expander (Plus button) */
 
@@ -295,9 +290,6 @@
 //     }
 // }
 
-
-
-
 /* Hamburger Menu */
 
 // .menu-trigger {
@@ -309,8 +301,6 @@
 //         width: 120px;
 //     }
 // }
-
-
 
 // .menu-button-text {
 //     font-family: $highFont;
@@ -324,5 +314,3 @@
 //         display: block;
 //     }
 // }
-
-

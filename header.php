@@ -24,9 +24,9 @@
     
     <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>">
         <div class="masthead">
-            <div class="mast-logo"> 
+            <!-- <div class="mast-logo"> 
                 <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo'); ?></a>
-            </div>
+            </div> -->
 
             <?php if( have_rows('locations', 'option')): ?>
               <?php while( have_rows('locations', 'option')): the_row();
@@ -35,6 +35,11 @@
                 if($phone) echo '<div class="mast-phone"> <a href="tel:+1' . $tel . '">' . $phone . '</a></div>'; ?>
               <?php endwhile; ?>
             <?php endif; ?>
+
+            <div class="header-buttons">
+              <a href="#contact-form"><div><?php echo inline_svg('icon-chat'); ?><span>Request an Appointment</span></div></a>
+              <a href="tel:+16192827060"><div><?php echo inline_svg('icon-phone'); ?><span>(619) 282-7060</span></div></a>
+            </div>
 
             <div class="menu-trigger" id="moby-button">
                 <div class="nav-hamburger">
@@ -46,17 +51,6 @@
             </div>
         </div>
        
-        <!-- <div class="sticky-trigger">
-            <div class="menu-trigger" id="moby-button">
-                <div class="nav-hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div> -->
-
         <nav id="main-nav">
             <?php wp_nav_menu(array(
                 'menu'      => 'Main Navigation',
@@ -67,13 +61,6 @@
         </nav>
 
 
-    <?php if (is_page_template('page-no-header.php')) { // Logo inside pages with No header ?>
-       
-          <!-- <div class="breadcrumb-wrap">
-                <div class="site-crumbs"><?php echo __salaciouscrumb(); ?></div>
-            </div> -->
-    <?php } ?>
-
 
     </header>
 
@@ -81,7 +68,7 @@
 <?php if (!is_front_page() && !is_page_template('page-no-header.php')) { // Headers for inside pages: Contact, Blog, Single, Gallery  ?>
         <section class="internal-header-images" <?php //header_images(); ?>>
             <div class="internal-logo"> 
-                <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo-inside'); ?></a>
+                <!-- <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo-inside'); ?></a> -->
             </div>
             <!-- <div class="breadcrumb-wrap">
                 <div class="site-crumbs"><?php echo __salaciouscrumb(); ?></div>

@@ -13,12 +13,11 @@
     </a>
   </div>
   <div class="hero-bucket">
-      <div class="taglines-pretitle">Steven J. Byers D.D.S</div>
-      <div class="taglines-title">Beautiful, Healthy <strong>Smiles</strong></div>
-      <div class="taglines-subtitle">Providing the San Diego Community with Truly Exceptional Dental Care for Over 25 Years. </div>
+      <h1 class="taglines-pretitle">Steven J. Byers D.D.S</h1>
+      <h2 class="taglines-title">Beautiful, Healthy <strong>Smiles</strong></h2>
+      <h3 class="taglines-subtitle">Providing the San Diego Community with Truly Exceptional Dental Care for Over 25 Years. </div>
   </div>
 </div>
-
 
 <section class="home-about">
   <h2>Let your dreams of a beautiful smile take flight!</h2>
@@ -57,14 +56,7 @@
     </section> -->
 
 
-   
-
 </div>
-
-
-
-
-
 
 
 <?php get_footer(); ?>

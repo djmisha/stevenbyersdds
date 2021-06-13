@@ -59,7 +59,8 @@
       padding-top: 55vh;
     }
   }
-  .taglines-pretitle {
+  h1.taglines-pretitle {
+    margin: 0;
     text-transform: uppercase;
     background: $priCol;
     color: white;
@@ -74,7 +75,8 @@
       font-size: 19px;
     }
   }
-  .taglines-title {
+  h2.taglines-title {
+    margin: 0;
     color: $secCol;
     font-family: $priFont;
     text-align: left;
@@ -87,7 +89,8 @@
       @include font(52px, 1.1em, 300);
     }
   }
-  .taglines-subtitle {
+  h3.taglines-subtitle {
+    margin: 0;
     color: $secCol;
     text-align: left;
     font-style: italic;

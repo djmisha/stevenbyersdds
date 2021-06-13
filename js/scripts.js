@@ -9,15 +9,16 @@ var bLazy = new Blazy({
 
 // TODO: Select Elements using Vanilla JS
 // var navigation = document.getElementById('#main-nav')
-
-// var mobyMenu = new Moby({
-//   menu: $('#main-nav'), // The menu that will be cloned
-//   mobyTrigger: $('.menu-trigger'), // Button that will trigger the Moby menu to open
-//   subMenuOpenIcon: '<i class="fa fa-plus"></i>',
-//   subMenuCloseIcon: '<i class="fa fa-minus"></i>',
-//   menuClass: 'left-side',
-//   template: '<div class="moby-wrap"><div class="moby-close"><span class="moby-close-icon"></span></div><div class="moby-menu"></div></div>'
-// });
+// var hamburger = d
+var mobyMenu = new Moby({
+  breakpoint: 1024,
+  menu: $('#main-nav'), // The menu that will be cloned
+  mobyTrigger: $('.menu-trigger'), // Button that will trigger the Moby menu to open
+  subMenuOpenIcon: '<i class="fa fa-plus"></i>',
+  subMenuCloseIcon: '<i class="fa fa-minus"></i>',
+  menuClass: 'right-side',
+  template: '<div class="moby-wrap"><div class="moby-close"><span class="moby-close-icon"></span></div><div class="moby-menu"></div></div>'
+});
 
 
 /* Slideshows */
