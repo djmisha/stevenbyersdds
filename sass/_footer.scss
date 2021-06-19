@@ -10,10 +10,13 @@
 }
 
 .footer-slideshow {
-  // margin-top: -60px;
   padding-bottom: 60px;
   max-width: 1214px;
   margin: 0 auto;
+  @include media($tablet) {
+    position: relative;
+    top: -80px;
+  }
 }
 
 .footer-splide {

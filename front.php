@@ -20,11 +20,19 @@
 </div>
 
 <section class="home-about">
-  <h2>Let your dreams of a beautiful smile take flight!</h2>
-  <p>Dr. Steven J. Byers has been serving the San Diego community for over 25 years. At our Kensington, San Diego cosmetic and family dentistry practice, we are proud to provide patients with truly exceptional care. Those from Kensington, Normal Heights, North Park, and across San Diego, benefit from our many family and emergency dentistry procedures. </p>
-  <p>We are committed to providing patients with beautiful, healthy smiles!</p>
-  <span>Did you know Dr. Byers is also an avid pilot? When not serving patients at our busy dental practice, Dr. Byers is frequently enjoying the views of San Diego from thousands of feet up.</span>
+  <div class="about-content">
+    <h2>Let your dreams of a beautiful smile <strong>take flight!</strong></h2>
+    <p>Dr. Steven J. Byers has been serving the San Diego community for over 25 years. At our Kensington, San Diego cosmetic and family dentistry practice, we are proud to provide patients with truly exceptional care. Those from Kensington, Normal Heights, North Park, and across San Diego, benefit from our many family and emergency dentistry procedures. </p>
+    <p>We are committed to providing patients with beautiful, healthy smiles!</p>
+    <span>Did you know Dr. Byers is also an avid pilot? When not serving patients at our busy dental practice, Dr. Byers is frequently enjoying the views of San Diego from thousands of feet up.</span>
+  </div>
+  <div class="about-image">
+    <img src="<?php bloginfo('template_directory'); ?>/images/img-doc.jpg" alt="Picture of Steven J. Byers D.D.S">
+    <span>Dr. Steven J. Byers</span>
+  </div>
 </section>
+
+<div class="home-fly"></div>
 
 <h2>Our Services</h2>
 <div class="home-services">
@@ -36,25 +44,28 @@
   <div class="service"><a href="<?php bloginfo('url'); ?>/NEEDTOADDLINKHERE/"><img src="<?php bloginfo('template_directory'); ?>/images/service-6.jpg" alt="Metal-Free Fillings"><h3>Metal-Free Fillings</h3></a></div>
 </div>
 
-    <!-- <section class="home-testis">
-        <div class="home-testi_head">
-            <span class="home-testi_head_stars">4.9 Star Average  out of 684 Reviews</span>
-            <h2 class="home-testi_head_trusted">Trusted & Highly Recommended</h2>
+<section class="home-testis">
+    <div class="home-testi_head">
+      <div class="icon"> <?php echo inline_svg('icon-stars-2'); ?></div>
+        <!-- <span class="home-testi_head_stars">4.9 Star Average  out of 684 Reviews</span> -->
+        <!-- <h2 class="home-testi_head_trusted">Trusted & Highly Recommended</h2> -->
+    </div>
+    <div class="testi-splide splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <p>All it took was one visit and I haven’t gone to anyone since. It’s been so long now that I feel like part of the family instead of just another customer. They work with my schedule; something I truly appreciate especially with my job.
+                <br>  
+                The only thing I need now is a plane ride
+                <br>  
+                <strong>Editha Q.</strong>
+                </p>
+              </li>
+            </ul>
         </div>
-        <div class="testi-splide splide">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <?php if(have_rows('testimonials')): ?>
-                        <?php while(have_rows('testimonials')): the_row(); ?>
-                            <li class="splide__slide"><?php the_sub_field('testimonial'); ?></li>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </ul>
-            </div>
-        </div>
-        <a href="<?php the_field('read_more_reviews_button'); ?>" class="button button-light">Read More Reviews</a>
-    </section> -->
-
+    </div>
+    <a href="NEEDS LINK" class="button button-light"><div class="icon"> <?php echo inline_svg('icon-write'); ?></div> Write A Review</a>
+</section>
 
 </div>
 

@@ -107,6 +107,70 @@
   }
 }
 
+.home-about {
+  padding-bottom: 80px;
+  padding-top: 60px;
+  background: #f7f7f7;
+
+  @include media($tablet) {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  .about-content {
+    text-align: left;
+    @include media($tablet) {
+      margin-right: 80px;
+    }
+    @include media($desktop) {
+      margin-right: 100px;
+      max-width: 700px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    span {
+      display: block;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      font-size: 20px;
+      font-style: italic;
+      @include media($tablet) {
+        margin-top: 80px;
+      }
+    }
+  }
+  .about-image {
+    @include media($tablet) {
+      width: 338px;
+    }
+    img {
+      box-shadow: 0px 13px 16px rgba($color: #000000, $alpha: 0.16);
+      width: 100%;
+      max-width: 250px;
+      @include media($tablet) {
+        width: auto;
+        max-width: none;
+      }
+    }
+    span {
+      display: block;
+      padding-top: 10px;
+    }
+  }
+}
+
+.home-fly {
+  background: #f7f7f7 url("images/img-fly.png") top center no-repeat;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+  @include media($tablet) {
+    height: 350px;
+  }
+}
+
 .home-services {
   display: flex;
   flex-wrap: wrap;
@@ -161,84 +225,84 @@
   }
 }
 
-// .home-testis {
-//   min-height: 400px;
-//   padding-bottom: 60px;
-//   padding-top: 60px;
-//   position: relative;
-//   @include media($tablet) {
-//     padding-top: 100px;
-//     padding-bottom: 100px;
-//   }
-//   .home-testi_head_stars {
-//     font-family: $secFont;
-//     color: $secCol;
-//     @include media($tablet) {
-//       font-size: 21px;
-//     }
-//   }
-//   &:before {
-//     content: "";
-//     position: absolute;
-//     top: 180px;
-//     left: 0;
-//     right: 0;
-//     width: 100vw;
-//     height: 1px;
-//     background: $priCol;
-//     margin: 0 auto;
-//   }
-//   h2.home-testi_head_trusted {
-//     background-color: white;
-//     position: relative;
-//     z-index: 2;
-//     display: inline-block;
-//     padding-left: 20px;
-//     padding-right: 20px;
-//     margin-bottom: 60px;
-//     @include media($tablet) {
-//       padding-left: 40px;
-//       padding-right: 40px;
-//     }
-//   }
+.home-testis {
+  min-height: 400px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  position: relative;
+  @include media($tablet) {
+    padding-top: 100px;
+    padding-bottom: 200px;
+  }
+  .home-testi_head_stars {
+    font-family: $secFont;
+    color: $secCol;
+    @include media($tablet) {
+      font-size: 21px;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background: $priCol;
+    margin: 0 auto;
+  }
+  h2.home-testi_head_trusted {
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 60px;
+    @include media($tablet) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
 
-//   li p {
-//     font-size: 18px !important;
-//     line-height: 30px;
-//     max-width: $desktop;
-//     margin: 0 auto;
-//     color: #5a5a5a;
-//   }
-//   li h2 {
-//     margin-top: 40px;
-//     @include media($tablet) {
-//       font-size: 26px;
-//     }
-//   }
-//   li h3 {
-//     margin-bottom: 20px;
-//     @include media($tablet) {
-//       font-size: 20px;
-//     }
-//   }
-//   .button {
-//     margin-top: 100px;
-//   }
-//   .splide__arrows {
-//     display: none;
-//   }
-//   .splide__pagination {
-//     bottom: -50px;
-//     button {
-//       background: transparent;
-//       border: 1px solid $secCol;
-//       width: 50px;
-//       height: 1px;
-//       border-radius: 0;
-//     }
-//     .is-active {
-//       border: 2px solid $secCol;
-//       transform: none;
-//     }
-//   }
-// }
+  li p {
+    font-size: 18px !important;
+    line-height: 30px;
+    max-width: $desktop;
+    margin: 0 auto;
+    color: #5a5a5a;
+  }
+  li h2 {
+    margin-top: 40px;
+    @include media($tablet) {
+      font-size: 26px;
+    }
+  }
+  li h3 {
+    margin-bottom: 20px;
+    @include media($tablet) {
+      font-size: 20px;
+    }
+  }
+  .button {
+    margin-top: 100px;
+  }
+  .splide__arrows {
+    display: none;
+  }
+  .splide__pagination {
+    bottom: -50px;
+    button {
+      background: transparent;
+      border: 1px solid $secCol;
+      width: 50px;
+      height: 1px;
+      border-radius: 0;
+    }
+    .is-active {
+      border: 2px solid $secCol;
+      transform: none;
+    }
+  }
+}

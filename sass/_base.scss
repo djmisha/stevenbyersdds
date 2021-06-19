@@ -7,25 +7,25 @@ html {
 }
 
 body {
-    color: $defaultcolor;
-    font: 15px/23px $defaultfont;
-    font-weight: normal;
-    min-width: 320px;
-    text-align: center;
-    @include media($tablet) {
-        font: 16px/28px $defaultfont;
-    }
+  color: $defaultcolor;
+  font: 16px/26px $defaultfont;
+  font-weight: normal;
+  min-width: 320px;
+  text-align: center;
+  @include media($tablet) {
+    font: 16px/28px $defaultfont;
+  }
 }
 
 p {
-    margin: 0 0 1em;
-    font-weight: 300;
+  margin: 0 0 1em;
+  font-weight: 300;
 }
 
 ul,
 ol,
 dl {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 li {
@@ -38,75 +38,75 @@ h4,
 h5,
 h6,
 .headline {
-    font-family: $secFont;
-    color: $priCol;
-    font-weight: 300;
-    // text-transform: uppercase;
-    // letter-spacing: 3px;
+  font-family: $secFont;
+  color: $secCol;
+  font-weight: 300;
+  // text-transform: uppercase;
+  // letter-spacing: 3px;
 }
 
 h1 {
-    @include font(30px);
-    @include media($tablet) {
-        @include font(56px);
-    }
+  @include font(30px);
+  @include media($tablet) {
+    @include font(56px);
+  }
 }
 
 h2,
 .headline {
-    @include font(25px, 1.1em);
-    @include media($tablet) {
-        @include font(40px, 1.2em);
-    }
+  @include font(25px, 1.1em);
+  @include media($tablet) {
+    @include font(40px, 1.2em);
+  }
 }
 
 h3 {
-    @include font(22px, 1.1em);
-    @include media($tablet) {
-        @include font(30px, 1.2em);
-    }
+  @include font(22px, 1.1em);
+  @include media($tablet) {
+    @include font(30px, 1.2em);
+  }
 }
 
 h4,
 h5,
 h6 {
-    @include font(18px);
-    @include media($tablet) {
-        @include font(24px);
-    }
+  @include font(18px);
+  @include media($tablet) {
+    @include font(24px);
+  }
 }
 
 a {
-    color: $priCol;
-    text-decoration: underline;
-    &:focus {
-        outline: none;
-        text-decoration: none;
-    }
+  color: $priCol;
+  text-decoration: underline;
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 blockquote {
-    font-family: $highFont;
-    font-style: italic;
-    @include media($desktop) {
-        @include font(25px, 110%);
-    }
-    footer {
-        font-style: normal;
-    }
+  font-family: $highFont;
+  font-style: italic;
+  @include media($desktop) {
+    @include font(25px, 110%);
+  }
+  footer {
+    font-style: normal;
+  }
 }
 
 // header,
 section,
 // main,
 .contain {
-    padding: 20px;
-    @include media($desktop) {
-        padding: 20px 40px;
-    }
-    @include media($full) {
-        @include contain($full, 20px);
-    }
+  padding: 20px;
+  @include media($desktop) {
+    padding: 20px 40px;
+  }
+  @include media($full) {
+    @include contain($full, 20px);
+  }
 }
 
 /* Smaller Width Sizing Containers */
@@ -116,23 +116,23 @@ section,
 main,
 .single-case-content,
 .gallery-cat-wrap {
-    padding-left: 20px;
-    padding-right: 20px;
-    @include media($tablet) {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    @include media($desktop) {
-        // padding-left: calc(40px + (50% - (#{$desktop} / 2)));
-        // padding-right: calc(40px + (50% - (#{$desktop} / 2)));
-    }
-    @include media($full) {
-        // max-width: $full;
-        max-width: $full;
-        margin: 0 auto;
-        // padding-left: calc(40px + (50% - (1200px / 2)));
-        // padding-right: calc(40px + (50% - (1200px / 2)));
-    }
+  padding-left: 20px;
+  padding-right: 20px;
+  @include media($tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include media($desktop) {
+    // padding-left: calc(40px + (50% - (#{$desktop} / 2)));
+    // padding-right: calc(40px + (50% - (#{$desktop} / 2)));
+  }
+  @include media($full) {
+    // max-width: $full;
+    max-width: $full;
+    margin: 0 auto;
+    // padding-left: calc(40px + (50% - (1200px / 2)));
+    // padding-right: calc(40px + (50% - (1200px / 2)));
+  }
 }
 
 // section,
@@ -174,13 +174,13 @@ main,
 
 .container,
 .container-full {
-    position: relative;
+  position: relative;
 }
 
 .container {
-    max-width: $desktop;
-    margin: 0 auto;
-    text-align: left;
+  max-width: $desktop;
+  margin: 0 auto;
+  text-align: left;
 }
 
 /* ------------------------
@@ -195,8 +195,7 @@ main,
 
 @import "moby";
 @import "menu_touch";
-@import "menu_hover";
-
+// @import "menu_hover";
 
 /* ------------------------
 	Content
@@ -245,16 +244,10 @@ main,
 @import "blog";
 
 /* ------------------------
-	Gallery
------------------------- */
-
-@import "gallery";
-
-/* ------------------------
 	Custom Page
 ------------------------ */
 
-@import "custompages";
+// @import "custompages";
 
 /* Hide / Show */
 
