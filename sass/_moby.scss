@@ -332,31 +332,3 @@
   top: 0%;
   margin-left: -1px;
 }
-
-@include media($desktop) {
-  .moby-active .sub-menu {
-    position: absolute;
-    left: 600px;
-    z-index: 9999;
-    top: 80px;
-    background: #fcfcfc;
-    width: 300px;
-    a {
-      padding-left: 20px;
-      padding-right: 20px;
-      color: $priCol !important;
-      font-size: 17px;
-      .moby-expand i {
-        color: $priCol !important;
-      }
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    .sub-menu {
-      top: 0;
-      left: 300px;
-      width: 350px;
-    }
-  }
-}

@@ -47,8 +47,6 @@
 <section class="home-testis">
     <div class="home-testi_head">
       <div class="icon"> <?php echo inline_svg('icon-stars-2'); ?></div>
-        <!-- <span class="home-testi_head_stars">4.9 Star Average  out of 684 Reviews</span> -->
-        <!-- <h2 class="home-testi_head_trusted">Trusted & Highly Recommended</h2> -->
     </div>
     <div class="testi-splide splide">
         <div class="splide__track">
@@ -61,10 +59,23 @@
                 <strong>Editha Q.</strong>
                 </p>
               </li>
+              <li class="splide__slide">
+                <p>As a physician I look carefully at where I plan to obtain my healthcare. I have been a patient of Dr. Steven Byers for around 15 years, which indicates how I feel about the quality of care and the level of service delivered by Dr. Byers and his team.
+                <br>  
+                <strong>Judith S.</strong>
+                </p>
+              </li>
+              <li class="splide__slide">
+                <p>This is the best dental office in San Diego. The staff is professional and friendly at the same time.
+The dental work is done with the skill of a jeweler in a fast efficient way. Their hygienists do great work and keep your smile beautiful and healthy.  
+                <br>  
+                <strong>Jim E.</strong>
+                </p>
+              </li>
             </ul>
         </div>
     </div>
-    <a href="NEEDS LINK" class="button button-light"><div class="icon"> <?php echo inline_svg('icon-write'); ?></div> Write A Review</a>
+    <a href="https://www.google.com/search?client=firefox-b-1-d&q=stevenbyersdds+#lrd=0x80d954464b5f322b:0x5db5a2c7d80e2cac,3,,," class="button"> <?php echo inline_svg('icon-write'); ?> Write A Review</a>
 </section>
 
 </div>

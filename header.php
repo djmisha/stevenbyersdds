@@ -68,7 +68,7 @@
 <?php if (!is_front_page() && !is_page_template('page-no-header.php')) { // Headers for inside pages: Contact, Blog, Single, Gallery  ?>
         <section class="internal-header-images" <?php //header_images(); ?>>
             <div class="internal-logo"> 
-                <!-- <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo-inside'); ?></a> -->
+                <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo'); ?></a>
             </div>
             <!-- <div class="breadcrumb-wrap">
                 <div class="site-crumbs"><?php echo __salaciouscrumb(); ?></div>

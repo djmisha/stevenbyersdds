@@ -7,9 +7,6 @@ var bLazy = new Blazy({
 
 /* Main Mobile Navigation */
 
-// TODO: Select Elements using Vanilla JS
-// var navigation = document.getElementById('#main-nav')
-// var hamburger = d
 var mobyMenu = new Moby({
   breakpoint: 1024,
   menu: $('#main-nav'), // The menu that will be cloned
@@ -22,6 +19,20 @@ var mobyMenu = new Moby({
 
 
 /* Slideshows */
+
+/* Testi Slideshow */
+
+var homepageSlideShows = document.querySelector('.testi-splide');
+
+if (homepageSlideShows) {
+  new Splide('.testi-splide', {
+    type: 'loop',
+    perPage: 1,
+    autoplay: true,
+
+  }).mount();
+}
+
 
 /* Footer Slideshow */
 
@@ -36,48 +47,6 @@ if (footerSlideShow) {
   }).mount();
 }
 
-
-// var homepageSlideShows = document.querySelector('.testi-splide');
-
-// if (homepageSlideShows) {
-//   new Splide('.testi-splide', {
-//     type: 'loop',
-//     perPage: 1,
-//   }).mount();
-// }
-
-
-/* Doctors Slideshow */
-
-// var doctorSlideShows = document.querySelector('.doctors-splide');
-
-// if (doctorSlideShows) {
-//   new Splide('.doctors-splide', {
-//     type: 'loop',
-//     perPage: 1,
-//   }).mount();
-// }
-
-
-
-
-/* Mobile Slideshow */
-
-// var homepageSlideShowsMobile = document.querySelector('.mobile-splide');
-
-// if (homepageSlideShowsMobile) {
-//     new Splide( '.mobile-splide', {
-//         type   : 'loop',
-//         perPage: 1,
-//         arrows: false,
-//         pagination: false,
-//         focus  : 'center',
-//         padding: {
-//             right: '40px',
-//             left : '40px',
-//           },
-//     } ).mount();
-// }
 
 
 
@@ -103,40 +72,5 @@ if (footerSlideShow) {
 // end of jQuery doc ready 
 
 
-/* Parallax Effects -> https://github.com/dixonandmoe/rellax */
-
-// var isHome = document.querySelector('.home');
-
-// if (isHome) {
-
-//   var welcomeFlower = new Rellax('.icon-welcome-flower', {
-//     speed: 1,
-//     center: false,
-//     wrapper: null,
-//     round: true,
-//     vertical: true,
-//     horizontal: false
-//   });
-
-//   var welcomeFlowerTwo = new Rellax('.icon-welcome-flower-2', {
-//     speed: 2,
-//     center: false,
-//     wrapper: null,
-//     round: true,
-//     vertical: true,
-//     horizontal: false
-//   });
-
-
-//   var doctorFlower = new Rellax('.icon-doctor-flower', {
-//     speed: 2,
-//     center: false,
-//     wrapper: null,
-//     round: true,
-//     vertical: true,
-//     horizontal: false
-//   });
-
-// }
 
 

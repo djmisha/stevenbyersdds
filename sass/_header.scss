@@ -151,19 +151,23 @@
 /*--------------  Header Hero Images  -------------*/
 
 .internal-header-images {
-  background-color: #f8f8f7;
+  background: #f8f8f7 url("images/office-3.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 250px;
+  height: 300px;
 }
 
 .internal-logo {
-  margin-top: 60px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+
+  // margin-top: 60px;
   svg {
-    width: 280px;
+    width: 180px;
     @include media($tablet) {
-      width: auto;
+      // width: auto;
     }
   }
 }

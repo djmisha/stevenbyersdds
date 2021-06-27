@@ -4287,25 +4287,21 @@ main,
 
 /*--------------  Header Hero Images  -------------*/
 .internal-header-images {
-  background-color: #f8f8f7;
+  background: #f8f8f7 url("images/office-3.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 250px;
+  height: 300px;
 }
 
 .internal-logo {
-  margin-top: 60px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
 }
 
 .internal-logo svg {
-  width: 280px;
-}
-
-@media only screen and (min-width: 768px) {
-  .internal-logo svg {
-    width: auto;
-  }
+  width: 180px;
 }
 
 /* Page Title */
@@ -4735,34 +4731,6 @@ main,
   margin-left: -1px;
 }
 
-@media only screen and (min-width: 1060px) {
-  .moby-active .sub-menu {
-    position: absolute;
-    left: 600px;
-    z-index: 9999;
-    top: 80px;
-    background: #fcfcfc;
-    width: 300px;
-  }
-  .moby-active .sub-menu a {
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #93C3AD !important;
-    font-size: 17px;
-  }
-  .moby-active .sub-menu a .moby-expand i {
-    color: #93C3AD !important;
-  }
-  .moby-active .sub-menu a:hover {
-    text-decoration: underline;
-  }
-  .moby-active .sub-menu .sub-menu {
-    top: 0;
-    left: 300px;
-    width: 350px;
-  }
-}
-
 /* Hamburger Menu */
 .nav-hamburger {
   width: 30px;
@@ -4839,6 +4807,13 @@ main,
 .interior {
   display: block;
   text-align: left;
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .interior {
+    margin-bottom: 180px;
+  }
 }
 
 .interior .content {
@@ -7108,81 +7083,44 @@ span.error {
 
 @media only screen and (min-width: 768px) {
   .home-testis {
-    padding-top: 100px;
-    padding-bottom: 200px;
+    padding-top: 80px;
+    padding-bottom: 160px;
   }
 }
 
-.home-testis .home-testi_head_stars {
-  font-family: "Lato", sans-serif;
-  color: #4B5F52;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-testis .home-testi_head_stars {
-    font-size: 21px;
-  }
-}
-
-.home-testis:before {
-  content: "";
-  position: absolute;
-  top: 180px;
-  left: 0;
-  right: 0;
-  width: 100vw;
-  height: 1px;
-  background: #93C3AD;
-  margin: 0 auto;
-}
-
-.home-testis h2.home-testi_head_trusted {
-  background-color: white;
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 60px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-testis h2.home-testi_head_trusted {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+.home-testis .home-testi_head {
+  margin-bottom: 20px;
 }
 
 .home-testis li p {
   font-size: 18px !important;
-  line-height: 30px;
+  line-height: 40px;
   max-width: 1060px;
   margin: 0 auto;
   color: #5a5a5a;
 }
 
-.home-testis li h2 {
-  margin-top: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-testis li h2 {
-    font-size: 26px;
-  }
-}
-
-.home-testis li h3 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-testis li h3 {
-    font-size: 20px;
-  }
+.home-testis li strong {
+  display: block;
+  margin-top: 30px;
+  font-size: 26px;
 }
 
 .home-testis .button {
   margin-top: 100px;
+  position: relative;
+  padding-left: 60px !important;
+  background-color: #93C3AD;
+}
+
+.home-testis .button:hover {
+  background-color: #4B5F52;
+}
+
+.home-testis .button svg {
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
 
 .home-testis .splide__arrows {
@@ -7194,18 +7132,13 @@ span.error {
 }
 
 .home-testis .splide__pagination button {
-  background: transparent;
-  border: 1px solid #4B5F52;
-  width: 50px;
-  height: 1px;
-  border-radius: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #93C3AD;
 }
 
 .home-testis .splide__pagination .is-active {
-  border: 2px solid #4B5F52;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  background-color: #93C3AD;
 }
 
 /* ------------------------
