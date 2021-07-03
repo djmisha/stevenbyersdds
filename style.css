@@ -3945,13 +3945,6 @@ h1 {
   font-size: 1.875rem;
 }
 
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 56px;
-    font-size: 3.5rem;
-  }
-}
-
 h2,
 .headline {
   font-size: 25px;
@@ -3962,8 +3955,8 @@ h2,
 @media only screen and (min-width: 768px) {
   h2,
   .headline {
-    font-size: 40px;
-    font-size: 2.5rem;
+    font-size: 35px;
+    font-size: 2.1875rem;
     line-height: 1.2em;
   }
 }
@@ -5960,7 +5953,14 @@ aside li {
 .footer-logo {
   position: absolute;
   left: calc(50% - 100px);
-  top: 200px;
+  top: 15vw;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-logo {
+    display: block;
+  }
 }
 
 .footer-slideshow {
@@ -5979,6 +5979,7 @@ aside li {
 .footer-splide {
   -webkit-box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.38);
           box-shadow: 0px 13px 16px rgba(0, 0, 0, 0.38);
+  position: relative;
 }
 
 .footer-splide img {
@@ -5993,12 +5994,16 @@ aside li {
   fill: white;
 }
 
-.footer-splide .splide__arrow--prev {
-  left: -2em;
+.footer-splide .splide__arrow--prev,
+.footer-splide .splide__arrow--next {
+  visibility: hidden;
 }
 
-.footer-splide .splide__arrow--next {
-  right: -2em;
+@media only screen and (min-width: 768px) {
+  .footer-splide .splide__arrow--prev,
+  .footer-splide .splide__arrow--next {
+    visibility: visible;
+  }
 }
 
 .footer-splide .splide__pagination {
@@ -6784,7 +6789,7 @@ span.error {
   background-color: #f7f7f7;
   background-repeat: no-repeat;
   height: 100vh;
-  max-height: 800px;
+  max-height: 667px;
   width: 100%;
   color: #93C3AD;
 }
@@ -6793,6 +6798,7 @@ span.error {
   .home-hero {
     background: url("images/hero.jpg") top center no-repeat;
     height: 100vh;
+    max-height: 800px;
   }
 }
 
@@ -6990,13 +6996,15 @@ span.error {
 
 .home-fly {
   background: #f7f7f7 url("images/img-fly.png") top center no-repeat;
+  background-size: 600px auto;
   width: 100%;
-  height: 300px;
+  height: 200px;
   margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
   .home-fly {
+    background-size: auto;
     height: 350px;
   }
 }
@@ -7104,6 +7112,8 @@ span.error {
   display: block;
   margin-top: 30px;
   font-size: 26px;
+  font-weight: normal;
+  font-style: italic;
 }
 
 .home-testis .button {

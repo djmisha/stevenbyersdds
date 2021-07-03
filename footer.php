@@ -40,7 +40,7 @@
 	
 	<section class="action-buttons">
 		<div class="address">
-			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" target="_blank">
+			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" target="_blank" rel="noopener">
 				<div class="icon">
 					<?php echo inline_svg('icon-map'); ?>
 				</div>
@@ -52,7 +52,7 @@
 			</a>
 		</div>
 		<div class="directions">
-			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" target="_blank">
+			<a href="https://goo.gl/maps/yvLYjsbg3KJ1DfCH6" target="_blank" rel="noopener">
 				<div class="icon">
 					<?php echo inline_svg('icon-direction'); ?>
 				</div>

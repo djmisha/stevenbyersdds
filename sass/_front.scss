@@ -24,12 +24,13 @@
   background-color: #f7f7f7;
   background-repeat: no-repeat;
   height: 100vh;
-  max-height: 800px;
+  max-height: 667px;
   width: 100%;
   color: $priCol;
   @include media($tablet) {
     background: url("images/hero.jpg") top center no-repeat;
     height: 100vh;
+    max-height: 800px;
   }
   @include media($desktop) {
     background: url("images/hero.jpg") center center no-repeat;
@@ -163,10 +164,12 @@
 
 .home-fly {
   background: #f7f7f7 url("images/img-fly.png") top center no-repeat;
+  background-size: 600px auto;
   width: 100%;
-  height: 300px;
+  height: 200px;
   margin-bottom: 40px;
   @include media($tablet) {
+    background-size: auto;
     height: 350px;
   }
 }
@@ -249,6 +252,8 @@
     display: block;
     margin-top: 30px;
     font-size: 26px;
+    font-weight: normal;
+    font-style: italic;
   }
   .button {
     margin-top: 100px;

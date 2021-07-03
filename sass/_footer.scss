@@ -6,11 +6,14 @@
 .footer-logo {
   position: absolute;
   left: calc(50% - 100px);
-  top: 200px;
+  top: 15vw;
+  display: none;
+  @include media($tablet) {
+    display: block;
+  }
 }
 
 .footer-slideshow {
-  // overflow: hidden;
   padding-bottom: 60px;
   max-width: 1214px;
   margin: 0 auto;
@@ -33,11 +36,13 @@
       }
     }
   }
-  .splide__arrow--prev {
-    left: -2em;
-  }
+  position: relative;
+  .splide__arrow--prev,
   .splide__arrow--next {
-    right: -2em;
+    visibility: hidden;
+    @include media($tablet) {
+      visibility: visible;
+    }
   }
   .splide__pagination {
     bottom: -2em;
