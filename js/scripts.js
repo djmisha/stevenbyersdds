@@ -26,10 +26,9 @@ var homepageSlideShows = document.querySelector('.testi-splide');
 
 if (homepageSlideShows) {
   new Splide('.testi-splide', {
-    type: 'loop',
+    type: 'fade',
     perPage: 1,
     autoplay: true,
-
   }).mount();
 }
 

@@ -4123,27 +4123,20 @@ main,
   }
 }
 
-.masthead .mast-phone {
-  display: none;
+.masthead .mast-logo {
+  position: absolute;
+  left: 20px;
+  top: -70px;
 }
 
-@media only screen and (min-width: 768px) {
-  .masthead .mast-phone {
-    display: block;
-    position: absolute;
-    right: 120px;
+@media only screen and (min-width: 1060px) {
+  .masthead .mast-logo {
+    display: none;
   }
 }
 
-.masthead .mast-phone a {
-  font-weight: 100;
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-}
-
-.masthead .mast-phone:nth-of-type(2) {
-  display: none;
+.masthead .mast-logo svg {
+  width: 60px;
 }
 
 /* Menu Trigger  */
@@ -4324,52 +4317,6 @@ main,
     font-size: 2.3125rem;
     line-height: 1em;
   }
-}
-
-/* BreadCrums  */
-.site-crumbs {
-  text-align: left;
-  padding-top: 10px;
-}
-
-@media only screen and (min-width: 1060px) {
-  .site-crumbs {
-    margin-top: 40px;
-  }
-}
-
-.site-crumbs .salacious-crumb {
-  font-size: 12px;
-  font-size: 0.75rem;
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-}
-
-.site-crumbs .salacious-crumb a {
-  text-decoration: none;
-  color: #93C3AD;
-}
-
-.site-crumbs .salacious-crumb .crumb-sep {
-  border-right: 1px solid #93C3AD;
-  color: #93C3AD;
-  margin: 0 6px;
-}
-
-.site-crumbs .salacious-crumb span {
-  color: #93C3AD !important;
-}
-
-.site-crumbs .salacious-crumb .current-crumb-item {
-  color: #93C3AD !important;
-}
-
-.site-crumbs .salacious-crumb .current-crumb-item a {
-  color: #93C3AD !important;
-}
-
-.site-crumbs p {
-  margin: 0;
 }
 
 /* ------------------------
@@ -6128,6 +6075,17 @@ aside li {
   line-height: 1.3rem;
 }
 
+.action-buttons .request .i-text {
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .action-buttons .request .i-text {
+    max-width: none;
+  }
+}
+
 .ratings-social {
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -6789,7 +6747,7 @@ span.error {
   background-color: #f7f7f7;
   background-repeat: no-repeat;
   height: 100vh;
-  max-height: 667px;
+  max-height: 736px;
   width: 100%;
   color: #93C3AD;
 }
@@ -6876,7 +6834,7 @@ span.error {
   font-size: 1.8125rem;
   line-height: 1em;
   font-weight: 300;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6901,7 +6859,7 @@ span.error {
   line-height: 1.2em;
   font-weight: 100;
   max-width: 690px;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -6919,15 +6877,23 @@ span.error {
   padding-bottom: 80px;
   padding-top: 60px;
   background: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 @media only screen and (min-width: 768px) {
   .home-about {
     padding-top: 150px;
     padding-bottom: 80px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6967,6 +6933,10 @@ span.error {
   .home-about .about-content span {
     margin-top: 80px;
   }
+}
+
+.home-about .about-image {
+  margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -7108,7 +7078,7 @@ span.error {
   color: #5a5a5a;
 }
 
-.home-testis li strong {
+.home-testis li em {
   display: block;
   margin-top: 30px;
   font-size: 26px;

@@ -53,22 +53,22 @@
         <div class="splide__track">
             <ul class="splide__list">
               <li class="splide__slide">
-                <p>All it took was one visit and I haven’t gone to anyone since. It’s been so long now that I feel like part of the family instead of just another customer. They work with my schedule; something I truly appreciate especially with my job.
-                <br>  
-                <strong>~ Editha Q.</strong>
-                </p>
-              </li>
-              <li class="splide__slide">
-                <p>As a physician I look carefully at where I plan to obtain my healthcare. I have been a patient of Dr. Steven Byers for around 15 years, which indicates how I feel about the quality of care and the level of service delivered by Dr. Byers and his team.
-                <br>  
-                <strong>~ Judith S.</strong>
-                </p>
-              </li>
-              <li class="splide__slide">
-                <p>This is the best dental office in San Diego. The staff is professional and friendly at the same time.
+                <p><strong>This is the best dental office in San Diego</strong>. The staff is professional and friendly at the same time.
                   The dental work is done with the skill of a jeweler in a fast efficient way. Their hygienists do great work and keep your smile beautiful and healthy.  
                 <br>  
-                <strong>~ Jim E.</strong>
+                <em>~ Jim E.</em>
+                </p>
+              </li>
+              <li class="splide__slide">
+                <p><strong>All it took was one visit and I haven’t gone to anyone since.</strong> It’s been so long now that I feel like part of the family instead of just another customer. They work with my schedule; something I truly appreciate especially with my job.
+                <br>  
+                <em>~ Editha Q.</em>
+                </p>
+              </li>
+              <li class="splide__slide">
+                <p>As a physician I look carefully at where I plan to obtain my healthcare. <strong>I have been a patient of Dr. Steven Byers for around 15 years</strong>, which indicates how I feel about the quality of care and the level of service delivered by Dr. Byers and his team.
+                <br>  
+                <em>~ Judith S.</em>
                 </p>
               </li>
             </ul>

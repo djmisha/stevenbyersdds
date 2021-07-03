@@ -32,10 +32,6 @@
       </div>		
     </div>
       
-    <?php // Footer Contact Form - not shown on Homepage, Contact, Blog or Single Blogs
-        if(!is_page(array('contact-us', 'contact' )) ):?>
-    <?php endif; ?>  
-
 	</div>	
 	
 	<section class="action-buttons">
@@ -95,7 +91,7 @@
 		<div class="copyright">
 			Copyright &copy; <?php echo date("Y"); ?> <?bloginfo('title');?>. All rights reserved. <a href="<?php bloginfo('url'); ?>/sitemap/" title="Sitemap">Sitemap</a>
 			<br>
-			<a href="https://asburymediagroup.com/website-design-and-development/" target="_blank" rel="noopener" aria-label="Web Development" title="Web Development">Web Development</a>  by <a href="https://asburymediagroup.com/" target="_blank" rel="noopener" aria-label="Asbury Media Group" title="Asbury Media Group">Asbury Media Group </a>
+			<a href="https://asburymediagroup.com/" target="_blank" rel="noopener" aria-label="Web Design &amp; Development" title="Web Design &amp; Development">Web Design &amp; Development</a>  by <a href="https://asburymediagroup.com/" target="_blank" rel="noopener" aria-label="Asbury Media Group" title="Asbury Media Group">Asbury Media Group</a>
 		</div>
 	</section>
 

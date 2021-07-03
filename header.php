@@ -23,9 +23,9 @@
   
   <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>">
     <div class="masthead">
-        <!-- <div class="mast-logo"> 
+        <div class="mast-logo"> 
             <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo'); ?></a>
-        </div> -->
+        </div>
 
         <div class="header-buttons">
           <a href="#contact-form"><div><?php echo inline_svg('icon-chat'); ?><span>Request an Appointment</span></div></a>
@@ -49,7 +49,7 @@
     </nav>
   </header>
 
-  <?php if (!is_front_page() && !is_page_template('page-no-header.php')) { // Headers for inside pages  ?>
+  <?php if (!is_front_page()) { // Headers for inside pages  ?>
     <section class="internal-header-images">
         <div class="internal-logo"> 
             <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo'); ?></a>
