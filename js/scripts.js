@@ -26,7 +26,7 @@ var homepageSlideShows = document.querySelector('.testi-splide');
 
 if (homepageSlideShows) {
   new Splide('.testi-splide', {
-    type: 'fade',
+    type: 'loop',
     perPage: 1,
     autoplay: true,
   }).mount();
@@ -44,29 +44,3 @@ if (footerSlideShow) {
     autoplay: true,
   }).mount();
 }
-
-
-/*jQuery*/
-
-// $(function () {
-
-//   $(window).on("load resize", function (e) {
-//     $(".will-parallax").addClass("parallax");
-//     $(".will-parallax").addClass("is-parallaxing");
-
-//     if ($(".parallax").hasClass("parallax")) {
-//       $(".will-parallax").waypoint(function () {
-//         $(".parallax-home-about").parallax("center", 0.3, true);
-//         $(".parallax-home-wrapper").parallax("center", 0.3, true);
-//         $(".parallax-home-footer").parallax("center", -0.3, true);
-//       });
-//     }
-//   });
-
-// }); 
-
-// end of jQuery doc ready 
-
-
-
-

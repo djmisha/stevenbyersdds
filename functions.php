@@ -72,10 +72,6 @@ function __themejs()
     wp_register_script('silvr-splide', TMPL_DIR_URI . '/js/libs/splide/js/splide.min.js', array('jquery'), '1.0', true);
 
 
-    // Sliders -> http://ganlanyuan.github.io/tiny-slider/demo/
-    // wp_register_script('silvr-tiny-slider', TMPL_DIR_URI . '/js/libs/tiny-slider/tiny-slider.js', array('jquery'), '1.0', true);
-
-
     wp_register_script('silvr-beer-slider', TMPL_DIR_URI . '/js/libs/beerslider/BeerSlider.js', array('jquery'), '1.0', true);
     // Parallax -> https://github.com/dixonandmoe/rellax
     wp_register_script('silvr-rellax', TMPL_DIR_URI . '/js/libs/rellax.js', array('jquery'), '1.0', true);
@@ -128,8 +124,8 @@ function __themejs()
     // wp_enqueue_script( 'silvr-match');
     // wp_enqueue_script('silvr-owl');
     // wp_enqueue_script('silvr-rangeslider');
-    wp_enqueue_script('silvr-parallax');
-    wp_enqueue_script('silvr-waypoints');
+    // wp_enqueue_script('silvr-parallax');
+    // wp_enqueue_script('silvr-waypoints');
    
     // wp_enqueue_script( 'silvr-preload');
     // wp_enqueue_script( 'silvr-kenburns');
@@ -462,16 +458,16 @@ add_shortcode('sitemap', 'sitemap_function');
 =            Nav Menu Dropdown            =
 =========================================*/
 
-function custom_start_el($item_output, $item, $depth, $args)
-{
-    if ($args->menu_id == 'menu-main' && in_array('menu-item-has-children', $item->classes)) {
-        $item_output = $item_output .'<div class="nav-dropdown-button"><div class="nav-expander"><span></span><span></span></div></div>';
-    }
+// function custom_start_el($item_output, $item, $depth, $args)
+// {
+//     if ($args->menu_id == 'menu-main' && in_array('menu-item-has-children', $item->classes)) {
+//         $item_output = $item_output .'<div class="nav-dropdown-button"><div class="nav-expander"><span></span><span></span></div></div>';
+//     }
 
-    return $item_output;
-}
+//     return $item_output;
+// }
 
-add_filter('walker_nav_menu_start_el', 'custom_start_el', 10, 4);
+// add_filter('walker_nav_menu_start_el', 'custom_start_el', 10, 4);
 
 
 /* Duplicate Items for dropdowns function */
@@ -530,16 +526,16 @@ remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
 =            Exclude pages from Wordpress Search            =
 ===========================================================*/
 
-if (!is_admin()) {
-    function wpb_search_filter($query)
-    {
-        if ($query->is_search) {
-            $query->set('post_type', 'post');
-        }
-        return $query;
-    }
-    add_filter('pre_get_posts', 'wpb_search_filter');
-}
+// if (!is_admin()) {
+//     function wpb_search_filter($query)
+//     {
+//         if ($query->is_search) {
+//             $query->set('post_type', 'post');
+//         }
+//         return $query;
+//     }
+//     add_filter('pre_get_posts', 'wpb_search_filter');
+// }
 
 
 
@@ -581,22 +577,22 @@ if (!is_admin()) {
 /* ACF CUSTOM BLOCKS */
 
 
-add_action('acf/init', 'my_acf_init_block_types');
+// add_action('acf/init', 'my_acf_init_block_types');
 
-function my_acf_init_block_types() {
+// function my_acf_init_block_types() {
 
-    // Check function exists.
-    if( function_exists('acf_register_block_type') ) {
+//     // Check function exists.
+//     if( function_exists('acf_register_block_type') ) {
 
-        // register a testimonial block.
-        acf_register_block_type(array(
-            'name'              => 'FAQ',
-            'title'             => __('FAQ'),
-            'description'       => __('A custom FAQ block.'),
-            'render_template'   => 'inc/blocks/faq.php',
-            'category'          => 'formatting',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'FAQ', 'quote' ),
-        ));
-    }
-}
+//         // register a testimonial block.
+//         acf_register_block_type(array(
+//             'name'              => 'FAQ',
+//             'title'             => __('FAQ'),
+//             'description'       => __('A custom FAQ block.'),
+//             'render_template'   => 'inc/blocks/faq.php',
+//             'category'          => 'formatting',
+//             'icon'              => 'admin-comments',
+//             'keywords'          => array( 'FAQ', 'quote' ),
+//         ));
+//     }
+// }
