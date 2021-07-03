@@ -25,6 +25,7 @@
     h4,
     h5,
     h6 {
+      color: $priCol;
       margin-top: 0px;
       margin-bottom: 20px;
       margin-top: 60px;
@@ -94,4 +95,17 @@
       }
     }
   } // End Content
+}
+
+.gallery .interior {
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .ngg-album-compact h4 .ngg-album-desc {
+    height: auto;
+  }
+  .ngg-album-gallery-image-counter {
+    margin-bottom: 40px;
+  }
 }

@@ -55,17 +55,9 @@
             <a href="<?php bloginfo('url'); ?>"><?php echo inline_svg('logo'); ?></a>
         </div>
     </section>
-    <div class="page-title">
+    <section class="page-title">
         <?php if (is_search()): ?>
         <div class="headline">Search Results</div>
-        <?php elseif (this_is('gallery-child')): ?>
-        <?php $category_title =  get_the_title($post->in_cat_ID); ?>
-        <div class="headline"><?php echo $category_title ?> Gallery</div>
-        <?php elseif (this_is('gallery')): ?>
-        <?php elseif (this_is('gallery-case')): ?>
-        <?php $category_title =  get_the_title($post->in_cat_ID); ?>
-        <div class="headline"><?php echo $category_title ?> - <span class="single-case-title"><?php the_title(); ?></span></div>
-        <h1>Photo Gallery</h1>
         <?php elseif (is_home() or is_archive()): ?>
         <h1>Blog</h1>
         <?php elseif (is_single()): ?>
@@ -73,5 +65,5 @@
         <?php else: ?>
         <h1> <?php the_title();?></h1>
         <?php endif; ?>
-    </div>
+    </section>
   <?php } ?>

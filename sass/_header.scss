@@ -26,7 +26,7 @@
     position: absolute;
     left: 20px;
     top: -70px;
-    @include media($desktop) {
+    @include media($tablet) {
       display: none;
     }
     svg {
@@ -137,19 +137,31 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   height: 300px;
+  top: 80px;
+  @include media($tablet) {
+    top: 0;
+    height: 400px;
+  }
 }
 
 .internal-logo {
   position: absolute;
-  left: 40px;
-  top: 40px;
-
-  // margin-top: 60px;
+  // left: 10px;
+  // top: 10px;
+  display: none;
+  @include media($tablet) {
+    display: inline-block;
+    left: 40px;
+    top: 40px;
+  }
   svg {
-    width: 180px;
+    width: 55px;
+    height: 60px;
     @include media($tablet) {
-      // width: auto;
+      width: 138px;
+      height: 152px;
     }
   }
 }

@@ -28,9 +28,6 @@ dl {
   font-weight: 300;
 }
 
-li {
-}
-
 h1,
 h2,
 h3,
@@ -123,46 +120,12 @@ main,
     padding-right: 40px;
   }
   @include media($desktop) {
-    // padding-left: calc(40px + (50% - (#{$desktop} / 2)));
-    // padding-right: calc(40px + (50% - (#{$desktop} / 2)));
   }
   @include media($full) {
-    // max-width: $full;
     max-width: $full;
     margin: 0 auto;
-    // padding-left: calc(40px + (50% - (1200px / 2)));
-    // padding-right: calc(40px + (50% - (1200px / 2)));
   }
 }
-
-// section,
-// main,
-// .contain {
-//     padding: 0 20px;
-//     @include media($tablet) {
-//         padding: 0 40px;
-//     }
-//     @include media($desktop) {
-//         padding: 0  calc(40px + (50% - (#{$desktop} / 2)));
-//     }
-//     @include media(1280px) {
-//         // padding: 0 calc(40px + (50% - (1280px / 2)));
-//     }
-//     @include media($full) {
-//         // padding: 0  calc(40px + (50% - (#{$full} / 2)));
-//     }
-// }
-
-/* For Devices - still needed ?  */
-// .is--device {
-// 	section,
-// 	main,
-// 	.contain {
-// 		@include media($desktop) {
-// 			padding: 0 20px;
-// 		}
-// 	}
-// }
 
 /* ***************************************** */
 /* --------------- Layouts ----------------- */
@@ -207,7 +170,7 @@ main,
 	Guttenberg
 ------------------------ */
 
-@import "blocks";
+// @import "blocks";
 
 /* ------------------------
 	Aside
@@ -225,7 +188,7 @@ main,
 	Forms & Form Elements
 ------------------------ */
 
-@import "contact";
+// @import "contact";
 
 /* ***************************************** */
 /* ---------- Specific Templates ----------- */
@@ -251,4 +214,4 @@ main,
 
 /* Hide / Show */
 
-@import "hide";
+// @import "hide";
